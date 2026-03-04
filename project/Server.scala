@@ -55,9 +55,9 @@ object Server {
     pipelineStages in Assets := Seq(scalaJSPipeline),
     pipelineStages := Seq(digest, gzip),
 
-    includeFilter in (Assets, LessKeys.less) := "*.less",
-    excludeFilter in (Assets, LessKeys.less) := "_*.less",
-    LessKeys.compress in Assets := true,
+    // includeFilter in (Assets, LessKeys.less) := "*.less",
+    // excludeFilter in (Assets, LessKeys.less) := "_*.less",
+    // LessKeys.compress in Assets := true,
 
     // Code Quality
     scapegoatIgnoredFiles := Seq(
