@@ -44,7 +44,7 @@ object Shared {
 
     // Resolvers
     resolvers += Resolver.jcenterRepo,
-    resolvers += "Akka Snapshot Repository" at "http://repo.akka.io/snapshots/",
+    resolvers += "Akka Snapshot Repository" at "https://repo.akka.io/snapshots/",
 
     // Code Quality
     scapegoatVersion := Dependencies.Utils.scapegoatVersion,
