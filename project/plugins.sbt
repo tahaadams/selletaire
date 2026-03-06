@@ -2,10 +2,8 @@ scalacOptions ++= Seq( "-unchecked", "-deprecation" )
 
 resolvers += Resolver.typesafeRepo("releases")
 
-resolvers += Resolver.url("jetbrains-bintray", url("http://dl.bintray.com/jetbrains/sbt-plugins/"))(Resolver.ivyStylePatterns)
-
 // The Play plugin
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.6.12")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.8.20")
 
 // SBT-Web plugins
 addSbtPlugin("com.typesafe.sbt" % "sbt-less" % "1.0.0")
@@ -15,16 +13,16 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.2")
 addSbtPlugin("com.typesafe.sbt" % "sbt-gzip" % "1.0.1")
 
 // Scala.js
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.22")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "1.13.2")
 
-addSbtPlugin("org.scala-native" % "sbt-crossproject" % "0.2.0")
+addSbtPlugin("org.portable-scala" % "sbt-crossproject" % "1.3.1")
 
-addSbtPlugin("org.scala-native" % "sbt-scalajs-crossproject" % "0.2.0")
+addSbtPlugin("org.portable-scala" % "sbt-scalajs-crossproject" % "1.3.1")
 
-addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.0.5")
+addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.2.0")
 
 // Source Control
-addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "0.9.3")
+addSbtPlugin("com.typesafe.sbt" % "sbt-git" % "1.0.1")
 
 // Benchmarking
 addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.2.25")
@@ -32,12 +30,9 @@ addSbtPlugin("pl.project13.scala" % "sbt-jmh" % "0.2.25")
 addSbtPlugin("io.gatling" % "gatling-sbt" % "2.2.1")
 
 // App Packaging
-addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.2.0")
+addSbtPlugin("com.typesafe.sbt" % "sbt-native-packager" % "1.10.4")
 
-addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "0.14.5")
-
-// Dependency Resolution
-addSbtPlugin("io.get-coursier" % "sbt-coursier" % "1.0.0-RC6")
+addSbtPlugin("com.eed3si9n" % "sbt-assembly" % "2.1.1")
 
 // Code Quality
 addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0") // scalastyle
