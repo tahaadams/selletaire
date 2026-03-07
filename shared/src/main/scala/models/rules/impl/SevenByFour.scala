@@ -14,8 +14,5 @@ object SevenByFour extends GameRules(
     TableauRules(
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules())
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules()))

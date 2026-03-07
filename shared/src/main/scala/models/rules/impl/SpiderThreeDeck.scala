@@ -14,15 +14,11 @@ object SpiderThreeDeck extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.TableauIfNoneEmpty,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 12,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -39,10 +35,6 @@ object SpiderThreeDeck extends GameRules(
         "DDDU",
         "DDDU",
         "DDDU",
-        "DDDU"
-      ),
+        "DDDU"),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

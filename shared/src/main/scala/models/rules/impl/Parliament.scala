@@ -13,17 +13,13 @@ object Parliament extends GameRules(
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
       initialCards = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -31,7 +27,4 @@ object Parliament extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)))

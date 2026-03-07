@@ -10,24 +10,19 @@ object StraightFifteens extends GameRules(
   related = Seq("fifteens"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/fifteens.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/fifteens_v2.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/fifteens_v2.html")),
   layout = "sf|t",
   cardRemovalMethod = CardRemovalMethod.RemoveSetsAddingToFifteenOr10JQK,
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       lowRank = FoundationLowRank.AnyCard,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -36,7 +31,4 @@ object StraightFifteens extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

@@ -12,25 +12,17 @@ object PasSeul extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/pas_seul.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/pas-seul.htm"),
     Link("PySol", "pysolfc.sourceforge.net/doc/rules/passeul.html"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Passeul.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Passeul.htm")),
   layout = "swf|.t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
-      initialCards = InitialCards.Count(3)
-    )
-  )
-)
+      initialCards = InitialCards.Count(3))))

@@ -18,15 +18,10 @@ object Apophis extends GameRules(
     FoundationRules(
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   pyramids = IndexedSeq(
     PyramidRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

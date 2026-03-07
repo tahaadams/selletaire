@@ -1,6 +1,6 @@
 package client
 
-import msg.rsp.{Profile, SocketResponseMessage}
+import msg.rsp.{ Profile, SocketResponseMessage }
 import util.Logging
 
 trait MessageHelper { this: SolitaireGG =>

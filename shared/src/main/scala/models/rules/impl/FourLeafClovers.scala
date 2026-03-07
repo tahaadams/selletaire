@@ -10,16 +10,13 @@ object FourLeafClovers extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/four_leaf_clovers.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/four_leaf_clovers.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/four-leaf-clovers.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/FourLeafClovers.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/FourLeafClovers.htm")),
   layout = "::::::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       suitMatchRule = SuitMatchRule.Any,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
@@ -29,7 +26,4 @@ object FourLeafClovers extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

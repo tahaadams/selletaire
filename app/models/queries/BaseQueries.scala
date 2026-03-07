@@ -29,8 +29,7 @@ trait BaseQueries[T] {
   }
 
   protected def getSql(
-    whereClause: Option[String] = None, groupBy: Option[String] = None, orderBy: Option[String] = None, limit: Option[Int] = None, offset: Option[Int] = None
-  ) = BaseQueries.trim(s"""
+    whereClause: Option[String] = None, groupBy: Option[String] = None, orderBy: Option[String] = None, limit: Option[Int] = None, offset: Option[Int] = None) = BaseQueries.trim(s"""
     select $quotedColumns from $tableName ${whereClause.map(x => s" where $x").getOrElse("")}
     ${groupBy.map(x => s" group by $x").getOrElse("")} ${orderBy.map(x => s" order by $x").getOrElse("")}
     ${limit.map(x => s" limit $x").getOrElse("")} ${offset.map(x => s" offset $x").getOrElse("")}
@@ -51,8 +50,7 @@ trait BaseQueries[T] {
   protected class ColSeqQuery(column: String, vals: Seq[Any] = Nil) extends SeqQuery("where \"" + column + "\" in (" + placeholdersFor(vals) + ")", vals)
 
   protected case class GetAll(orderBy: Option[String] = None, limit: Option[Int] = None, offset: Option[Int] = None) extends SeqQuery(
-    orderBy.map(" order by " + _).getOrElse("") + limit.map(" limit " + _).getOrElse("") + offset.map(" offset " + _).getOrElse("")
-  )
+    orderBy.map(" order by " + _).getOrElse("") + limit.map(" limit " + _).getOrElse("") + offset.map(" offset " + _).getOrElse(""))
 
   protected case class Insert(model: T) extends Statement {
     override val sql = insertSql

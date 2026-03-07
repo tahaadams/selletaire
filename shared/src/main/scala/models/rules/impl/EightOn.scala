@@ -18,8 +18,5 @@ object EightOn extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.HighRank,
-      pilesWithLowCardsAtBottom = 4
-    )
-  ),
-  cells = Some(CellRules(numPiles = 8, initialCards = 8))
-)
+      pilesWithLowCardsAtBottom = 4)),
+  cells = Some(CellRules(numPiles = 8, initialCards = 8)))

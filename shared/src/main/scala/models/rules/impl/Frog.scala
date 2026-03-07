@@ -13,8 +13,7 @@ object Frog extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/frog.html"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Frog.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/frog.htm"),
-    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/frog.htm")
-  ),
+    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/frog.htm")),
   layout = "sf|r:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Manually, maximumDeals = Some(1))),
@@ -22,9 +21,7 @@ object Frog extends GameRules(
     FoundationRules(
       numPiles = 8,
       suitMatchRule = SuitMatchRule.Any,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 5,
@@ -34,8 +31,5 @@ object Frog extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock),
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  ),
-  reserves = Some(ReserveRules(name = "Frog", initialCards = 13))
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock))),
+  reserves = Some(ReserveRules(name = "Frog", initialCards = 13)))

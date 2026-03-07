@@ -11,8 +11,7 @@ object Alternate extends GameRules(
   like = Some("sirtommy"),
   links = Seq(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/alternate.html"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/alternate.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/alternate.php")),
   layout = "sff|.t",
   stock = Some(StockRules(dealTo = StockDealTo.Manually, maximumDeals = Some(1))),
   foundations = IndexedSeq(
@@ -22,8 +21,7 @@ object Alternate extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(Color.Red)),
       initialCards = 2,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Black Foundation",
       setNumber = 1,
@@ -33,9 +31,7 @@ object Alternate extends GameRules(
       initialCards = 2,
       suitMatchRule = SuitMatchRule.AlternatingColors,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Reserve",
@@ -46,7 +42,4 @@ object Alternate extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock),
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock))))

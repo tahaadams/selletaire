@@ -16,5 +16,4 @@ case class User(
   username: Option[String] = None,
   email: Option[String] = None,
   settings: Settings = Settings.default,
-  created: LocalDateTime = DateUtils.now
-)
+  created: LocalDateTime = DateUtils.now)

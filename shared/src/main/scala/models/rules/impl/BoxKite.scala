@@ -12,8 +12,7 @@ object BoxKite extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/box_kite.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/box_kite.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/box-kite.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/BoxKite.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/BoxKite.htm")),
   layout = ":.f:f|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(
@@ -21,8 +20,7 @@ object BoxKite extends GameRules(
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       setNumber = 1,
       numPiles = 4,
@@ -30,9 +28,7 @@ object BoxKite extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -41,7 +37,4 @@ object BoxKite extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

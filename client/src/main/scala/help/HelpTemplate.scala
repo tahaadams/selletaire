@@ -18,21 +18,17 @@ object HelpTemplate {
     val linksDiv = HelpTemplateContent.getLinksDiv(rules)
 
     val content = div(cls := "theme striped with-margin align-left")(
-      titleDiv, descriptionDiv, akaDiv, objectiveDiv, deckDiv, layoutDiv, similarDiv, relDiv, linksDiv
-    )
+      titleDiv, descriptionDiv, akaDiv, objectiveDiv, deckDiv, layoutDiv, similarDiv, relDiv, linksDiv)
     div(cls := "content")(content)
   }
 
   lazy val generalHelp = div(
     div(cls := "theme striped with-margin")(
-      div("General Help for Solitaire.gg")
-    ),
+      div("General Help for Solitaire.gg")),
     div(cls := "theme striped")(
       "I need to write some help files...",
       br(),
       "Please send your feedback to ",
       a(href := "mailto:feedback@solitaire.gg")("feedback@solitaire.gg"),
-      "."
-    )
-  )
+      "."))
 }

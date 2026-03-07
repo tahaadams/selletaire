@@ -12,15 +12,11 @@ object Friday extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Left Tableau",
@@ -30,8 +26,7 @@ object Friday extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    ),
+      emptyFilledWith = FillEmptyWith.None),
     TableauRules(
       name = "Right Tableau",
       setNumber = 1,
@@ -40,7 +35,4 @@ object Friday extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

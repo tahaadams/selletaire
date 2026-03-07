@@ -13,33 +13,24 @@ object RougeForty extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 2,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueColors),
-      suitMatchRule = SuitMatchRule.SameColor
-    ),
+      suitMatchRule = SuitMatchRule.SameColor),
     FoundationRules(
       setNumber = 1,
       numPiles = 2,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueColors),
-      suitMatchRule = SuitMatchRule.SameColor
-    ),
+      suitMatchRule = SuitMatchRule.SameColor),
     FoundationRules(
       setNumber = 2,
       numPiles = 4,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

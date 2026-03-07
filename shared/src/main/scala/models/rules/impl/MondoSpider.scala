@@ -14,15 +14,11 @@ object MondoSpider extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.TableauIfNoneEmpty,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 18,
@@ -45,11 +41,7 @@ object MondoSpider extends GameRules(
         "UUUUUUU",
         "DDDDDDDU",
         "UUUUUUU",
-        "DDDDDDDU"
-      ),
+        "DDDDDDDU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

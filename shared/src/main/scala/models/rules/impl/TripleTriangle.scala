@@ -13,20 +13,13 @@ object TripleTriangle extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 12,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

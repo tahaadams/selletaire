@@ -20,15 +20,11 @@ object Algiers extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      maxCards = 1
-    ),
+      maxCards = 1),
     TableauRules(
       setNumber = 1,
       numPiles = 12,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

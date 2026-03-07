@@ -20,7 +20,4 @@ object Cornelius extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

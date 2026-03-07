@@ -9,8 +9,7 @@ object Pharaohs extends GameRules(
   title = "Pharaohs",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/pharaohs.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Pharaohs.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Pharaohs.htm")),
   layout = "f|ppp",
   victoryCondition = VictoryCondition.NoneInPyramid,
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToThirteenOrK,
@@ -19,31 +18,24 @@ object Pharaohs extends GameRules(
       numPiles = 4,
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   pyramids = IndexedSeq(
     PyramidRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    ),
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf),
     PyramidRules(
       setNumber = 1,
       height = 6,
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    ),
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf),
     PyramidRules(
       setNumber = 2,
       height = 2,
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

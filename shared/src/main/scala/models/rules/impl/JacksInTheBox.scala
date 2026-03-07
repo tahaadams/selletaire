@@ -17,17 +17,12 @@ object JacksInTheBox extends GameRules(
     FoundationRules(
       numPiles = 8,
       initialCards = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules())
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules()))

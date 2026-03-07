@@ -32,8 +32,7 @@ object FoundationPilesHelpService {
             "help.piles.multiple.cards.multiple",
             Messages.numberAsString(x, properCase = true),
             loweredName,
-            Messages.numberAsString(rules.initialCards)
-          )
+            Messages.numberAsString(rules.initialCards))
         }
       }
     }

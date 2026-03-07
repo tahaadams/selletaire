@@ -13,29 +13,21 @@ object RedAndBlack extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/red_and_black.php"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/RedandBlack.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/red_and_black.htm"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Zebra.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Zebra.html.en")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
       initialCards = 8,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.Count(1),
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

@@ -74,8 +74,7 @@ object FoundationPileOptions {
         PileOptions(
           cardsShown = Some(rules.cardsShown),
           dragFromConstraint = dragFromConstraint,
-          dragToConstraint = dragToConstraint
-        )
+          dragToConstraint = dragToConstraint)
       }
     } else {
       val lowRank = rules.lowRank match {
@@ -90,8 +89,7 @@ object FoundationPileOptions {
       Seq(PileOptions(
         cardsShown = Some(rules.cardsShown),
         dragFromConstraint = dragFromConstraint,
-        dragToConstraint = dragToConstraint
-      ))
+        dragToConstraint = dragToConstraint))
     }
   }
 }

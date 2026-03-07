@@ -1,4 +1,4 @@
-import com.sksamuel.scapegoat.sbt.ScapegoatSbtPlugin.autoImport._
+// import com.sksamuel.scapegoat.sbt.ScapegoatSbtPlugin.autoImport._
 import com.typesafe.sbt.GitVersioning
 import com.typesafe.sbt.digest.Import._
 import com.typesafe.sbt.gzip.Import._
@@ -60,11 +60,11 @@ object Server {
     // LessKeys.compress in Assets := true,
 
     // Code Quality
-    scapegoatIgnoredFiles := Seq(
-      ".*/Row.scala", ".*/Routes.scala", ".*/ReverseRoutes.scala", ".*/JavaScriptReverseRoutes.scala", ".*/*.template.scala",
-      ".*/SeedSerializers.scala"
-    ),
-    scapegoatDisabledInspections := Seq("DuplicateImport", "FinalModifierOnCaseClass"),
+    // scapegoatIgnoredFiles := Seq(
+    //   ".*/Row.scala", ".*/Routes.scala", ".*/ReverseRoutes.scala", ".*/JavaScriptReverseRoutes.scala", ".*/*.template.scala",
+    //   ".*/SeedSerializers.scala"
+    // ),
+    // scapegoatDisabledInspections := Seq("DuplicateImport", "FinalModifierOnCaseClass"),
 
     // SBT Output
     ivyLoggingLevel := UpdateLogging.Quiet,

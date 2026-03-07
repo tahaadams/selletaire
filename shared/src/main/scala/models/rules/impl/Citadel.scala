@@ -13,8 +13,7 @@ object Citadel extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/citadel.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/citadel.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Citadel.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/citadel.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/citadel.php")),
   layout = "f|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, initialCards = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -24,7 +23,4 @@ object Citadel extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      actionDuringDeal = PileAction.MoveToFoundation
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveToFoundation)))

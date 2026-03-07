@@ -6,7 +6,7 @@ import sangria.schema._
 import sangria.validation.ValueCoercionViolation
 import util.EnumWithDescription
 
-import scala.util.{Failure, Success, Try}
+import scala.util.{ Failure, Success, Try }
 
 object CommonSchema {
   val idArg = Argument("id", OptionInputType(IntType), description = "Returns model matching the provided id.")
@@ -31,26 +31,22 @@ object CommonSchema {
       case _ => Left(UuidCoercionViolation)
     },
     coerceInput = {
-      case sangria.ast.StringValue(s, _, _) => parseUuid(s)
+      case sangria.ast.StringValue(s, _, _, _, _) => parseUuid(s)
       case _ => Left(UuidCoercionViolation)
-    }
-  )
+    })
 
   def deriveEnumeratumType[T <: enumeratum.EnumEntry](name: String, description: String, values: Seq[(T, String)]) = EnumType(
     name = name,
     description = Some(description),
-    values = values.map(t => EnumValue(name = t._1.toString, value = t._1, description = Some(t._2))).toList
-  )
+    values = values.map(t => EnumValue(name = t._1.toString, value = t._1, description = Some(t._2))).toList)
 
   def deriveStringEnumeratumType[T <: EnumWithDescription](name: String, description: Option[String] = None, values: Seq[T]) = {
     deriveStringTypes(name, description, values.map(x => x -> x.description))
   }
 
   private[this] def deriveStringTypes[T <: enumeratum.values.StringEnumEntry](
-    name: String, description: Option[String] = None, values: Seq[(T, String)]
-  ) = EnumType(
+    name: String, description: Option[String] = None, values: Seq[(T, String)]) = EnumType(
     name = name,
     description = description,
-    values = values.map(t => EnumValue(name = t._1.toString, value = t._1, description = Some(t._2))).toList
-  )
+    values = values.map(t => EnumValue(name = t._1.toString, value = t._1, description = Some(t._2))).toList)
 }

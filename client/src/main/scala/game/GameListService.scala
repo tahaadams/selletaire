@@ -2,7 +2,7 @@ package game
 
 import help.HelpService
 import menu.MenuService
-import org.scalajs.jquery.{jQuery => $}
+import org.scalajs.jquery.{ jQuery => $ }
 import util.TemplateUtils
 
 object GameListService {

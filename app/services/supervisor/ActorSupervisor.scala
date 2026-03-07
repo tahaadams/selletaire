@@ -3,14 +3,14 @@ package services.supervisor
 import java.util.UUID
 
 import akka.actor.SupervisorStrategy.Stop
-import akka.actor.{Actor, ActorRef, OneForOneStrategy, SupervisorStrategy}
+import akka.actor.{ Actor, ActorRef, OneForOneStrategy, SupervisorStrategy }
 import models._
 import java.time.LocalDateTime
 
-import io.prometheus.client.{Counter, Gauge, Histogram}
+import io.prometheus.client.{ Counter, Gauge, Histogram }
 import services.supervisor.ActorSupervisor.SocketRecord
 import util.metrics.Instrumented
-import util.{Application, DateUtils, Logging}
+import util.{ Application, DateUtils, Logging }
 
 object ActorSupervisor {
   case class SocketRecord(userId: UUID, username: Option[String], actorRef: ActorRef, started: LocalDateTime)

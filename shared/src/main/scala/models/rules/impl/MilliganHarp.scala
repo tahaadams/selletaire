@@ -12,25 +12,17 @@ object MilliganHarp extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/milligan_harp.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/milligan_harp.php"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/MilliganHarp.htm"),
-    Link("PySol", "pysolfc.sourceforge.net/doc/rules/milliganharp.html")
-  ),
+    Link("PySol", "pysolfc.sourceforge.net/doc/rules/milliganharp.html")),
   layout = "sf|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      numPiles = 8
-    )
-  )
-)
+      numPiles = 8)))

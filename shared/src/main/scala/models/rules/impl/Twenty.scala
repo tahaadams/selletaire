@@ -13,24 +13,20 @@ object Twenty extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/twenty.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Twenty.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/twenty.php"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/fox.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/fox.html")),
   layout = "sf:f|2t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       name = "Aces Foundation",
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Kings Foundation",
       setNumber = 1,
@@ -39,9 +35,7 @@ object Twenty extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 20,
@@ -50,7 +44,4 @@ object Twenty extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

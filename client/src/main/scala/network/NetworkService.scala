@@ -1,8 +1,8 @@
 package network
 
-import msg.req.{OnGameComplete, OnGameStart, Ping, SocketRequestMessage}
-import msg.rsp.{Pong, SocketResponseMessage}
-import util.{JsonSerializers, Logging}
+import msg.req.{ OnGameComplete, OnGameStart, Ping, SocketRequestMessage }
+import msg.rsp.{ Pong, SocketResponseMessage }
+import util.{ JsonSerializers, Logging }
 
 import scala.scalajs.js.timers.setTimeout
 

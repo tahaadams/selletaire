@@ -1,8 +1,8 @@
 package network
 
-import msg.req.{ClientError, SocketRequestMessage}
+import msg.req.{ ClientError, SocketRequestMessage }
 import org.scalajs.dom
-import util.{JsonSerializers, Logging}
+import util.{ JsonSerializers, Logging }
 
 import scala.util.control.NonFatal
 

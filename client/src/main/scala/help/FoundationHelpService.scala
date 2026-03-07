@@ -36,8 +36,7 @@ object FoundationHelpService {
 
       rules.initialCardRestriction match {
         case Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(c)) => ret += Messages(
-          "help.foundation.initial.restriction.specific.color.unique.suits", c.toString.toLowerCase
-        )
+          "help.foundation.initial.restriction.specific.color.unique.suits", c.toString.toLowerCase)
         case Some(FoundationInitialCardRestriction.SpecificSuit(s)) => ret += Messages("help.foundation.initial.restriction.specific.suit", s.title)
         case Some(FoundationInitialCardRestriction.UniqueColors) => ret += Messages("help.foundation.initial.restriction.unique.colors")
         case Some(FoundationInitialCardRestriction.UniqueSuits) => ret += Messages("help.foundation.initial.restriction.unique.suits")
@@ -51,8 +50,7 @@ object FoundationHelpService {
           "help.foundation.build.rank.and.suit.match.rules",
           loweredName,
           MatchRuleHelpService.toWords(rules.rankMatchRule),
-          MatchRuleHelpService.toWords(rules.suitMatchRule)
-        )
+          MatchRuleHelpService.toWords(rules.suitMatchRule))
       }
 
       if (rules.wrap) {

@@ -15,8 +15,7 @@ object Cruel extends GameRules(
     Link("Dan Fletcher's Strategy Guide.", "ezinearticles.com/?Cruel-Solitaire-Strategy-Guide&id=111462"),
     Link("L. Schaffer's Rules and Strategy Guide", "www.hobbyhub360.com/index.php/how-to-play-cruel-solitaire-14162/"),
     Link("Jan Wolter's Analysis", "/article/cruel.html"),
-    Link("An 1898 Description of a game called \"Perseverance\".", "howtoplaysolitaire.blogspot.com/2010/06/perseverance-single-deck-solitaire-game.html")
-  ),
+    Link("An 1898 Description of a game called \"Perseverance\".", "howtoplaysolitaire.blogspot.com/2010/06/perseverance-single-deck-solitaire-game.html")),
   layout = "::f|2t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, initialCards = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -26,7 +25,4 @@ object Cruel extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

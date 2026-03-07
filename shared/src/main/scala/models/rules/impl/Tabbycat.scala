@@ -11,23 +11,18 @@ object Tabbycat extends GameRules(
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/TabbyCat.html"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/tabby_cat.html"),
     Link("Wikipedia", "en.wikipedia.org/wiki/Tabby_Cat_(solitaire)"),
-    Link("PySol", "pysolfc.sourceforge.net/doc/rules/tabbycat.html")
-  ),
+    Link("PySol", "pysolfc.sourceforge.net/doc/rules/tabbycat.html")),
   layout = "sf|tt",
   stock = Some(
     StockRules(
       dealTo = StockDealTo.TableauFirstSet,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       suitMatchRule = SuitMatchRule.Any,
       moveCompleteSequencesOnly = true,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
@@ -35,8 +30,7 @@ object Tabbycat extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any),
     TableauRules(
       name = "Tail",
       setNumber = 1,
@@ -45,7 +39,4 @@ object Tabbycat extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-      rankMatchRuleForMovingStacks = RankMatchRule.Any
-    )
-  )
-)
+      rankMatchRuleForMovingStacks = RankMatchRule.Any)))

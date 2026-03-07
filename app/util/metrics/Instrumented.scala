@@ -1,11 +1,11 @@
 package util.metrics
 
-import io.prometheus.client.{CollectorRegistry, Counter, Histogram}
+import io.prometheus.client.{ CollectorRegistry, Counter, Histogram }
 import io.prometheus.client.exporter.HTTPServer
 import io.prometheus.client.hotspot.DefaultExports
 import util.Logging
 
-import scala.concurrent.{ExecutionContext, Future}
+import scala.concurrent.{ ExecutionContext, Future }
 import scala.util.control.NonFatal
 
 object Instrumented extends Logging {

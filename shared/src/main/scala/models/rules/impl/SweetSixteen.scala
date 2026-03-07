@@ -14,9 +14,7 @@ object SweetSixteen extends GameRules(
     StockRules(
       cardsShown = 19,
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -24,7 +22,4 @@ object SweetSixteen extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

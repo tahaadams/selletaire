@@ -14,15 +14,11 @@ object HugeSpider extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.TableauIfNoneEmpty,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 16,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 20,
@@ -47,11 +43,7 @@ object HugeSpider extends GameRules(
         "DDDDU",
         "DDDDU",
         "DDDDU",
-        "DDDDU"
-      ),
+        "DDDDU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

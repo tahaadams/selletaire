@@ -13,12 +13,10 @@ object Emperor extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/emperor.html"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/emperor.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/emperor.htm"),
-    Link("Bicycle", "www.bicyclecards.ca/game-rules/emperor/184.php?page_id=32")
-  ),
+    Link("Bicycle", "www.bicyclecards.ca/game-rules/emperor/184.php?page_id=32")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 10, initialCards = InitialCards.Count(4), suitMatchRuleForMovingStacks = SuitMatchRule.None))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 10, initialCards = InitialCards.Count(4), suitMatchRuleForMovingStacks = SuitMatchRule.None)))

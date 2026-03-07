@@ -18,11 +18,9 @@ object Westcliff extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/westcliff.html"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/westcliff.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Westhaven.html.en"),
-    Link("John Welford on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-westcliff-solitaire-28948/")
-  ),
+    Link("John Welford on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-westcliff-solitaire-28948/")),
   layout = "swf|t",
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 10, initialCards = InitialCards.Count(3)))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 10, initialCards = InitialCards.Count(3))))

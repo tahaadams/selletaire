@@ -18,15 +18,11 @@ object Flow extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    ),
+      emptyFilledWith = FillEmptyWith.None),
     TableauRules(
       setNumber = 1,
       numPiles = 8,
       initialCards = InitialCards.Count(0),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

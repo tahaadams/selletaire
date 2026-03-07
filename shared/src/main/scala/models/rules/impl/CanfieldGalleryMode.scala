@@ -18,8 +18,5 @@ object CanfieldGalleryMode extends GameRules(
       numPiles = 4,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1)))

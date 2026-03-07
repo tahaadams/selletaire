@@ -20,11 +20,8 @@ object Dragon extends GameRules(
       "DDDUUUU",
       "DDDDUUU",
       "DDDDDUU",
-      "DDDDDDU"
-    ),
+      "DDDDDDU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-    rankMatchRuleForMovingStacks = RankMatchRule.Any
-  ))
-)
+    rankMatchRuleForMovingStacks = RankMatchRule.Any)))

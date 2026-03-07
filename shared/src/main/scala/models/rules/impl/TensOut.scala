@@ -14,9 +14,7 @@ object TensOut extends GameRules(
     FoundationRules(
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -24,7 +22,4 @@ object TensOut extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

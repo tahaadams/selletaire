@@ -9,15 +9,13 @@ object Calculation extends GameRules(
   title = "Calculation",
   aka = Map(
     "brokenintervals" -> "Broken Intervals",
-    "hopscotch" -> "Hopscotch"
-  ),
+    "hopscotch" -> "Hopscotch"),
   links = Seq(
     Link("Wikipedia", "en.wikipedia.org/wiki/Calculation_(card_game)"),
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/calculation.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/calculation.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/calculation.html"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Hopscotch.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Hopscotch.html.en")),
   layout = "sf|t",
   stock = Some(StockRules(dealTo = StockDealTo.Manually, maximumDeals = Some(1))),
   foundations = IndexedSeq(
@@ -27,9 +25,7 @@ object Calculation extends GameRules(
       initialCards = 4,
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpByPileIndex,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Reserve",
@@ -40,7 +36,4 @@ object Calculation extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock),
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock))))

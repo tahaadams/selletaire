@@ -1,8 +1,8 @@
 package util
 
 import io.prometheus.client.Gauge
-import org.slf4j.{LoggerFactory, MarkerFactory}
-import play.api.{Logger, MarkerContext}
+import org.slf4j.{ LoggerFactory, MarkerFactory }
+import play.api.{ Logger, MarkerContext }
 
 object Logging {
   private[this] lazy val gauge = Gauge.build(util.Config.projectId + "_logging", "Logging statistics.").labelNames("level").register()

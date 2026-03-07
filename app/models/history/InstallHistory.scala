@@ -10,5 +10,4 @@ case class InstallHistory(
   deviceId: UUID,
   deviceInfo: Seq[String],
   client: String,
-  occurred: LocalDateTime
-)
+  occurred: LocalDateTime)

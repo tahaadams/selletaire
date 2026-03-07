@@ -27,8 +27,7 @@ object WikiReserve {
             "help.piles.multiple.cards.multiple.each",
             WikiService.numberAsString(x, properCase = true),
             loweredName,
-            WikiService.numberAsString(rules.initialCards)
-          )
+            WikiService.numberAsString(rules.initialCards))
         }
     }
     ret += piles

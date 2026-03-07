@@ -1,7 +1,7 @@
 package models.rules
 
 import enumeratum.values._
-import models.card.{Color, Rank, Suit}
+import models.card.{ Color, Rank, Suit }
 import models.pile.set.PileSet
 
 sealed abstract class FoundationInitialCardRestriction(val value: Int) extends IntEnumEntry
@@ -48,5 +48,4 @@ case class FoundationRules(
   mayMoveToFrom: Seq[PileSet.Behavior] = PileSet.Behavior.values,
   visible: Boolean = true,
   autoMoveCards: Boolean = false,
-  autoMoveFrom: Seq[PileSet.Behavior] = PileSet.Behavior.values
-)
+  autoMoveFrom: Seq[PileSet.Behavior] = PileSet.Behavior.values)

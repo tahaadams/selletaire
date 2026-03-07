@@ -21,12 +21,9 @@ object YukonOneSuit extends GameRules(
       "DDDUUUUU",
       "DDDDUUUUU",
       "DDDDDUUUUU",
-      "DDDDDDUUUUU"
-    ),
+      "DDDDDDUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.Any,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

@@ -53,8 +53,7 @@ object VictoryCondition extends StringEnum[VictoryCondition] with StringCirceEnu
         rmr = tableauRules.rankMatchRuleForBuilding,
         smr = tableauRules.suitMatchRuleForBuilding,
         lowRank = gs.deck.lowRank,
-        wrap = tableauRules.wrap
-      )
+        wrap = tableauRules.wrap)
       val allTableauSorted = gs.pileSets.filter(_.behavior == PileSet.Behavior.Tableau).forall(ps => ps.piles.forall(sorted))
       val eligible = gs.pileSets.filterNot(ps => ps.behavior == PileSet.Behavior.Foundation || ps.behavior == PileSet.Behavior.Tableau)
       val eligibleEmpty = eligible.forall(ps => ps.piles.forall(_.cards.isEmpty))

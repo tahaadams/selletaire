@@ -1,7 +1,7 @@
 package models.rules
 
 import enumeratum.values._
-import models.card.{Card, Rank}
+import models.card.{ Card, Rank }
 
 sealed abstract class CardRemovalMethod(val value: Int) extends IntEnumEntry {
   def canRemove(l: Card, r: Card): Boolean = false

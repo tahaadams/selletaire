@@ -16,8 +16,5 @@ object DoubleSeaTowers extends GameRules(
       initialCards = InitialCards.Count(9),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules(numPiles = 9, initialCards = 5))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(numPiles = 9, initialCards = 5)))

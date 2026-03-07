@@ -3,7 +3,7 @@ package models.queries.report
 import java.util.UUID
 
 import enumeratum._
-import models.database.{Query, Row}
+import models.database.{ Query, Row }
 
 sealed abstract class LeaderboardQueries extends EnumEntry with Query[Seq[(UUID, Option[String], Option[String], Int)]] {
   override def reduce(rows: Iterator[Row]) = rows.map { row =>

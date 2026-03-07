@@ -14,9 +14,7 @@ object UpAndUp extends GameRules(
     StockRules(
       cardsShown = 19,
       dealTo = StockDealTo.Manually,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -27,7 +25,4 @@ object UpAndUp extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Up,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

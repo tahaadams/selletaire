@@ -19,12 +19,9 @@ object YukonCells extends GameRules(
       "DDDUUUUU",
       "DDDDUUUUU",
       "DDDDDUUUUU",
-      "DDDDDDUUUUU"
-    ),
+      "DDDDDDUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  )),
-  cells = Some(CellRules(numPiles = 2))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(numPiles = 2)))

@@ -11,12 +11,10 @@ object Alternations extends GameRules(
     Link("Wikipedia", "en.wikipedia.org/wiki/Alternation_(solitaire)"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/alternation.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/alternations.htm"),
-    Link("Solitaire City", "www.solitairecity.com/Alternations.shtml")
-  ),
+    Link("Solitaire City", "www.solitairecity.com/Alternations.shtml")),
   layout = "swf|::t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(initialCards = InitialCards.Count(7), cardsFaceDown = TableauFaceDownCards.EvenNumbered))
-)
+  tableaus = IndexedSeq(TableauRules(initialCards = InitialCards.Count(7), cardsFaceDown = TableauFaceDownCards.EvenNumbered)))

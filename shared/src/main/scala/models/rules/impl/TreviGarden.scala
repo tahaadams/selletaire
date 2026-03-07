@@ -16,8 +16,5 @@ object TreviGarden extends GameRules(
       name = "Garden",
       numPiles = 6,
       initialCards = InitialCards.Count(6),
-      cardsFaceDown = TableauFaceDownCards.OddNumbered
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2, initialCards = 2))
-)
+      cardsFaceDown = TableauFaceDownCards.OddNumbered)),
+  cells = Some(CellRules(numPiles = 2, initialCards = 2)))

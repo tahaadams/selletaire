@@ -2,7 +2,7 @@ package services.history
 
 import java.sql.Connection
 
-import models.history.{GameHistory, GameStatistics}
+import models.history.{ GameHistory, GameStatistics }
 import models.queries.history.GameStatisticsQueries
 import services.database.Database
 import util.FutureUtils.defaultContext

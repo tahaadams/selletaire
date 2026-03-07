@@ -1,6 +1,6 @@
 package input
 
-import com.definitelyscala.phaser.{Gamepad, SinglePad}
+import com.definitelyscala.phaser.{ Gamepad, SinglePad }
 import phaser.PhaserGame
 import util.PhaserUtils
 

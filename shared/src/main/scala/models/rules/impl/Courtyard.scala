@@ -13,8 +13,7 @@ object Courtyard extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/courtyard.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/courtyard.php"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Courtyard.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/courtyard.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/courtyard.html")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -27,7 +26,4 @@ object Courtyard extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock)))

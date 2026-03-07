@@ -19,7 +19,4 @@ object Bobby extends GameRules(
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpOrDown,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  )
-)
+      autoMoveCards = true)))

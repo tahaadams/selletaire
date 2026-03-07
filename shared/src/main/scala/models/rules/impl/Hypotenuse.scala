@@ -13,15 +13,11 @@ object Hypotenuse extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -36,10 +32,6 @@ object Hypotenuse extends GameRules(
         "DDDU",
         "DDU",
         "DU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

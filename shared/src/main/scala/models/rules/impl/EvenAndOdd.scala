@@ -18,8 +18,7 @@ object EvenAndOdd extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpBy2,
-      maxCards = 7
-    ),
+      maxCards = 7),
     FoundationRules(
       setNumber = 1,
       numPiles = 4,
@@ -27,9 +26,7 @@ object EvenAndOdd extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpBy2,
-      maxCards = 6
-    )
-  ),
+      maxCards = 6)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
@@ -38,8 +35,5 @@ object EvenAndOdd extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 3, initialCards = 6, cardsFaceDown = -1))
-)
+      emptyFilledWith = FillEmptyWith.None)),
+  reserves = Some(ReserveRules(numPiles = 3, initialCards = 6, cardsFaceDown = -1)))

@@ -11,8 +11,7 @@ object Carousel extends GameRules(
   layout = "sw.f|f|f|t",
   deckOptions = DeckOptions(
     numDecks = 2,
-    ranks = Seq(Rank.Two, Rank.Three, Rank.Four, Rank.Five, Rank.Six, Rank.Seven, Rank.Eight, Rank.Nine, Rank.Ten, Rank.Jack, Rank.Queen, Rank.Ace)
-  ),
+    ranks = Seq(Rank.Two, Rank.Three, Rank.Four, Rank.Five, Rank.Six, Rank.Seven, Rank.Eight, Rank.Nine, Rank.Ten, Rank.Jack, Rank.Queen, Rank.Ace)),
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
@@ -21,8 +20,7 @@ object Carousel extends GameRules(
       lowRank = FoundationLowRank.SpecificRank(Rank.Ace),
       suitMatchRule = SuitMatchRule.AlternatingColors,
       rankMatchRule = RankMatchRule.Equal,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Evens Foundation",
       setNumber = 1,
@@ -30,8 +28,7 @@ object Carousel extends GameRules(
       lowRank = FoundationLowRank.SpecificRank(Rank.Two),
       rankMatchRule = RankMatchRule.UpBy2,
       maxCards = 6,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Odds Foundation",
       setNumber = 2,
@@ -39,15 +36,11 @@ object Carousel extends GameRules(
       lowRank = FoundationLowRank.SpecificRank(Rank.Three),
       rankMatchRule = RankMatchRule.UpBy2,
       maxCards = 5,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(TableauRules(
     numPiles = 8,
     initialCards = InitialCards.Count(4),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
-    autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock
-  ))
-)
+    autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock)))

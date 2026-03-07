@@ -3,7 +3,7 @@ package phaser.pile
 import com.definitelyscala.phaser.Pointer
 import models.MC
 import models.game.PossibleMove
-import phaser.card.{CardSprite, CardTweens}
+import phaser.card.{ CardSprite, CardTweens }
 
 object PileDragHelper {
   private[this] def isValidMove(src: PileGroup, tgt: PileGroup) = {

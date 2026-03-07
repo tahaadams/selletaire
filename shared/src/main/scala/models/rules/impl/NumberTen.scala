@@ -14,27 +14,19 @@ object NumberTen extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/number-ten.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/NumberTen.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/number_ten.php"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/number_ten.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/number_ten.htm")),
   layout = "swf|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
-      cardsFaceDown = TableauFaceDownCards.Count(2)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(2))))

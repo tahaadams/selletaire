@@ -9,8 +9,7 @@ object ForeCell extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/forecell.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Forecell.htm"),
-    Link("PySol", "pysolfc.sourceforge.net/doc/rules/forecell.html")
-  ),
+    Link("PySol", "pysolfc.sourceforge.net/doc/rules/forecell.html")),
   layout = "f:c|.t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -19,8 +18,5 @@ object ForeCell extends GameRules(
       initialCards = InitialCards.Count(6),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(initialCards = 4))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(initialCards = 4)))

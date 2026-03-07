@@ -10,16 +10,12 @@ object FarmersWife extends GameRules(
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       suitMatchRule = SuitMatchRule.DifferentSuits,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -34,13 +30,9 @@ object FarmersWife extends GameRules(
         "UUUUU",
         "UUUUU",
         "UUUUU",
-        "UUUUU"
-      ),
+        "UUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

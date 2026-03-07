@@ -1,7 +1,7 @@
 package phaser.pile
 
 import models.pile.set.PileSet
-import phaser.card.{CardSprite, CardTweens}
+import phaser.card.{ CardSprite, CardTweens }
 
 object PileCardHelper {
   def cardAdded(pileGroup: PileGroup, card: CardSprite): Unit = {

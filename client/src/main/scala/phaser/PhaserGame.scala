@@ -10,7 +10,7 @@ import org.scalajs.dom.raw.UIEvent
 import phaser.card.CardImages
 import phaser.gameplay.Gameplay
 import phaser.playmat.Playmat
-import util.{JsUtils, Logging}
+import util.{ JsUtils, Logging }
 
 import scala.scalajs.js
 
@@ -21,8 +21,7 @@ object PhaserGame {
     "renderer" -> Phaser.AUTO,
     "parent" -> "panel-play",
     "transparent" -> true,
-    "resolution" -> dom.window.devicePixelRatio
-  ))
+    "resolution" -> dom.window.devicePixelRatio))
 }
 
 class PhaserGame(gg: SolitaireGG) extends Game(PhaserGame.options) {

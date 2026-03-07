@@ -1,8 +1,8 @@
 package models.test
 
 import models.graphql.GraphQLContext
-import sangria.macros.derive.{DocumentField, IncludeMethods, deriveObjectType}
-import sangria.schema.{Field, fields}
+import sangria.macros.derive.{ DocumentField, IncludeMethods, deriveObjectType }
+import sangria.schema.{ Field, fields }
 
 import scala.util.Random
 
@@ -16,15 +16,12 @@ object TestSchema {
 
   private[this] val mutationType = deriveObjectType[GraphQLContext, TestApi](
     IncludeMethods("solve"),
-    DocumentField("solve", "Attempts to solve the provided game rules, returning the results.")
-  )
+    DocumentField("solve", "Attempts to solve the provided game rules, returning the results."))
 
   val mutationFields = fields[GraphQLContext, Unit](
     Field(
       name = "test",
       fieldType = mutationType,
       description = Some("Allows calling of system tests."),
-      resolve = _ => new TestApi()
-    )
-  )
+      resolve = _ => new TestApi()))
 }

@@ -22,8 +22,7 @@ object Schema extends Logging {
     CreateGameStatisticsTable,
 
     CreateOpensTable,
-    CreateInstallsTable
-  )
+    CreateInstallsTable)
 
   def update() = tables.foldLeft(Future.successful(Unit)) { (f, t) =>
     f.flatMap { _ =>

@@ -7,5 +7,4 @@ case class SpecialRules(
   rotationTopToBottom: Boolean = true,
 
   drawsAllowed: Int = 0,
-  drawsAfterRedeals: Boolean = false
-)
+  drawsAfterRedeals: Boolean = false)

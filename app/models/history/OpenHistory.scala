@@ -10,5 +10,4 @@ case class OpenHistory(
   deviceId: UUID,
   deviceInfo: Seq[String],
   client: String,
-  occurred: LocalDateTime
-)
+  occurred: LocalDateTime)

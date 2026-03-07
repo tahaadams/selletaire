@@ -16,8 +16,5 @@ object Munger extends GameRules(
     TableauRules(
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.OddNumbered,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 7))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  reserves = Some(ReserveRules(initialCards = 7)))

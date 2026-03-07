@@ -13,9 +13,7 @@ object FortressOfMercy extends GameRules(
     FoundationRules(
       numPiles = 4,
       initialCards = 2,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -23,12 +21,7 @@ object FortressOfMercy extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
   special = Some(
     SpecialRules(
-      drawsAllowed = 1
-    )
-  )
-)
+      drawsAllowed = 1)))

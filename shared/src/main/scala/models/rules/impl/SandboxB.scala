@@ -10,6 +10,4 @@ object SandboxB extends GameRules(
   cardRemovalMethod = CardRemovalMethod.BuildSequencesOnFoundation,
 
   waste = Some(WasteRules(
-    cardsShown = 52
-  ))
-)
+    cardsShown = 52)))

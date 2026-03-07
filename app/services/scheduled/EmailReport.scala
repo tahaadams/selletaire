@@ -5,7 +5,7 @@ import models.queries.report.RowCountQueries
 import services.audit.DailyMetricService
 import services.database.Database
 import services.email.EmailService
-import util.{DateUtils, Logging}
+import util.{ DateUtils, Logging }
 import util.FutureUtils.defaultContext
 
 import scala.concurrent.Future

@@ -17,8 +17,7 @@ object AceyAndKingsley extends GameRules(
       name = "Ace Foundation",
       numPiles = 4,
       initialCards = 4,
-      suitMatchRule = SuitMatchRule.Any
-    ),
+      suitMatchRule = SuitMatchRule.Any),
     FoundationRules(
       name = "King Foundation",
       setNumber = 1,
@@ -26,9 +25,7 @@ object AceyAndKingsley extends GameRules(
       lowRank = FoundationLowRank.DeckHighRank,
       initialCards = 4,
       suitMatchRule = SuitMatchRule.Any,
-      rankMatchRule = RankMatchRule.Down
-    )
-  ),
+      rankMatchRule = RankMatchRule.Down)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
@@ -36,8 +33,5 @@ object AceyAndKingsley extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 2, initialCards = 13))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)),
+  reserves = Some(ReserveRules(numPiles = 2, initialCards = 13)))

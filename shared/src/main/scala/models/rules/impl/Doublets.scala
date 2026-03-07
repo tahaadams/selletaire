@@ -13,8 +13,7 @@ object Doublets extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/doublets.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/doublets.php"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/doublet.html"),
-    Link("Elton Gahr on HobbyHub", "www.hobbyhub360.com/index.php/solitaire-how-to-play-doublets-14100/")
-  ),
+    Link("Elton Gahr on HobbyHub", "www.hobbyhub360.com/index.php/solitaire-how-to-play-doublets-14100/")),
   layout = ".:s.:f|t",
   cardRemovalMethod = CardRemovalMethod.RemovePairsOfSameRank,
   stock = Some(StockRules(dealTo = StockDealTo.Never, maximumDeals = Some(1))),
@@ -25,6 +24,4 @@ object Doublets extends GameRules(
     suitMatchRuleForBuilding = SuitMatchRule.None,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
     autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-    emptyFilledWith = FillEmptyWith.None
-  ))
-)
+    emptyFilledWith = FillEmptyWith.None)))

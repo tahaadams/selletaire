@@ -2,15 +2,15 @@ package services.graphql
 
 import io.circe.Json
 import io.circe.parser._
-import models.graphql.{GraphQLContext, Schema}
+import models.graphql.{ GraphQLContext, Schema }
 import models.user.User
-import sangria.execution.{ExceptionHandler, Executor, HandledException}
+import sangria.execution.{ ExceptionHandler, Executor, HandledException }
 import sangria.marshalling.circe._
 import sangria.parser.QueryParser
 import util.Application
 import util.FutureUtils.defaultContext
 
-import scala.util.{Failure, Success}
+import scala.util.{ Failure, Success }
 
 object GraphQLService {
   protected val exceptionHandler = ExceptionHandler {
@@ -28,8 +28,7 @@ object GraphQLService {
         variables = variables.getOrElse(Json.obj()),
         deferredResolver = Schema.resolver,
         exceptionHandler = exceptionHandler,
-        maxQueryDepth = Some(10)
-      )
+        maxQueryDepth = Some(10))
       case Failure(error) => throw error
     }
   }

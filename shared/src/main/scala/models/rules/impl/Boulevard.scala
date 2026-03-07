@@ -17,16 +17,13 @@ object Boulevard extends GameRules(
     FoundationRules(
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      rankMatchRule = RankMatchRule.UpBy2
-    ),
+      rankMatchRule = RankMatchRule.UpBy2),
     FoundationRules(
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.SpecificRank(Rank.Two),
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      rankMatchRule = RankMatchRule.UpBy2
-    )
-  ),
+      rankMatchRule = RankMatchRule.UpBy2)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
@@ -35,8 +32,5 @@ object Boulevard extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 3, initialCards = 6, cardsFaceDown = -1))
-)
+      emptyFilledWith = FillEmptyWith.None)),
+  reserves = Some(ReserveRules(numPiles = 3, initialCards = 6, cardsFaceDown = -1)))

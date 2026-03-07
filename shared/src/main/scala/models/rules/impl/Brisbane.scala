@@ -9,15 +9,12 @@ object Brisbane extends GameRules(
   like = Some("yukon"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/brisbane.htm"),
-    Link("dogMelon", "www.dogmelon.com.au/solhelp/Brisbane%20Solitaire.shtml")
-  ),
+    Link("dogMelon", "www.dogmelon.com.au/solhelp/Brisbane%20Solitaire.shtml")),
   layout = ":.f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -28,13 +25,9 @@ object Brisbane extends GameRules(
         "DDDUUUU",
         "DDDDUUUU",
         "DDDDDUUUU",
-        "DDDDDDUUUU"
-      ),
+        "DDDDDDUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

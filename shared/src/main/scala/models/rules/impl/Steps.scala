@@ -13,25 +13,17 @@ object Steps extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/steps.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Steps.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/steps.php"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/steps.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/steps.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(2)
-    )
-  ),
+      maximumDeals = Some(2))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

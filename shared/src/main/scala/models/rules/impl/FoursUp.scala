@@ -13,24 +13,17 @@ object FoursUp extends GameRules(
   deckOptions = DeckOptions(numDecks = 2, lowRank = Rank.Four),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
       initialCards = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

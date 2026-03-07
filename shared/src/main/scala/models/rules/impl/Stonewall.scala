@@ -12,25 +12,17 @@ object Stonewall extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/stonewall.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/stonewall.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Stonewall.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/stonewall.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/stonewall.php")),
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
       initialCards = InitialCards.Count(6),
-      cardsFaceDown = TableauFaceDownCards.OddNumbered
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.OddNumbered)))

@@ -19,12 +19,9 @@ object YukonKings extends GameRules(
       "DDDUUUUU",
       "DDDDUUUUU",
       "DDDDDUUUUU",
-      "DDDDDDUUUUU"
-    ),
+      "DDDDDDUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     wrap = true,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

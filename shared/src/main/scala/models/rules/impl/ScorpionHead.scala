@@ -19,14 +19,10 @@ object ScorpionHead extends GameRules(
         "DDDDUUU",
         "DDDDUUU",
         "DDDDUUU",
-        "DDDDUUU"
-      ),
+        "DDDDUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules())
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules()))

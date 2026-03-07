@@ -15,8 +15,7 @@ object Storehouse extends GameRules(
     Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/storehouse.htm"),
     Link("Swoop Solitaire", "www.swoopsoftware.com/solitaire_rules/storehouse.html"),
     Link("An 1898 description", "howtoplaysolitaire.blogspot.com/2010/06/storehouse-single-deck-solitaire-game.html"),
-    Link("Jan Wolter's Experiments", "/article/storehouse.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/storehouse.html")),
   layout = "swf|r|t",
   deckOptions = DeckOptions(lowRank = Rank.Two),
   stock = Some(StockRules(maximumDeals = Some(3))),
@@ -29,8 +28,5 @@ object Storehouse extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(name = "Storehouse", initialCards = 13, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(name = "Storehouse", initialCards = 13, cardsFaceDown = -1)))

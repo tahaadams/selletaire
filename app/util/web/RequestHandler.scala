@@ -8,11 +8,17 @@ import play.api.routing.Router
 import util.Logging
 
 class RequestHandler @Inject() (
-    errorHandler: HttpErrorHandler,
-    configuration: HttpConfiguration,
-    filters: HttpFilters,
-    router: Router
-) extends DefaultHttpRequestHandler(router, errorHandler, configuration, filters) with Logging {
+  webCommands: play.core.WebCommands,
+  errorHandler: HttpErrorHandler,
+  configuration: HttpConfiguration,
+  filters: HttpFilters,
+  router: Router) extends DefaultHttpRequestHandler(
+  webCommands,
+  None,
+  () => router,
+  errorHandler,
+  configuration,
+  filters.filters) with Logging {
 
   override def routeRequest(request: RequestHeader) = {
     if (!Option(request.path).exists(_.startsWith("/assets"))) {

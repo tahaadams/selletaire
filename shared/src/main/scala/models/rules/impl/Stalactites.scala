@@ -16,8 +16,7 @@ object Stalactites extends GameRules(
     Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/stalactites.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Stalactites.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/stalactites.htm"),
-    Link("PySol", "pysolfc.sourceforge.net/doc/rules/stalactites.html")
-  ),
+    Link("PySol", "pysolfc.sourceforge.net/doc/rules/stalactites.html")),
   layout = "f::c|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   foundations = IndexedSeq(
@@ -26,9 +25,7 @@ object Stalactites extends GameRules(
       lowRank = FoundationLowRank.AnyCard,
       initialCards = 4,
       suitMatchRule = SuitMatchRule.Any,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -36,8 +33,5 @@ object Stalactites extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2))
-)
+      emptyFilledWith = FillEmptyWith.None)),
+  cells = Some(CellRules(numPiles = 2)))

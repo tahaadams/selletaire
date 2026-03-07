@@ -1,12 +1,12 @@
 package services.email
 
-import models.audit.{Metric, UserFeedback}
+import models.audit.{ Metric, UserFeedback }
 import org.apache.commons.mail.EmailException
 import java.time.LocalDate
 import play.api.i18n.Messages
 import play.api.libs.mailer._
 import services.audit.DailyMetricService
-import util.{Config, DateUtils, Logging}
+import util.{ Config, DateUtils, Logging }
 
 @javax.inject.Singleton
 class EmailService @javax.inject.Inject() (mailerClient: MailerClient, config: Config) extends Logging {

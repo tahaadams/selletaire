@@ -1,7 +1,7 @@
 package models.pile.options
 
 import models.card.Rank
-import models.pile.actions.{DragToActions, SelectCardActions}
+import models.pile.actions.{ DragToActions, SelectCardActions }
 import models.pile.constraints.Constraint
 import models.rules._
 
@@ -21,8 +21,7 @@ object TableauPileOptions extends TableauPileOptionHelper {
       rmr = rules.rankMatchRuleForMovingStacks,
       smr = rules.suitMatchRuleForMovingStacks,
       lowRank = deckOptions.lowRank,
-      wrap = rules.wrap
-    )
+      wrap = rules.wrap)
 
     val requireNonEmptyPiles = if (rules.emptyFilledWith == FillEmptyWith.HighRankUntilStockEmpty) { Seq("stock") } else { Seq.empty }
     val dragToConstraint = dragTo(
@@ -30,8 +29,7 @@ object TableauPileOptions extends TableauPileOptionHelper {
       rules = rules,
       lowRank = deckOptions.lowRank,
       emptyPileRanks = emptyRanks,
-      requireNonEmptyPiles = requireNonEmptyPiles
-    )
+      requireNonEmptyPiles = requireNonEmptyPiles)
 
     val (selectCardConstraint, selectCardAction) = {
       cardRemovalMethod match {
@@ -58,7 +56,6 @@ object TableauPileOptions extends TableauPileOptionHelper {
         case _ => Some(DragToActions.remove())
       },
       selectCardConstraint = selectCardConstraint,
-      selectCardAction = selectCardAction
-    )
+      selectCardAction = selectCardAction)
   }
 }

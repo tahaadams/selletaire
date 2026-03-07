@@ -3,11 +3,11 @@ package services.test
 import java.util.UUID
 
 import models._
-import models.game.{MoveHelper, PossibleMove, RequestMessageHandler, UndoHelper}
+import models.game.{ MoveHelper, PossibleMove, RequestMessageHandler, UndoHelper }
 import models.history.GameHistory
 import models.rules.GameRulesSet
 import models.rules.moves.InitialMoves
-import util.{DateUtils, Logging}
+import util.{ DateUtils, Logging }
 
 import scala.util.Random
 
@@ -91,6 +91,5 @@ case class GameSolver(rules: String, testSeed: Int, gameSeed: Int) extends Loggi
     redos = undoHelper.redoCount,
     created = start,
     firstMove = Some(start),
-    completed = Some(start)
-  )
+    completed = Some(start))
 }

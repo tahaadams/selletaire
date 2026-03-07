@@ -15,6 +15,4 @@ object Dnieper extends GameRules(
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     wrap = true,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-    rankMatchRuleForMovingStacks = RankMatchRule.Any
-  ))
-)
+    rankMatchRuleForMovingStacks = RankMatchRule.Any)))

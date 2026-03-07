@@ -1,7 +1,7 @@
 package services.wiki.template
 
 import models.card.Rank
-import models.rules.{FillEmptyWith, RankMatchRule, SuitMatchRule}
+import models.rules.{ FillEmptyWith, RankMatchRule, SuitMatchRule }
 import services.wiki.WikiService.messages
 
 object WikiMatchRule {

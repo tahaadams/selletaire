@@ -1,6 +1,6 @@
 package services.wiki.template
 
-import models.rules.{CardRemovalMethod, GameRules, VictoryCondition}
+import models.rules.{ CardRemovalMethod, GameRules, VictoryCondition }
 import services.wiki.WikiService.messages
 
 object WikiObjective {

@@ -24,8 +24,5 @@ object Colonel extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
       mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 11))
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)),
+  reserves = Some(ReserveRules(initialCards = 11)))

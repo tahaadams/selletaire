@@ -5,7 +5,7 @@ import sangria.marshalling.DateSupport
 import sangria.schema._
 import sangria.validation.ValueCoercionViolation
 
-import scala.util.{Failure, Success, Try}
+import scala.util.{ Failure, Success, Try }
 
 object DateTimeSchema {
   case object LocalDateTimeCoercionViolation extends ValueCoercionViolation("Date/time value expected in format [yyyy-MM-dd HH:mm:ss].")
@@ -34,10 +34,9 @@ object DateTimeSchema {
       case _ => Left(LocalDateTimeCoercionViolation)
     },
     coerceInput = {
-      case sangria.ast.StringValue(s, _, _) => parseLocalDateTime(s)
+      case sangria.ast.StringValue(s, _, _, _, _) => parseLocalDateTime(s)
       case _ => Left(LocalDateTimeCoercionViolation)
-    }
-  )
+    })
 
   private[this] def parseLocalDate(s: String) = Try(LocalDate.parse(s, fmtLocalDate)) match {
     case Success(date) => Right(date)
@@ -57,10 +56,9 @@ object DateTimeSchema {
       case _ => Left(LocalDateCoercionViolation)
     },
     coerceInput = {
-      case sangria.ast.StringValue(s, _, _) => parseLocalDate(s)
+      case sangria.ast.StringValue(s, _, _, _, _) => parseLocalDate(s)
       case _ => Left(LocalDateCoercionViolation)
-    }
-  )
+    })
 
   private[this] def parseLocalTime(s: String) = Try(LocalTime.parse(s, fmtLocalTime)) match {
     case Success(date) => Right(date)
@@ -76,8 +74,7 @@ object DateTimeSchema {
       case _ => Left(LocalDateCoercionViolation)
     },
     coerceInput = {
-      case sangria.ast.StringValue(s, _, _) => parseLocalTime(s)
+      case sangria.ast.StringValue(s, _, _, _, _) => parseLocalTime(s)
       case _ => Left(LocalDateCoercionViolation)
-    }
-  )
+    })
 }

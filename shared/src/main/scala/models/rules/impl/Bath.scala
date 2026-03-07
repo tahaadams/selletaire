@@ -8,8 +8,7 @@ object Bath extends GameRules(
   title = "Bath",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/bath.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/bath.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/bath.html")),
   layout = "f|c|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -26,12 +25,8 @@ object Bath extends GameRules(
         "UUUUUUU",
         "UUUUUUUU",
         "UUUUUUUU",
-        "UUUUUUUU"
-      ),
+        "UUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(numPiles = 2)))

@@ -13,8 +13,7 @@ object SimpleSimon extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/simple-simon.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SimpleSimon.htm"),
     Link("Solitaire Whizz", "www.solitairewhizz.com/how-to-play/simple-simon.shtml"),
-    Link("kPatience", "docs.kde.org/stable/en/kdegames/kpat/rules-specific.html#simple-simon")
-  ),
+    Link("kPatience", "docs.kde.org/stable/en/kdegames/kpat/rules-specific.html#simple-simon")),
   layout = "f|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   foundations = IndexedSeq(
@@ -22,9 +21,7 @@ object SimpleSimon extends GameRules(
       numPiles = 4,
       moveCompleteSequencesOnly = true,
       canMoveFrom = FoundationCanMoveFrom.Never,
-      visible = false
-    )
-  ),
+      visible = false)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -39,11 +36,7 @@ object SimpleSimon extends GameRules(
         "UUUU",
         "UUU",
         "UU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

@@ -34,8 +34,7 @@ object WikiFoundationPiles {
             "help.piles.multiple.cards.multiple",
             WikiService.numberAsString(x, properCase = true),
             loweredName,
-            WikiService.numberAsString(rules.initialCards)
-          )
+            WikiService.numberAsString(rules.initialCards))
         }
       }
     }

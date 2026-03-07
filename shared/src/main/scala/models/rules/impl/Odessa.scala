@@ -12,9 +12,7 @@ object Odessa extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -25,13 +23,9 @@ object Odessa extends GameRules(
         "DDDUUUUU",
         "DDDUUUUU",
         "DDDUUUUU",
-        "DDDUUU"
-      ),
+        "DDDUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

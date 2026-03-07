@@ -19,8 +19,5 @@ object ChineseFreeCell extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules())
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules()))

@@ -17,8 +17,7 @@ object Crescent extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/crescent.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Crescent.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/crescent.htm"),
-    Link("Lena Games", "www.lenagames.com/bp_files/rul/crescent.htm")
-  ),
+    Link("Lena Games", "www.lenagames.com/bp_files/rul/crescent.htm")),
   layout = "::f::::f|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(
@@ -27,8 +26,7 @@ object Crescent extends GameRules(
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Kings Foundation",
       setNumber = 1,
@@ -37,9 +35,7 @@ object Crescent extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -50,8 +46,5 @@ object Crescent extends GameRules(
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Tableau)
-    )
-  ),
-  special = Some(SpecialRules(rotationsAllowed = 3, rotationTopToBottom = false))
-)
+      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Tableau))),
+  special = Some(SpecialRules(rotationsAllowed = 3, rotationTopToBottom = false)))

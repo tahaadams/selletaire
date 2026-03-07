@@ -15,8 +15,7 @@ object Colorado extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/colorado.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/colorado.php"),
     Link("dogMelon", "www.dogmelon.com.au/solhelp/Colorado.shtml"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/colorado.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/colorado.htm")),
   layout = "sff|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Manually, maximumDeals = Some(1))),
@@ -25,8 +24,7 @@ object Colorado extends GameRules(
       name = "Aces Foundation",
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Kings Foundation",
       setNumber = 1,
@@ -34,9 +32,7 @@ object Colorado extends GameRules(
       lowRank = FoundationLowRank.DeckHighRank,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 20,
@@ -47,7 +43,4 @@ object Colorado extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
       emptyFilledWith = FillEmptyWith.None,
-      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  )
-)
+      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock))))

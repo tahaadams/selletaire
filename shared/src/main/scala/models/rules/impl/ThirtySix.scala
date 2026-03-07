@@ -12,28 +12,20 @@ object ThirtySix extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/thirty-six.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/thirty-six.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ThirtySix.htm"),
-    Link("Jan Wolter's Experiments", "/article/thirtysix.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/thirtysix.html")),
   layout = "swf|.t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
       initialCards = InitialCards.Count(6),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

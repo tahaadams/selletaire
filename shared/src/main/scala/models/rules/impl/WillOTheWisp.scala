@@ -15,14 +15,11 @@ object WillOTheWisp extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/will_o_the_wisp.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/will_o_the_wisp.php"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Will_O_The_Wisp.html.en"),
-    Link("L. Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-will-o-the-wisp-solitaire-14333/")
-  ),
+    Link("L. Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-will-o-the-wisp-solitaire-14333/")),
   layout = "sf|t",
   stock = Some(StockRules(dealTo = StockDealTo.TableauIfNoneEmpty, maximumDeals = Some(1))),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(TableauRules(
     initialCards = InitialCards.Count(3),
     suitMatchRuleForBuilding = SuitMatchRule.Any,
-    suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-  ))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

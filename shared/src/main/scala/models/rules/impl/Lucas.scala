@@ -15,29 +15,21 @@ object Lucas extends GameRules(
     Link("Erik Arneson on About.com", "boardgames.about.com/od/solitaire/a/Forty-Thieves.htm"),
     Link("Solitaire Central", "www.solitairecentral.com/rules/Lucas.html"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/lucas.html"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/lucas.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/lucas.htm")),
   layout = "sw:.f|t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
       initialCards = InitialCards.Count(3),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

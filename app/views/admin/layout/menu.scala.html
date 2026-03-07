@@ -27,7 +27,7 @@
     <li @if(section == "tests") { class="active" }>
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Tests <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
-        <li><a href="@controllers.admin.routes.TestController.tests()">Overview</a></li>
+        <li><a href="@controllers.admin.routes.TestController.tests">Overview</a></li>
         <li class="divider"></li>
         <li><a href="@controllers.admin.routes.TestController.runTest("all")">All Tests</a></li>
         <li><a href="@controllers.admin.routes.TestController.runTest("rules")">Rules Tests</a></li>

@@ -1,11 +1,11 @@
 package services.audit
 
-import models.audit.{DailyMetric, Metric}
+import models.audit.{ DailyMetric, Metric }
 import models.queries.audit.DailyMetricQueries
 import java.time.LocalDate
 import util.FutureUtils.defaultContext
 import services.database.Database
-import util.{DateUtils, Logging}
+import util.{ DateUtils, Logging }
 
 import scala.concurrent.Future
 

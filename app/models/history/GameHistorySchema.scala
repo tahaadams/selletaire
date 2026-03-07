@@ -2,14 +2,14 @@ package models.history
 
 import java.util.UUID
 
-import models.graphql.{CommonSchema, GraphQLContext}
+import models.graphql.{ CommonSchema, GraphQLContext }
 import models.graphql.CommonSchema.uuidType
 import models.graphql.DateTimeSchema.localDateTimeType
 import models.user.UserSchema
-import sangria.execution.deferred.{Fetcher, HasId, Relation}
+import sangria.execution.deferred.{ Fetcher, HasId, Relation }
 import sangria.macros.derive._
 import sangria.schema._
-import services.history.{GameHistoryService, GameSeedService}
+import services.history.{ GameHistoryService, GameSeedService }
 
 object GameHistorySchema {
   implicit val gameStatusEnum = CommonSchema.deriveStringEnumeratumType(name = "GameStatus", values = GameHistory.Status.values)
@@ -19,8 +19,7 @@ object GameHistorySchema {
   val gameHistoryByPlayer = Relation[GameHistory, UUID]("byPlayer", h => Seq(h.player))
   val gameHistoryByPlayerFetcher = Fetcher.rel[GraphQLContext, GameHistory, GameHistory, UUID](
     (_, ids) => GameHistoryService.getByIds(ids),
-    (_, rels) => GameHistoryService.getByPlayers(rels(gameHistoryByPlayer))
-  )
+    (_, rels) => GameHistoryService.getByPlayers(rels(gameHistoryByPlayer)))
 
   implicit val gameHistoryType: OutputType[GameHistory] = deriveObjectType[GraphQLContext, GameHistory](
     ObjectTypeDescription("An instance of a game, played at some point."),
@@ -31,16 +30,12 @@ object GameHistorySchema {
         name = "seed",
         fieldType = OptionType(GameSeedSchema.gameSeedType),
         description = Some("The seed record associated with this game."),
-        resolve = ctx => GameSeedService.getGameSeed(ctx.value.rules, ctx.value.seed)
-      ),
+        resolve = ctx => GameSeedService.getGameSeed(ctx.value.rules, ctx.value.seed)),
       Field(
         name = "player",
         fieldType = OptionType(UserSchema.userType),
         description = Some("The player responsible for this game."),
-        resolve = ctx => UserSchema.userFetcherById.defer(ctx.value.player)
-      )
-    )
-  )
+        resolve = ctx => UserSchema.userFetcherById.defer(ctx.value.player))))
 
   val queryFields = fields[GraphQLContext, Unit](Field(
     name = "games",
@@ -50,8 +45,7 @@ object GameHistorySchema {
     resolve = c => c.arg(CommonSchema.queryArg) match {
       case Some(q) => GameHistoryService.search(q, c.arg(CommonSchema.limitArg), c.arg(CommonSchema.offsetArg))
       case _ => GameHistoryService.getAll(c.arg(CommonSchema.limitArg), c.arg(CommonSchema.offsetArg))
-    }
-  ))
+    }))
 
   class GameHistoryApi() {
     def remove(id: Option[UUID], email: Option[String]) = "TODO"
@@ -59,13 +53,11 @@ object GameHistorySchema {
 
   val mutationType = deriveObjectType[GraphQLContext, GameHistoryApi](
     IncludeMethods("remove"),
-    DocumentField("remove", "Removes a game history from the system.")
-  )
+    DocumentField("remove", "Removes a game history from the system."))
 
   val mutationFields = fields[GraphQLContext, Unit](Field(
     name = "games",
     fieldType = mutationType,
     description = Some("Allows mutation and removal of recorded games."),
-    resolve = _ => new GameHistoryApi()
-  ))
+    resolve = _ => new GameHistoryApi()))
 }

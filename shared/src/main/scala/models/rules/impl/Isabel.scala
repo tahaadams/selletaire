@@ -14,9 +14,7 @@ object Isabel extends GameRules(
       numPiles = 4,
       lowRank = FoundationLowRank.AnyCard,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
@@ -24,7 +22,4 @@ object Isabel extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

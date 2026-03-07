@@ -15,8 +15,5 @@ object EphemeralFreeCell extends GameRules(
       numPiles = 8,
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules(numEphemeral = 1))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(numEphemeral = 1)))

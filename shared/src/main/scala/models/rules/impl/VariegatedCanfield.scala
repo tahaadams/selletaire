@@ -13,8 +13,7 @@ object VariegatedCanfield extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/variegated_canfield.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/variegated-canfield.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/VariegatedCanfield.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/canfield/variegated_canfield.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/canfield/variegated_canfield.htm")),
   layout = "swf|r|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(3), cardsDealt = StockCardsDealt.Count(3))),
@@ -25,8 +24,5 @@ object VariegatedCanfield extends GameRules(
       numPiles = 5,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1)))

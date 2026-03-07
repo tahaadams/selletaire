@@ -14,8 +14,7 @@ object Dieppe extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/dieppe.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/dieppe.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Dieppe.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/dieppe.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/dieppe.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -28,7 +27,4 @@ object Dieppe extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)))

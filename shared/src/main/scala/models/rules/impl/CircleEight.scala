@@ -21,7 +21,4 @@ object CircleEight extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Up,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Waste)
-    )
-  )
-)
+      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Waste))))

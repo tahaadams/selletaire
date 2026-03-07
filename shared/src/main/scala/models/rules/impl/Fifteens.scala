@@ -14,24 +14,19 @@ object Fifteens extends GameRules(
     Link("Solitaire Central", "www.solitairecentral.com/rules/Fifteens.html"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Fifteens.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/fifteens.php"),
-    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/fifteens.htm")
-  ),
+    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/fifteens.htm")),
   layout = ":::::s:f|t",
   cardRemovalMethod = CardRemovalMethod.RemoveSetsAddingToFifteenOrFour10JQK,
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       lowRank = FoundationLowRank.AnyCard,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -40,7 +35,4 @@ object Fifteens extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

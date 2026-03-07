@@ -60,5 +60,4 @@ case class TableauRules(
   maxCards: Int = 0,
   actionDuringDeal: PileAction = PileAction.None,
   actionAfterDeal: PileAction = PileAction.None,
-  pilesWithLowCardsAtBottom: Int = 0
-)
+  pilesWithLowCardsAtBottom: Int = 0)

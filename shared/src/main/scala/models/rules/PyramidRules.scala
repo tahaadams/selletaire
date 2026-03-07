@@ -34,5 +34,4 @@ case class PyramidRules(
 
   mayMoveToNonEmptyFrom: Seq[PileSet.Behavior] = PileSet.Behavior.values,
   mayMoveToEmptyFrom: Seq[PileSet.Behavior] = PileSet.Behavior.values,
-  emptyFilledWith: FillEmptyWith = FillEmptyWith.None
-)
+  emptyFilledWith: FillEmptyWith = FillEmptyWith.None)

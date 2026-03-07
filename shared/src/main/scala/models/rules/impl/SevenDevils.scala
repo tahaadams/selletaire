@@ -13,5 +13,4 @@ object SevenDevils extends GameRules(
   waste = Some(WasteRules()),
   reserves = Some(ReserveRules(initialCards = 13)),
   foundations = IndexedSeq(FoundationRules(numPiles = 8)),
-  tableaus = IndexedSeq(TableauRules(emptyFilledWith = FillEmptyWith.HighRank))
-)
+  tableaus = IndexedSeq(TableauRules(emptyFilledWith = FillEmptyWith.HighRank)))

@@ -1,17 +1,16 @@
 package phaser.playmat
 
 import com.definitelyscala.phaser.Group
-import models.{GameLost, GameWon}
+import models.{ GameLost, GameWon }
 import models.pile.set.PileSet
 import phaser.PhaserGame
 import phaser.card.CardSprite
 import phaser.gameplay.HighlightService
 import phaser.pile.PileGroup
-import util.{Logging, NullUtils}
+import util.{ Logging, NullUtils }
 
 class Playmat(val phaser: PhaserGame, val pileSets: IndexedSeq[PileSet], val layoutString: String) extends Group(
-  game = phaser, parent = NullUtils.inst, name = "playmat"
-) {
+  game = phaser, parent = NullUtils.inst, name = "playmat") {
   var w: Double = 0.0
   var h: Double = 0.0
 

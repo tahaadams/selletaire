@@ -10,8 +10,7 @@ object Eighteens extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/eighteens.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/eighteens.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Eighteens.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Eighteens.htm")),
   layout = "s:::f|t",
   cardRemovalMethod = CardRemovalMethod.RemoveSetsOfOneFaceCardAnd3ThatAddToEighteen,
   stock = Some(StockRules(dealTo = StockDealTo.Never, maximumDeals = Some(1))),
@@ -23,6 +22,4 @@ object Eighteens extends GameRules(
     suitMatchRuleForBuilding = SuitMatchRule.None,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
     autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-    emptyFilledWith = FillEmptyWith.None
-  ))
-)
+    emptyFilledWith = FillEmptyWith.None)))

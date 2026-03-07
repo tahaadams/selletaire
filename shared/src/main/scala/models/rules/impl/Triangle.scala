@@ -15,28 +15,19 @@ object Triangle extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.WasteOrPairManually,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(
     WasteRules(
-      numPiles = 2
-    )
-  ),
+      numPiles = 2)),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   pyramids = IndexedSeq(
     PyramidRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

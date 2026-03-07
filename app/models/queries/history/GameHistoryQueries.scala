@@ -3,7 +3,7 @@ package models.queries.history
 import java.util.UUID
 
 import models.queries.BaseQueries
-import models.database.{Query, Row, Statement}
+import models.database.{ Query, Row, Statement }
 import models.history.GameHistory
 import java.time.LocalDate
 
@@ -14,8 +14,7 @@ object GameHistoryQueries extends BaseQueries[GameHistory] {
   override protected val columns = Seq(
     "id", "rules", "seed", "status", "player",
     "cards", "moves", "undos", "redos", "score",
-    "created", "first_move", "completed"
-  )
+    "created", "first_move", "completed")
   override protected val searchColumns = Seq("id::text", "rules", "seed::text", "status", "player::text")
 
   def getById(id: UUID) = getBySingleId(id)
@@ -49,14 +48,12 @@ object GameHistoryQueries extends BaseQueries[GameHistory] {
 
   case class GetByUser(userId: UUID, limit: Option[Int], offset: Option[Int]) extends SeqQuery(
     additionalSql = s"where player = ? order by created desc${limit.map(" limit " + _).getOrElse("")}${offset.map(" offset " + _).getOrElse("")}",
-    values = Seq(userId)
-  )
+    values = Seq(userId))
   case class GetByUserIds(userIds: Seq[UUID]) extends SeqQuery(s"where player in (${userIds.map(_ => "?").mkString(", ")})", userIds)
 
   case class GetBySeed(rules: String, seed: Int, limit: Option[Int], offset: Option[Int]) extends SeqQuery(
     additionalSql = s"where rules = ? and seed = ? order by created desc${limit.map(" limit " + _).getOrElse("")}${offset.map(" offset " + _).getOrElse("")}",
-    values = Seq(rules, seed)
-  )
+    values = Seq(rules, seed))
 
   override protected def fromRow(row: Row) = {
     val id = row.as[UUID]("id")
@@ -76,6 +73,5 @@ object GameHistoryQueries extends BaseQueries[GameHistory] {
   }
 
   override protected def toDataSeq(gh: GameHistory) = Seq[Any](
-    gh.id, gh.rules, gh.seed, gh.status.value, gh.player, gh.cards, gh.moves, gh.undos, gh.redos, gh.score, gh.created, gh.firstMove, gh.completed
-  )
+    gh.id, gh.rules, gh.seed, gh.status.value, gh.player, gh.cards, gh.moves, gh.undos, gh.redos, gh.score, gh.created, gh.firstMove, gh.completed)
 }

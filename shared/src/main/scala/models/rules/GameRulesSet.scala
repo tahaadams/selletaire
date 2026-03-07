@@ -557,7 +557,6 @@ object GameRulesSet {
     YukonicPlague,
     YukonKings,
     YukonOneSuit,
-    Zerline
-  )
+    Zerline)
 }
 // scalastyle:on

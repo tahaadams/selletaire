@@ -3,10 +3,10 @@ package services.database
 import java.sql.Connection
 import java.util.Properties
 
-import com.zaxxer.hikari.{HikariConfig, HikariDataSource}
+import com.zaxxer.hikari.{ HikariConfig, HikariDataSource }
 import io.prometheus.client.Histogram
 import models.database.jdbc.Queryable
-import models.database.{DatabaseConfig, RawQuery, Statement}
+import models.database.{ DatabaseConfig, RawQuery, Statement }
 
 import scala.concurrent.Future
 import scala.util.control.NonFatal
@@ -14,8 +14,7 @@ import scala.util.control.NonFatal
 abstract class JdbcDatabase(override val key: String, configPrefix: String) extends Database[Connection] with Queryable {
   protected[this] lazy val sqlHistogram = Histogram.build(
     s"${util.Config.projectId}_${key}_database",
-    s"Database metrics for [$key]."
-  ).labelNames("method", "name").register()
+    s"Database metrics for [$key].").labelNames("method", "name").register()
 
   private[this] def time[A](method: String, name: String)(f: => A) = {
     val ctx = sqlHistogram.labels(method, name).startTimer()

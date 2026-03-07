@@ -18,7 +18,4 @@ object BarricadeA extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

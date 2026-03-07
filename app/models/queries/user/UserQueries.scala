@@ -3,7 +3,7 @@ package models.queries.user
 import java.util.UUID
 
 import models.queries.BaseQueries
-import models.database.{FlatSingleRowQuery, Row, SingleRowQuery, Statement}
+import models.database.{ FlatSingleRowQuery, Row, SingleRowQuery, Statement }
 import models.settings.Settings
 import models.user.User
 import java.time.LocalDateTime

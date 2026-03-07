@@ -11,18 +11,14 @@ object Links extends GameRules(
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToThirteenOrK,
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -33,12 +29,8 @@ object Links extends GameRules(
         "UUUUU",
         "UUUUU",
         "UUUUU",
-        "UUUU"
-      ),
+        "UUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

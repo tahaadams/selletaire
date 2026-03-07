@@ -1,6 +1,6 @@
 package models.pile.options
 
-import models.card.{Card, Rank}
+import models.card.{ Card, Rank }
 import models.pile.constraints.Constraint
 import models.rules._
 
@@ -38,8 +38,7 @@ trait TableauPileOptionHelper {
     rules: TableauRules,
     lowRank: Rank,
     emptyPileRanks: Seq[Rank],
-    requireNonEmptyPiles: Seq[String]
-  ) = {
+    requireNonEmptyPiles: Seq[String]) = {
     val rmr = rules.rankMatchRuleForBuilding
     val smr = rules.suitMatchRuleForBuilding
 

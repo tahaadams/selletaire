@@ -14,5 +14,4 @@ case class WasteRules(
   numPiles: Int = 1,
   cardsShown: Int = 3,
   maxCards: Option[Int] = None,
-  playableCards: WastePlayableCards = WastePlayableCards.TopCardOnly
-)
+  playableCards: WastePlayableCards = WastePlayableCards.TopCardOnly)

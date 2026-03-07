@@ -14,8 +14,7 @@ object BlockTen extends GameRules(
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Block_Ten.html.en"),
     Link("Erik Arnesson on About.com", "boardgames.about.com/od/solitaire/a/block_ten.htm"),
     Link("L. Schaffer on HobbyHow", "www.hobbyhub360.com/index.php/how-to-play-block-ten-solitaire-14362/"),
-    Link("Jan Wolter's Experiments", "/article/simplepairs.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/simplepairs.html")),
   layout = "sf|t",
   victoryCondition = VictoryCondition.AllButFourCardsOnFoundation,
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToTenOr10JQK,
@@ -29,7 +28,4 @@ object BlockTen extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

@@ -13,8 +13,7 @@ object BuffaloBill extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/buffalo_bill.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/buffalo-bill.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/buffalo_bill.html"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/BuffaloBill.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/BuffaloBill.htm")),
   layout = ":.f::f|::.c|2t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(
@@ -22,8 +21,7 @@ object BuffaloBill extends GameRules(
       name = "Aces Foundation",
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Kings Foundation",
       setNumber = 1,
@@ -31,9 +29,7 @@ object BuffaloBill extends GameRules(
       lowRank = FoundationLowRank.DeckHighRank,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Fan",
@@ -43,8 +39,5 @@ object BuffaloBill extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
-  cells = Some(CellRules(name = "Reserve", pluralName = "Reserve", numPiles = 8))
-)
+      emptyFilledWith = FillEmptyWith.None)),
+  cells = Some(CellRules(name = "Reserve", pluralName = "Reserve", numPiles = 8)))

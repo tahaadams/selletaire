@@ -21,7 +21,4 @@ object BrownRecluse extends GameRules(
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

@@ -2,7 +2,7 @@ package settings
 
 import models.settings._
 import org.scalajs.dom
-import org.scalajs.jquery.{JQueryEventObject, jQuery => $}
+import org.scalajs.jquery.{ JQueryEventObject, jQuery => $ }
 import util.TemplateUtils
 
 import scala.scalajs.js

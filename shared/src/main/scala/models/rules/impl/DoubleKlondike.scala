@@ -11,12 +11,10 @@ object DoubleKlondike extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/double_klondike.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/double_klondike.htm"),
     Link("Dan Fletcher's How To Play", "www.solitairecentral.com/articles/HowToPlayDoubleKlondike.html"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Jumbo.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Jumbo.html.en")),
   layout = "swf|:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 9, emptyFilledWith = FillEmptyWith.HighRank))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 9, emptyFilledWith = FillEmptyWith.HighRank)))

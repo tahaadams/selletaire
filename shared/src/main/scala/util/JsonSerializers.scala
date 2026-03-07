@@ -16,7 +16,7 @@ object JsonSerializers {
     case Right(x) => x
     case Left(_) => Settings.default
   }
-  def writeSettings(s: Settings, indent: Boolean = true) = if(indent) { s.asJson.spaces2 } else { s.asJson.noSpaces }
+  def writeSettings(s: Settings, indent: Boolean = true) = if (indent) { s.asJson.spaces2 } else { s.asJson.noSpaces }
 
   def writeRules(rules: GameRules) = rules.asJson.spaces2
 

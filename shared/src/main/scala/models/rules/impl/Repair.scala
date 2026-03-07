@@ -8,8 +8,7 @@ object Repair extends GameRules(
   title = "Repair",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/repair.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Repair.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Repair.htm")),
   layout = "f|c|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
@@ -18,8 +17,5 @@ object Repair extends GameRules(
       numPiles = 10,
       initialCards = InitialCards.Count(10),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules(initialCards = 4))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(initialCards = 4)))

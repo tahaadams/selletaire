@@ -11,20 +11,13 @@ object Phoenix extends GameRules(
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
       initialCards = InitialCards.Count(6),
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

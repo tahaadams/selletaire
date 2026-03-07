@@ -7,7 +7,7 @@ object GameStateDebug {
   def compare(l: GameState, r: GameState) = {
     val ret = new StringBuffer()
     def log(s: String) = ret.append(s + "\n")
-    def check(k: String, l: Any, r: Any): Unit = if(l != r) { log(s"$k [$l] does not match [$r].") }
+    def check(k: String, l: Any, r: Any): Unit = if (l != r) { log(s"$k [$l] does not match [$r].") }
     def checkSeq(k: String, l: Seq[Any], r: Seq[Any]) = l.zip(r).zipWithIndex.foreach(x => check(k + ":" + x._2, x._1._1, x._1._2))
     check("ID", l.gameId, r.gameId)
     check("Deck Size", l.deck.cards.size, r.deck.cards.size)

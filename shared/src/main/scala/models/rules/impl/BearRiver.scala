@@ -19,8 +19,7 @@ object BearRiver extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      maxCards = 3
-    ),
+      maxCards = 3),
     TableauRules(
       name = "Hole",
       setNumber = 1,
@@ -30,8 +29,7 @@ object BearRiver extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      maxCards = 3
-    ),
+      maxCards = 3),
     TableauRules(
       numPiles = 5,
       initialCards = InitialCards.Count(3),
@@ -40,8 +38,7 @@ object BearRiver extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      maxCards = 3
-    ),
+      maxCards = 3),
     TableauRules(
       name = "Hole",
       setNumber = 1,
@@ -51,8 +48,7 @@ object BearRiver extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      maxCards = 3
-    ),
+      maxCards = 3),
     TableauRules(
       numPiles = 5,
       initialCards = InitialCards.Count(3),
@@ -61,8 +57,7 @@ object BearRiver extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      maxCards = 3
-    ),
+      maxCards = 3),
     TableauRules(
       name = "Hole",
       setNumber = 1,
@@ -72,7 +67,4 @@ object BearRiver extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      maxCards = 3
-    )
-  )
-)
+      maxCards = 3)))

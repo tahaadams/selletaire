@@ -11,14 +11,11 @@ object Robert extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/robert.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/robert.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/robert.htm"),
-    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/robert.htm")
-  ),
+    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/robert.htm")),
   layout = "swf",
   stock = Some(
     StockRules(
-      maximumDeals = Some(3)
-    )
-  ),
+      maximumDeals = Some(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
@@ -27,7 +24,4 @@ object Robert extends GameRules(
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpOrDown,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  )
-)
+      autoMoveCards = true)))

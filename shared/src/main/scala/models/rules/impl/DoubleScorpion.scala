@@ -8,8 +8,7 @@ object DoubleScorpion extends GameRules(
   title = "Double Scorpion",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/double_scorpion.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/double-scorpion.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/double-scorpion.htm")),
   layout = "f|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, moveCompleteSequencesOnly = true, canMoveFrom = FoundationCanMoveFrom.Never, visible = false)),
@@ -26,12 +25,9 @@ object DoubleScorpion extends GameRules(
       "UUUUUUUUUU",
       "UUUUUUUUUU",
       "UUUUUUUUUU",
-      "UUUUUUUUUU"
-    ),
+      "UUUUUUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

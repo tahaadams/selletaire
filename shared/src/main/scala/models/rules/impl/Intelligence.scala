@@ -15,22 +15,17 @@ object Intelligence extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/intelligence.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/intelligence.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Intelligence.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/intelligence.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/intelligence.html")),
   layout = "s::::f|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 18,
@@ -41,12 +36,7 @@ object Intelligence extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveToEmptyFoundationAndReplace
-    )
-  ),
+      actionDuringDeal = PileAction.MoveToEmptyFoundationAndReplace)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

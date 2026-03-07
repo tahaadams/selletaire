@@ -12,5 +12,4 @@ object FairMaids extends GameRules(
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   stock = Some(StockRules(dealTo = StockDealTo.TableauNonEmpty, maximumDeals = Some(1))),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, suitMatchRule = SuitMatchRule.AlternatingColors, moveCompleteSequencesOnly = true)),
-  tableaus = IndexedSeq(TableauRules(initialCards = InitialCards.Count(4), suitMatchRuleForBuilding = SuitMatchRule.Any))
-)
+  tableaus = IndexedSeq(TableauRules(initialCards = InitialCards.Count(4), suitMatchRuleForBuilding = SuitMatchRule.Any)))

@@ -13,10 +13,9 @@ import util.web.MessageFrameFormatter
 
 @javax.inject.Singleton
 class SolitaireController @javax.inject.Inject() (
-    override val app: Application,
-    implicit val system: ActorSystem,
-    implicit val materializer: Materializer
-) extends BaseController {
+  override val app: Application,
+  implicit val system: ActorSystem,
+  implicit val materializer: Materializer) extends BaseController {
   private[this] implicit val t = new MessageFrameFormatter(app.config.debug).transformer
 
   def start() = startArgs("")

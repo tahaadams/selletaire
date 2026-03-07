@@ -33,5 +33,4 @@ case class StockRules(
   cardsDealt: StockCardsDealt = StockCardsDealt.Count(1),
   stopAfterPartialDeal: Boolean = true,
   createPocketWhenEmpty: Boolean = false,
-  galleryMode: Boolean = false
-)
+  galleryMode: Boolean = false)

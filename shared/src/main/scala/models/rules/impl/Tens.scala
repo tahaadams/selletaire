@@ -14,22 +14,17 @@ object Tens extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Tens.htm"),
     Link("tiffehr on eHow.com", "www.ehow.com/how_2000644_play-tens-solitaire.html"),
     Link("Erik Arneson on About.com", "boardgames.about.com/od/solitaire/a/tens.htm"),
-    Link("Jan Wolter's Experiments", "/article/simplepairs.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/simplepairs.html")),
   layout = "sf|t",
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToTenOrFour10JQK,
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
@@ -38,7 +33,4 @@ object Tens extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

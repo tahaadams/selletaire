@@ -1,7 +1,7 @@
 package phaser.card
 
 import com.definitelyscala.phaser.Image
-import models.card.{Rank, Suit}
+import models.card.{ Rank, Suit }
 import models.settings.Settings
 import phaser.PhaserGame
 

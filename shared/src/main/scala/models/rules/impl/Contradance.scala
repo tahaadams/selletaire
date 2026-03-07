@@ -10,8 +10,7 @@ object Contradance extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/contradance.htm"),
     Link("Wikipedia", "en.wikipedia.org/wiki/Contradance_(solitaire)"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/contradance.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/contradance.htm")),
   layout = "swff",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(2))),
@@ -22,14 +21,10 @@ object Contradance extends GameRules(
       lowRank = FoundationLowRank.SpecificRank(Rank.Five),
       rankMatchRule = RankMatchRule.Down,
       maxCards = 6,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       setNumber = 1,
       numPiles = 8,
       lowRank = FoundationLowRank.SpecificRank(Rank.Six),
       maxCards = 7,
-      autoMoveCards = true
-    )
-  )
-)
+      autoMoveCards = true)))

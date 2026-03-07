@@ -12,26 +12,21 @@ object Penta extends GameRules(
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       name = "Left Foundation",
       numPiles = 4,
       lowRank = FoundationLowRank.SpecificRank(Rank.Five),
-      suitMatchRule = SuitMatchRule.Any
-    ),
+      suitMatchRule = SuitMatchRule.Any),
     FoundationRules(
       name = "Right Foundation",
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.SpecificRank(Rank.Five),
       suitMatchRule = SuitMatchRule.Any,
-      rankMatchRule = RankMatchRule.Down
-    )
-  ),
+      rankMatchRule = RankMatchRule.Down)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Left Tableau",
@@ -40,8 +35,7 @@ object Penta extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None),
     TableauRules(
       name = "Right Tableau",
       setNumber = 1,
@@ -51,7 +45,4 @@ object Penta extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.Up,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

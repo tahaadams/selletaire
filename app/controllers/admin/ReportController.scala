@@ -3,12 +3,12 @@ package controllers.admin
 import controllers.BaseController
 import models.audit.Metric
 import models.queries.history.GameSeedQueries
-import models.queries.report.{LeaderboardQueries, RowCountQueries}
+import models.queries.report.{ LeaderboardQueries, RowCountQueries }
 import java.time.LocalDate
 import services.audit.DailyMetricService
 import services.database.Database
 import util.FutureUtils.defaultContext
-import util.{Application, DateUtils}
+import util.{ Application, DateUtils }
 
 import scala.concurrent.Future
 

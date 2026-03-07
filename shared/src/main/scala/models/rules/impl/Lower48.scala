@@ -12,22 +12,15 @@ object Lower48 extends GameRules(
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(2)
-    )
-  ),
+      maximumDeals = Some(2))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.Count(5),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

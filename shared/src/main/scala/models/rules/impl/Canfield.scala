@@ -15,8 +15,7 @@ object Canfield extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/canfield.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Canfield.html.en"),
     Link("Solitaire City", "www.solitairecity.com/Help/Demon.shtml"),
-    Link("Jan Wolter's Experiments", "/article/canfield.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/canfield.html")),
   layout = "swf|:r:t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(cardsDealt = StockCardsDealt.Count(3))),
@@ -27,8 +26,5 @@ object Canfield extends GameRules(
       numPiles = 4,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1)))

@@ -61,8 +61,7 @@ object WikiTableau {
         "help.tableau.build.rank.and.suit.match.rules",
         loweredName,
         WikiMatchRule.toWords(rules.rankMatchRuleForBuilding),
-        WikiMatchRule.toWords(rules.suitMatchRuleForBuilding)
-      )
+        WikiMatchRule.toWords(rules.suitMatchRuleForBuilding))
     }
 
     if (rules.rankMatchRuleForMovingStacks == RankMatchRule.None || rules.suitMatchRuleForMovingStacks == SuitMatchRule.None) {
@@ -72,8 +71,7 @@ object WikiTableau {
         "help.tableau.move.stacks.rank.and.suit.match.rules",
         loweredName,
         WikiMatchRule.toWords(rules.rankMatchRuleForBuilding),
-        WikiMatchRule.toWords(rules.suitMatchRuleForBuilding)
-      )
+        WikiMatchRule.toWords(rules.suitMatchRuleForBuilding))
     }
 
     val name = if (rules.setNumber == 0) {

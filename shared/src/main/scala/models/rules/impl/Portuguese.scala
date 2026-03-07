@@ -12,17 +12,14 @@ object Portuguese extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    ),
+      emptyFilledWith = FillEmptyWith.HighRank),
     TableauRules(
       setNumber = 1,
       numPiles = 6,
@@ -31,7 +28,4 @@ object Portuguese extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveKingsToBottom)))

@@ -12,8 +12,7 @@ object WaningMoon extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/waning_moon.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/waning_moon.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/WaningMoon.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/waning_moon.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/waning_moon.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2, suits = Seq(Suit.Hearts, Suit.Spades, Suit.Clubs, Suit.Horseshoes)),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -24,6 +23,4 @@ object WaningMoon extends GameRules(
     initialCards = InitialCards.Count(4),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-    suitMatchRuleForMovingStacks = SuitMatchRule.None
-  ))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.None)))

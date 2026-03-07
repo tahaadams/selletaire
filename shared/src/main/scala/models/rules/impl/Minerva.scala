@@ -17,8 +17,5 @@ object Minerva extends GameRules(
     TableauRules(
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.OddNumbered,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 11))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  reserves = Some(ReserveRules(initialCards = 11)))

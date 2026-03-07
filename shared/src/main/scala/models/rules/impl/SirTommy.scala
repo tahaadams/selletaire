@@ -17,22 +17,17 @@ object SirTommy extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Sirtommy.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/sir_tommy.php"),
     Link("PySol", "pysolfc.sourceforge.net/doc/rules/numerica.html"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Sir_Tommy.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Sir_Tommy.html.en")),
   layout = "sf|t",
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Manually,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       suitMatchRule = SuitMatchRule.Any,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Reserve",
@@ -43,7 +38,4 @@ object SirTommy extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock),
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock))))

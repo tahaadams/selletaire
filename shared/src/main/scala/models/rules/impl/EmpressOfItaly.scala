@@ -23,8 +23,5 @@ object EmpressOfItaly extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.StockThenWaste,
       mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 19))
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)),
+  reserves = Some(ReserveRules(initialCards = 19)))

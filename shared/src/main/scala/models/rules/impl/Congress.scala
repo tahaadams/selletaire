@@ -13,8 +13,7 @@ object Congress extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/congress.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/congress.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/congress.html"),
-    Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#congress")
-  ),
+    Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#congress")),
   layout = "sw|f|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -27,7 +26,4 @@ object Congress extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)))

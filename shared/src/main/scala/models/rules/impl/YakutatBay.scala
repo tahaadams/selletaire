@@ -18,12 +18,9 @@ object YakutatBay extends GameRules(
       "DDDUUUUU",
       "DDDDUUUUU",
       "DDDDDUUUUU",
-      "DDDDDDUUUUU"
-    ),
+      "DDDDDDUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
     autoFillEmptyFrom = TableauAutoFillEmptyFrom.NextPile,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

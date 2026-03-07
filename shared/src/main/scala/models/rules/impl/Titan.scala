@@ -13,20 +13,13 @@ object Titan extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.Count(3),
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

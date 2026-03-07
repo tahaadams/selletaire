@@ -21,8 +21,5 @@ object DoubleStorehouse extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(name = "Storehouse", initialCards = 19, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(name = "Storehouse", initialCards = 19, cardsFaceDown = -1)))

@@ -13,24 +13,18 @@ object Lafayette extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.DeckHighRank,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve,
-      emptyFilledWith = FillEmptyWith.Sevens
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1))
-)
+      emptyFilledWith = FillEmptyWith.Sevens)),
+  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1)))

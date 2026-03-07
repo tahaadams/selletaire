@@ -2,7 +2,7 @@ package models.queries.user
 
 import java.util.UUID
 
-import models.database.{Row, Statement}
+import models.database.{ Row, Statement }
 import models.history.GameHistory
 import models.queries.BaseQueries
 import models.user.UserStatistics
@@ -18,8 +18,7 @@ object UserStatisticsQueries extends BaseQueries[UserStatistics] {
     "played", "wins", "losses", "total_duration_ms", "total_moves", "total_undos", "total_redos",
     "last_win", "last_loss",
     "current_win_streak", "max_win_streak",
-    "current_loss_streak", "max_loss_streak"
-  )
+    "current_loss_streak", "max_loss_streak")
   override protected val searchColumns = Seq("id::text", "username")
 
   val insert = Insert
@@ -42,16 +41,13 @@ object UserStatisticsQueries extends BaseQueries[UserStatistics] {
       currentWinStreak = row.as[Int]("current_win_streak"),
       maxWinStreak = row.as[Int]("max_win_streak"),
       currentLossStreak = row.as[Int]("current_loss_streak"),
-      maxLossStreak = row.as[Int]("max_loss_streak")
-    )
-  )
+      maxLossStreak = row.as[Int]("max_loss_streak")))
 
   override protected def toDataSeq(s: UserStatistics) = Seq(
     s.userId, DateUtils.fromMillis(s.joined),
     s.games.played, s.games.wins, s.games.losses, s.games.totalDurationMs, s.games.totalMoves, s.games.totalUndos, s.games.totalRedos,
     s.games.lastWin.map(DateUtils.fromMillis), s.games.lastLoss.map(DateUtils.fromMillis),
-    s.games.currentWinStreak, s.games.maxWinStreak, s.games.currentLossStreak, s.games.maxLossStreak
-  )
+    s.games.currentWinStreak, s.games.maxWinStreak, s.games.currentLossStreak, s.games.maxLossStreak)
 
   case class Increment(userId: UUID, col: String, v: Int) extends Statement {
     override def sql = s"update $tableName set $col = $col + ? where id = ?"

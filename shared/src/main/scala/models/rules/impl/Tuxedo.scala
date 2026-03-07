@@ -8,8 +8,7 @@ object Tuxedo extends GameRules(
   title = "Tuxedo",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/tuxedo.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/tuxedo.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/tuxedo.htm")),
   layout = ":.f|c|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -22,13 +21,9 @@ object Tuxedo extends GameRules(
         "UUUUUUUU",
         "UUUUUUU",
         "UUUUUUU",
-        "UUUUUUUU"
-      ),
+        "UUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(numPiles = 7))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(numPiles = 7)))

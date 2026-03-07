@@ -14,5 +14,4 @@ object EndlessHarp extends GameRules(
   stock = Some(StockRules(cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 10, emptyFilledWith = FillEmptyWith.HighRank))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 10, emptyFilledWith = FillEmptyWith.HighRank)))

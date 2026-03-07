@@ -9,8 +9,7 @@ object Chequers extends GameRules(
   like = Some("caprice"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/chequers.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/chequers.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/chequers.htm")),
   layout = "ff|r|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(
@@ -18,8 +17,7 @@ object Chequers extends GameRules(
       name = "Ace Foundation",
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "King Foundation",
       setNumber = 1,
@@ -27,9 +25,7 @@ object Chequers extends GameRules(
       lowRank = FoundationLowRank.DeckHighRank,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 25,
@@ -39,8 +35,5 @@ object Chequers extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 4, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(initialCards = 4, cardsFaceDown = -1)))

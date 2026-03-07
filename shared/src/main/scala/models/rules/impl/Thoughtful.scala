@@ -10,26 +10,18 @@ object Thoughtful extends GameRules(
   related = Seq("auntmary"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/saratoga.htm"),
-    Link("Wikipedia", "en.wikipedia.org/wiki/Klondike_(solitaire)")
-  ),
+    Link("Wikipedia", "en.wikipedia.org/wiki/Klondike_(solitaire)")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

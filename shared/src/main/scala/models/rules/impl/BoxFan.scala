@@ -13,9 +13,7 @@ object BoxFan extends GameRules(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Fan",
@@ -23,7 +21,4 @@ object BoxFan extends GameRules(
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

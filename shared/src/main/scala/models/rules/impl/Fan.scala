@@ -9,15 +9,12 @@ object Fan extends GameRules(
   related = Seq("boxfan", "freefan", "ceilingfan", "midnightclover"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/fan.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/fan.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/fan.htm")),
   layout = ".::f|2t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Fan",
@@ -26,7 +23,4 @@ object Fan extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

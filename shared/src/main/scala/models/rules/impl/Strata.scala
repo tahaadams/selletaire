@@ -14,20 +14,13 @@ object Strata extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.Count(8),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

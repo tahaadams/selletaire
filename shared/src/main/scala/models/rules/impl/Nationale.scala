@@ -12,8 +12,7 @@ object Nationale extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/nationale.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/nationale.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Nationale.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/nationale.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/nationale.php")),
   layout = "ff|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(
@@ -22,8 +21,7 @@ object Nationale extends GameRules(
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "King Foundation",
       setNumber = 1,
@@ -32,9 +30,7 @@ object Nationale extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -44,7 +40,4 @@ object Nationale extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      actionDuringDeal = PileAction.MoveToFoundation
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveToFoundation)))

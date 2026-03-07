@@ -10,8 +10,7 @@ object Escalator extends GameRules(
   like = Some("golf"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/pyramid_golf.htm"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Escalator.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Escalator.html.en")),
   layout = ":s:::f|p",
   victoryCondition = VictoryCondition.NoneInPyramid,
   stock = Some(StockRules(cardsShown = 16, dealTo = StockDealTo.Foundation, maximumDeals = Some(1))),
@@ -22,15 +21,10 @@ object Escalator extends GameRules(
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpOrDown,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   pyramids = IndexedSeq(
     PyramidRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

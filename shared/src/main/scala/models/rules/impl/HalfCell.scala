@@ -14,16 +14,11 @@ object HalfCell extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueColors),
       suitMatchRule = SuitMatchRule.AlternatingColors,
       maxCards = 26,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules())
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules()))

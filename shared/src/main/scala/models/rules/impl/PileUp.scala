@@ -8,8 +8,7 @@ object PileUp extends GameRules(
   completed = true,
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/fifteen_puzzle.htm"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Pileon.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Pileon.html.en")),
   layout = "|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   tableaus = IndexedSeq(
@@ -29,14 +28,10 @@ object PileUp extends GameRules(
         "UUUU",
         "UUUU",
         "UUUU",
-        "UUUU"
-      ),
+        "UUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.Equal,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Equal,
-      maxCards = 4
-    )
-  )
-)
+      maxCards = 4)))

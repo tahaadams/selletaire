@@ -11,8 +11,7 @@ object Athena extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/athena.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Athena.html.en"),
-    Link("Elton Gahr on HobbyHub", "www.solitairelaboratory.com/buildingranks.html")
-  ),
+    Link("Elton Gahr on HobbyHub", "www.solitairelaboratory.com/buildingranks.html")),
   layout = "swf|t",
   stock = Some(StockRules(cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
@@ -21,7 +20,4 @@ object Athena extends GameRules(
     TableauRules(
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.OddNumbered,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

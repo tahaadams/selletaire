@@ -13,8 +13,7 @@ object AgnesSorel extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/agnes_sorel.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Agnes.html.en"),
     Link("Michael Smoker on HobbyHub", "www.hobbyhub360.com/index.php/view-article/1937518/"),
-    Link("Jan Wolter's Experiments", "/article/agnessorel.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/agnessorel.html")),
   layout = "s.f|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
@@ -22,14 +21,9 @@ object AgnesSorel extends GameRules(
     FoundationRules(
       numPiles = 4,
       initialCards = 1,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameColor,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameColor
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameColor)))

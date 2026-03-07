@@ -11,9 +11,7 @@ object LoveADuck extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   pyramids = IndexedSeq(
     PyramidRules(
       name = "Tableau",
@@ -24,7 +22,4 @@ object LoveADuck extends GameRules(
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
       mayMoveToEmptyFrom = PileSet.Behavior.wtpf,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

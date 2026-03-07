@@ -2,18 +2,18 @@ package phaser.gameplay
 
 import java.util.UUID
 
-import com.definitelyscala.phaser.{PhysicsObj, State}
-import input.{InputContextService, InputMessage}
-import models.{PossibleMoves, RE, UN}
+import com.definitelyscala.phaser.{ PhysicsObj, State }
+import input.{ InputContextService, InputMessage }
+import models.{ PossibleMoves, RE, UN }
 import models.game._
-import models.rules.{GameRules, GameRulesSet}
+import models.rules.{ GameRules, GameRulesSet }
 import models.settings.Settings
 import org.scalajs.jquery.JQuery
 import phaser.PhaserGame
 import phaser.card.CardImages
 import phaser.playmat.Playmat
 import util.Logging
-import org.scalajs.jquery.{jQuery => $}
+import org.scalajs.jquery.{ jQuery => $ }
 
 object Gameplay {
   case class GameServices(
@@ -22,8 +22,7 @@ object Gameplay {
     moves: MoveHelper,
     undo: UndoHelper,
     responses: ResponseMessageHandler,
-    requests: RequestMessageHandler
-  )
+    requests: RequestMessageHandler)
 }
 
 class Gameplay(val g: PhaserGame, var settings: Settings, onLoadComplete: () => Unit) extends State {

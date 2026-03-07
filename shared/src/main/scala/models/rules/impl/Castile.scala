@@ -16,8 +16,5 @@ object Castile extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 4, initialCards = 7))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  reserves = Some(ReserveRules(numPiles = 4, initialCards = 7)))

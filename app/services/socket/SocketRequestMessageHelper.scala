@@ -1,15 +1,15 @@
 package services.socket
 
 import akka.actor.Actor
-import io.prometheus.client.{Counter, Histogram}
+import io.prometheus.client.{ Counter, Histogram }
 import models.InternalMessage
 import models.history.GameHistory
 import models.rules.GameRulesSet
 import models.rules.impl.Sandbox
 import msg.req._
 import msg.rsp.Pong
-import services.history.{GameHistoryService, GameSeedService, GameStatisticsService}
-import services.user.{UserService, UserStatisticsService}
+import services.history.{ GameHistoryService, GameSeedService, GameStatisticsService }
+import services.user.{ UserService, UserStatisticsService }
 import util.DateUtils
 import util.metrics.Instrumented
 
@@ -23,8 +23,7 @@ trait SocketRequestMessageHelper extends Actor { this: SocketService =>
   private[this] def time(msg: Any, f: => Unit) = Instrumented.timeReceive(
     msg,
     SocketRequestMessageHelper.receiveHistogram,
-    SocketRequestMessageHelper.errorCounter
-  )(f)
+    SocketRequestMessageHelper.errorCounter)(f)
 
   override def receive = {
     case p: Ping => time(p, out ! Pong(p.ts))
@@ -60,8 +59,7 @@ trait SocketRequestMessageHelper extends Actor { this: SocketService =>
       redos = gc.redos,
       score = gc.score,
       firstMove = Some(DateUtils.fromMillis(gc.firstMove)),
-      completed = Some(DateUtils.fromMillis(gc.occurred))
-    )
+      completed = Some(DateUtils.fromMillis(gc.occurred)))
 
     GameHistoryService.onComplete(gh)
     GameSeedService.onComplete(gh)

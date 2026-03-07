@@ -1,8 +1,8 @@
 package util.web
 
-import java.time.{LocalDate, LocalDateTime, LocalTime}
+import java.time.{ LocalDate, LocalDateTime, LocalTime }
 
-import play.api.mvc.{PathBindable, QueryStringBindable}
+import play.api.mvc.{ PathBindable, QueryStringBindable }
 import util.DateUtils
 
 object QueryStringUtils {

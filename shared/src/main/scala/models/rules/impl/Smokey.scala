@@ -11,21 +11,14 @@ object Smokey extends GameRules(
   layout = "swf|t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(3)
-    )
-  ),
+      maximumDeals = Some(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameColor,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

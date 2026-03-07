@@ -20,8 +20,7 @@ object Nestor extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       rankMatchRuleForMovingStacks = RankMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    ),
+      emptyFilledWith = FillEmptyWith.None),
     TableauRules(
       setNumber = 1,
       numPiles = 4,
@@ -31,7 +30,4 @@ object Nestor extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       rankMatchRuleForMovingStacks = RankMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

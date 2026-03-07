@@ -8,5 +8,4 @@ case class CellRules(
   numPiles: Int = 4,
   mayMoveToFrom: Seq[PileSet.Behavior] = PileSet.Behavior.values,
   initialCards: Int = 0,
-  numEphemeral: Int = 0
-)
+  numEphemeral: Int = 0)

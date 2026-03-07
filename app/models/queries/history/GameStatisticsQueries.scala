@@ -1,7 +1,7 @@
 package models.queries.history
 
-import models.database.{Row, Statement}
-import models.history.{GameHistory, GameStatistics}
+import models.database.{ Row, Statement }
+import models.history.{ GameHistory, GameStatistics }
 import models.queries.BaseQueries
 
 import models.database.DatabaseFieldType.TimestampType
@@ -11,8 +11,7 @@ object GameStatisticsQueries extends BaseQueries[GameStatistics] {
   override protected val tableName = "game_statistics"
   override protected val columns = Seq(
     "rules", "played", "wins", "losses", "min_duration_ms", "max_duration_ms", "total_duration_ms",
-    "min_moves", "max_moves", "total_moves", "total_undos", "total_redos", "last_win", "last_loss"
-  )
+    "min_moves", "max_moves", "total_moves", "total_undos", "total_redos", "last_win", "last_loss")
   override protected val searchColumns = Seq("rules")
   override protected def idColumns = Seq("rules")
 
@@ -35,14 +34,12 @@ object GameStatisticsQueries extends BaseQueries[GameStatistics] {
     totalUndos = row.as[Int]("total_undos"),
     totalRedos = row.as[Int]("total_redos"),
     lastWin = TimestampType.opt(row, "last_win").map(DateUtils.toMillis),
-    lastLoss = TimestampType.opt(row, "last_loss").map(DateUtils.toMillis)
-  )
+    lastLoss = TimestampType.opt(row, "last_loss").map(DateUtils.toMillis))
 
   override protected def toDataSeq(s: GameStatistics) = Seq(
     s.rules, s.played, s.wins, s.losses, s.minDurationMs, s.maxDurationMs, s.totalDurationMs,
     s.minMoves, s.maxMoves, s.totalMoves, s.totalUndos, s.totalRedos,
-    s.lastWin.map(DateUtils.fromMillis), s.lastLoss.map(DateUtils.fromMillis)
-  )
+    s.lastWin.map(DateUtils.fromMillis), s.lastLoss.map(DateUtils.fromMillis))
 
   case class OnFinish(gh: GameHistory) extends Statement {
     override def sql = updateSql(gh.isWon)

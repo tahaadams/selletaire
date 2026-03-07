@@ -1,6 +1,6 @@
 package help
 
-import models.rules.{WastePlayableCards, WasteRules}
+import models.rules.{ WastePlayableCards, WasteRules }
 import util.Messages
 
 object WasteHelpService {

@@ -16,17 +16,14 @@ object Golf extends GameRules(
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Golf.html.en"),
     Link("Jan Wolter's Experiments", "/article/golf.html"),
     Link("Dan Fletcher's Strategy Guide", "www.solitairecentral.com/articles/GolfSolitaireStrategyGuide.html"),
-    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/golf.htm")
-  ),
+    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/golf.htm")),
   layout = "t|f:s",
   victoryCondition = VictoryCondition.AllOnFoundationOrStock,
   stock = Some(
     StockRules(
       cardsShown = 16,
       dealTo = StockDealTo.Foundation,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       lowRank = FoundationLowRank.AnyCard,
@@ -35,9 +32,7 @@ object Golf extends GameRules(
       rankMatchRule = RankMatchRule.UpOrDown,
       wrap = false,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Count(5),
@@ -45,7 +40,4 @@ object Golf extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

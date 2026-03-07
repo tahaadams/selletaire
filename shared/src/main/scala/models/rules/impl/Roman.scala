@@ -24,8 +24,5 @@ object Roman extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
       mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 11))
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)),
+  reserves = Some(ReserveRules(initialCards = 11)))

@@ -20,22 +20,17 @@ object Scorpion extends GameRules(
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Scorpion.html.en"),
     Link("Lena Games", "www.lenagames.com/bp_files/rul/scorpion.htm"),
     Link("dogMelon", "www.dogmelon.com.au/solhelp/Scorpion%20Solitaire.shtml"),
-    Link("eHow", "www.ehow.com/how_2258258_play-scorpion-solitaire.html")
-  ),
+    Link("eHow", "www.ehow.com/how_2258258_play-scorpion-solitaire.html")),
   layout = "s.f|t",
   stock = Some(
     StockRules(
       name = "Reserve",
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -46,13 +41,9 @@ object Scorpion extends GameRules(
         "DDDUUUU",
         "UUUUUUU",
         "UUUUUUU",
-        "UUUUUUU"
-      ),
+        "UUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

@@ -13,15 +13,10 @@ object Stewart extends GameRules(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.OddNumbered,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

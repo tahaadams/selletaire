@@ -9,8 +9,7 @@ object ExiledKings extends GameRules(
   like = Some("citadel"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/exiled_kings.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/exiled-kings.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/exiled-kings.htm")),
   layout = "::f|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, initialCards = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -21,7 +20,4 @@ object ExiledKings extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.HighRank,
-      actionDuringDeal = PileAction.MoveToFoundation
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveToFoundation)))

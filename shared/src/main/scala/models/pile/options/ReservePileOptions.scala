@@ -14,7 +14,6 @@ object ReservePileOptions {
     PileOptions(
       cardsShown = Some(cardsShown),
       direction = Some("d"),
-      dragFromConstraint = Some(Constraint.topCardOnly)
-    )
+      dragFromConstraint = Some(Constraint.topCardOnly))
   }
 }

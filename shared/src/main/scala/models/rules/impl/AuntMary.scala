@@ -12,8 +12,7 @@ object AuntMary extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/aunt_mary.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/aunt-mary.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Aunt_Mary.html.en"),
-    Link("L.Schaffer on Hobby Hub", "www.hobbyhub360.com/index.php/how-to-play-aunt-mary-solitaire-14352/")
-  ),
+    Link("L.Schaffer on Hobby Hub", "www.hobbyhub360.com/index.php/how-to-play-aunt-mary-solitaire-14352/")),
   layout = "swf|.t",
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
@@ -23,7 +22,4 @@ object AuntMary extends GameRules(
       numPiles = 6,
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

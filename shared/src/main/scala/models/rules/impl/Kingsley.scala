@@ -10,28 +10,20 @@ object Kingsley extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/kingsley.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/kingsley.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Kingsley.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Kingsley.htm")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       lowRank = FoundationLowRank.DeckHighRank,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       rankMatchRuleForBuilding = RankMatchRule.Up,
       rankMatchRuleForMovingStacks = RankMatchRule.Up,
-      emptyFilledWith = FillEmptyWith.LowRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.LowRank)))

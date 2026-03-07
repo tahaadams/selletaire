@@ -13,23 +13,16 @@ object ThievesRush extends GameRules(
   stock = Some(
     StockRules(
       maximumDeals = Some(3),
-      cardsDealt = StockCardsDealt.FewerEachTime
-    )
-  ),
+      cardsDealt = StockCardsDealt.FewerEachTime)),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

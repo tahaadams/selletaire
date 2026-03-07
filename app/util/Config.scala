@@ -2,7 +2,7 @@ package util
 
 import java.net.InetAddress
 
-import play.api.{Environment, Mode}
+import play.api.{ Environment, Mode }
 import util.metrics.MetricsConfig
 
 object Config {

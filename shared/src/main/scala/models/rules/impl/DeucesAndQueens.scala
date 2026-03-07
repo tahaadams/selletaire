@@ -18,17 +18,14 @@ object DeucesAndQueens extends GameRules(
       name = "Ace Foundation",
       numPiles = 4,
       lowRank = FoundationLowRank.SpecificRank(Rank.Two),
-      suitMatchRule = SuitMatchRule.Any
-    ),
+      suitMatchRule = SuitMatchRule.Any),
     FoundationRules(
       name = "King Foundation",
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.SpecificRank(Rank.Queen),
       suitMatchRule = SuitMatchRule.Any,
-      rankMatchRule = RankMatchRule.Down
-    )
-  ),
+      rankMatchRule = RankMatchRule.Down)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
@@ -38,8 +35,5 @@ object DeucesAndQueens extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 3, initialCards = 13))
-)
+      emptyFilledWith = FillEmptyWith.None)),
+  reserves = Some(ReserveRules(numPiles = 3, initialCards = 13)))

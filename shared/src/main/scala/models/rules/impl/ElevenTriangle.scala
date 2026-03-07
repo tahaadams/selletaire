@@ -20,7 +20,4 @@ object ElevenTriangle extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

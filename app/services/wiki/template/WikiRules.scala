@@ -1,6 +1,6 @@
 package services.wiki.template
 
-import models.rules.{GameRules, GameRulesSet}
+import models.rules.{ GameRules, GameRulesSet }
 import services.wiki.WikiService.messages
 
 class WikiRules(r: GameRules) {

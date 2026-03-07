@@ -10,26 +10,18 @@ object Gypsy extends GameRules(
   links = Seq(
     Link("PySol", "pysolfc.sourceforge.net/doc/rules/gypsy.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Gypsy.html.en"),
-    Link("KPatience", "docs.kde.org/stable/en/kdegames/kpat/rules-specific.html#gypsy")
-  ),
+    Link("KPatience", "docs.kde.org/stable/en/kdegames/kpat/rules-specific.html#gypsy")),
   layout = "sf|:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
-      initialCards = InitialCards.Count(3)
-    )
-  )
-)
+      initialCards = InitialCards.Count(3))))

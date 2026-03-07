@@ -27,8 +27,7 @@ object CellHelpService {
               "help.piles.multiple.cards.multiple.each",
               Messages.numberAsString(x, properCase = true),
               loweredName,
-              Messages.numberAsString(rules.initialCards)
-            )
+              Messages.numberAsString(rules.initialCards))
           }
         }
     }

@@ -15,8 +15,7 @@ case class Notification(recipient: Option[UUID], message: String) extends Respon
 case class GameResult(moves: Int, undos: Int, redos: Int, score: Int, durationSeconds: Int, leaderboardRanking: Int)
 case class GameLost(id: UUID, rules: String, seed: Int, result: GameResult, stats: UserStatistics) extends ResponseMessage
 case class GameWon(
-  id: UUID, rules: String, seed: Int, firstForRules: Boolean, firstForSeed: Boolean, result: GameResult, stats: UserStatistics
-) extends ResponseMessage
+  id: UUID, rules: String, seed: Int, firstForRules: Boolean, firstForSeed: Boolean, result: GameResult, stats: UserStatistics) extends ResponseMessage
 
 case class PossibleMoves(moves: Seq[PossibleMove], undosAvailable: Int, redosAvailable: Int) extends ResponseMessage
 

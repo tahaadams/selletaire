@@ -10,8 +10,7 @@ object UserFeedback {
     feedbackId: UUID,
     authorId: UUID,
     content: String,
-    occurred: LocalDateTime
-  )
+    occurred: LocalDateTime)
 }
 
 case class UserFeedback(
@@ -19,5 +18,4 @@ case class UserFeedback(
   deviceId: UUID,
   activeGameId: Option[UUID],
   feedback: String,
-  occurred: LocalDateTime
-)
+  occurred: LocalDateTime)

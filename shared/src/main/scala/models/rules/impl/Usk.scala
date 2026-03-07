@@ -9,15 +9,12 @@ object Usk extends GameRules(
   like = Some("somerset"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/usk.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/usk.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/usk.html")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -32,15 +29,9 @@ object Usk extends GameRules(
         "UUUU",
         "UUU",
         "UU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.HighRank)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 1
-    )
-  )
-)
+      redealsAllowed = 1)))

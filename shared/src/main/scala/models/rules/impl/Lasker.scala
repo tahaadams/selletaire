@@ -14,9 +14,7 @@ object Lasker extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -26,7 +24,4 @@ object Lasker extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       wrap = true,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      rankMatchRuleForMovingStacks = RankMatchRule.UpOrDown
-    )
-  )
-)
+      rankMatchRuleForMovingStacks = RankMatchRule.UpOrDown)))

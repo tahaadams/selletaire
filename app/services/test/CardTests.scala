@@ -1,6 +1,6 @@
 package services.test
 
-import models.card.{Card, Rank, Suit}
+import models.card.{ Card, Rank, Suit }
 import models.test.Test
 
 object CardTests {

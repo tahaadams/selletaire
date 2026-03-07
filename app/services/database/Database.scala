@@ -1,6 +1,6 @@
 package services.database
 
-import models.database.{DatabaseConfig, RawQuery, Statement}
+import models.database.{ DatabaseConfig, RawQuery, Statement }
 import util.Logging
 
 import scala.concurrent.Future

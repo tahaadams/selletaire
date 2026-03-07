@@ -13,8 +13,7 @@ object SuperiorCanfield extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SuperiorCanfield.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/superior_canfield.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/superior-canfield.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/superior_canfield.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/superior_canfield.php")),
   layout = "swf|r|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(cardsDealt = StockCardsDealt.Count(3))),
@@ -24,8 +23,5 @@ object SuperiorCanfield extends GameRules(
     TableauRules(
       numPiles = 4,
       initialCards = InitialCards.Count(1),
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13))
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))),
+  reserves = Some(ReserveRules(initialCards = 13)))

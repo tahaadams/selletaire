@@ -3,7 +3,7 @@ package menu
 import game.ActiveGame
 import models.settings.MenuPosition
 import navigation.NavigationService
-import org.scalajs.jquery.{jQuery => $}
+import org.scalajs.jquery.{ jQuery => $ }
 import util.TemplateUtils
 
 class MenuService(val navigation: NavigationService) {

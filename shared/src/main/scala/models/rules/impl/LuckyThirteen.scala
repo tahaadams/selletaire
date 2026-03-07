@@ -11,15 +11,12 @@ object LuckyThirteen extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/lucky_thirteen.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/lucky_thirteen.html"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/LuckyThirteen.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/lucky-thirteen.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/lucky-thirteen.htm")),
   layout = "::::.f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
@@ -27,7 +24,4 @@ object LuckyThirteen extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

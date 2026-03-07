@@ -12,12 +12,11 @@ import util.Logging
 import scala.concurrent._
 
 class ErrorHandler @Inject() (
-    env: Environment,
-    playConfig: Configuration,
-    appConfig: util.Config,
-    sourceMapper: OptionalSourceMapper,
-    router: Provider[Router]
-) extends DefaultHttpErrorHandler(env, playConfig, sourceMapper, router) with Logging {
+  env: Environment,
+  playConfig: Configuration,
+  appConfig: util.Config,
+  sourceMapper: OptionalSourceMapper,
+  router: Provider[Router]) extends DefaultHttpErrorHandler(env, playConfig, sourceMapper, router) with Logging {
 
   override def onProdServerError(request: RequestHeader, ex: UsefulException) = Future.successful {
     log.error(s"Error encountered processing request [${request.path}].", ex)

@@ -11,9 +11,7 @@ object Moosehide extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -24,13 +22,9 @@ object Moosehide extends GameRules(
         "DDDUUUUU",
         "DDDDUUUUU",
         "DDDDDUUUUU",
-        "DDDDDDUUUUU"
-      ),
+        "DDDDDDUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

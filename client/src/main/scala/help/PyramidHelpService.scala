@@ -31,8 +31,7 @@ object PyramidHelpService {
         "help.pyramid.build.rank.and.suit.match.rules",
         loweredName,
         MatchRuleHelpService.toWords(rules.rankMatchRuleForBuilding),
-        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding)
-      )
+        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding))
     }
 
     if (rules.rankMatchRuleForMovingStacks == RankMatchRule.None || rules.suitMatchRuleForMovingStacks == SuitMatchRule.None) {
@@ -42,8 +41,7 @@ object PyramidHelpService {
         "help.pyramid.move.stacks.rank.and.suit.match.rules",
         loweredName,
         MatchRuleHelpService.toWords(rules.rankMatchRuleForBuilding),
-        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding)
-      )
+        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding))
     }
 
     ret += MatchRuleHelpService.toWords(rules.emptyFilledWith, deckOptions.lowRank, deckOptions.highRank)

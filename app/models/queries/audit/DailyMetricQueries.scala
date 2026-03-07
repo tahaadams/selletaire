@@ -1,8 +1,8 @@
 package models.queries.audit
 
-import models.audit.{DailyMetric, Metric}
+import models.audit.{ DailyMetric, Metric }
 import models.queries.BaseQueries
-import models.database.{FlatSingleRowQuery, Query, Row, SingleRowQuery, Statement}
+import models.database.{ FlatSingleRowQuery, Query, Row, SingleRowQuery, Statement }
 import java.time.LocalDate
 
 import models.database.DatabaseFieldType.TimestampType

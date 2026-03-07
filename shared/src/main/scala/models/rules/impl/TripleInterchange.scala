@@ -16,16 +16,11 @@ object TripleInterchange extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 12,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
       initialCards = InitialCards.Count(9),
       cardsFaceDown = TableauFaceDownCards.EvenNumbered,
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

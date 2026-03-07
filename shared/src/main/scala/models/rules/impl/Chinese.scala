@@ -22,12 +22,8 @@ object Chinese extends GameRules(
         "DDDUUUU",
         "DDDDUUU",
         "DDDDDUU",
-        "DDDDDDU"
-      ),
+        "DDDDDDU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

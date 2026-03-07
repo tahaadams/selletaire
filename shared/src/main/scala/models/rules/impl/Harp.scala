@@ -13,27 +13,19 @@ object Harp extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/harp.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Harp.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/harp.php"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/harp.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/harp.html")),
   layout = "swf|:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(4)
-    )
-  ),
+      maximumDeals = Some(4))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

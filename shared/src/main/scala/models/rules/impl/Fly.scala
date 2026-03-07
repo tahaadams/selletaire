@@ -14,8 +14,7 @@ object Fly extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/fly.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/fly.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/fly.htm"),
-    Link("Wikipedia", "en.wikipedia.org/wiki/Frog_(game)")
-  ),
+    Link("Wikipedia", "en.wikipedia.org/wiki/Frog_(game)")),
   layout = "sf|r.:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Manually, maximumDeals = Some(1))),
@@ -24,9 +23,7 @@ object Fly extends GameRules(
       numPiles = 8,
       initialCards = 8,
       suitMatchRule = SuitMatchRule.Any,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 5,
@@ -36,8 +33,5 @@ object Fly extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock),
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  ),
-  reserves = Some(ReserveRules(name = "Fly", initialCards = 13))
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock))),
+  reserves = Some(ReserveRules(name = "Fly", initialCards = 13)))

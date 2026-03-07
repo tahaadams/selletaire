@@ -11,5 +11,4 @@ object Muse extends GameRules(
   layout = "::.f|:c|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(TableauRules(numPiles = 9, cardsFaceDown = TableauFaceDownCards.Count(0))),
-  cells = Some(CellRules(numPiles = 7, initialCards = 7))
-)
+  cells = Some(CellRules(numPiles = 7, initialCards = 7)))

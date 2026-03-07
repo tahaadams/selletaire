@@ -11,8 +11,7 @@ object Giza extends GameRules(
   related = Seq("pyramiddozen"),
   links = Seq(
     Link("Michael Keller's Discussion at Solitaire Laboratory", "www.solitairelaboratory.com/giza.html"),
-    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/giza.htm")
-  ),
+    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/giza.htm")),
   layout = "f|t|p",
   victoryCondition = VictoryCondition.NoneInPyramid,
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToThirteenOrK,
@@ -20,9 +19,7 @@ object Giza extends GameRules(
     FoundationRules(
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -30,15 +27,10 @@ object Giza extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   pyramids = IndexedSeq(
     PyramidRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

@@ -15,30 +15,22 @@ object Pyramid extends GameRules(
     Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/pyramid.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Thirteen.html.en"),
     Link("Erik Arneson's Rules at About.com", "boardgames.about.com/od/solitaire/a/pyramid.htm"),
-    Link("Dan Fletcher's Strategy Guide at Solitaire Central", "www.solitairecentral.com/articles/PyramidSolitaireAStrategyGuideForBeginners.html")
-  ),
+    Link("Dan Fletcher's Strategy Guide at Solitaire Central", "www.solitairecentral.com/articles/PyramidSolitaireAStrategyGuideForBeginners.html")),
   layout = "p|::.swf",
   victoryCondition = VictoryCondition.NoneInPyramid,
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToThirteenOrK,
   stock = Some(
     StockRules(
-      maximumDeals = Some(3)
-    )
-  ),
+      maximumDeals = Some(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   pyramids = IndexedSeq(
     PyramidRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

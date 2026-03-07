@@ -15,9 +15,6 @@ object SevenBySeven extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
   cells = Some(CellRules(numPiles = 3, initialCards = 3)),
-  special = Some(SpecialRules(redealsAllowed = 2))
-)
+  special = Some(SpecialRules(redealsAllowed = 2)))

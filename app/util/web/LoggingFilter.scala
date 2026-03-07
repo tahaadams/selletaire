@@ -35,7 +35,6 @@ class LoggingFilter @Inject() (override implicit val mat: Materializer) extends 
       exception => {
         logCompleted(Results.InternalServerError)
         exception
-      }
-    )
+      })
   }
 }

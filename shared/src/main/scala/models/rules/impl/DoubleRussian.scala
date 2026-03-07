@@ -24,12 +24,9 @@ object DoubleRussian extends GameRules(
       "DDDDDDUUUUUU",
       "DDDDDDDUUUUUU",
       "DDDDDDDDUUUUUU",
-      "DDDDDDDDDUUUUUU"
-    ),
+      "DDDDDDDDDUUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

@@ -11,25 +11,17 @@ object Saratoga extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/saratoga.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/saratoga.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Saratoga.html.en"),
-    Link("Elton Gahr on HobbyHub", "www.hobbyhub360.com/index.php/solitaire-how-to-play-saratoga-13682/")
-  ),
+    Link("Elton Gahr on HobbyHub", "www.hobbyhub360.com/index.php/solitaire-how-to-play-saratoga-13682/")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

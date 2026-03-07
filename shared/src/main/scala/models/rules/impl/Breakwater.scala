@@ -10,8 +10,7 @@ object Breakwater extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/breakwater.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/alternations.htm"),
-    Link("Solitaire City", "www.solitairecity.com/Alternations.shtml")
-  ),
+    Link("Solitaire City", "www.solitairecity.com/Alternations.shtml")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -22,7 +21,4 @@ object Breakwater extends GameRules(
       initialCards = InitialCards.Count(7),
       cardsFaceDown = TableauFaceDownCards.EvenNumbered,
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

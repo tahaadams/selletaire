@@ -16,15 +16,12 @@ object Fortress extends GameRules(
     Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#fortress"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Fortress.html.en"),
     Link("Jan Wolter's Experimental Analysis", "/article/fortress.html"),
-    Link("Michael Keller's Strategy Guide", "solitairelaboratory.com/fortress.html")
-  ),
+    Link("Michael Keller's Strategy Guide", "solitairelaboratory.com/fortress.html")),
   layout = ":::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -32,7 +29,4 @@ object Fortress extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

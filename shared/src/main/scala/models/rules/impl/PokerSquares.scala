@@ -14,10 +14,7 @@ object PokerSquares extends GameRules(
     numPiles = 25,
     maxCards = 1,
     suitMatchRuleForBuilding = SuitMatchRule.Any,
-    rankMatchRuleForBuilding = RankMatchRule.Any
-  )),
+    rankMatchRuleForBuilding = RankMatchRule.Any)),
   waste = Some(WasteRules(
     cardsShown = 25,
-    maxCards = Some(25)
-  ))
-)
+    maxCards = Some(25))))

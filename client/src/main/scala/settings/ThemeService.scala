@@ -1,7 +1,7 @@
 package settings
 
 import org.scalajs.dom
-import org.scalajs.jquery.{jQuery => $}
+import org.scalajs.jquery.{ jQuery => $ }
 import util.Logging
 
 object ThemeService {
@@ -34,8 +34,7 @@ object ThemeService {
     s"body { background-color: $lastColor; }",
     lastPattern.map(p => s"body { background-image: url(${navigation.NavigationService.assetRoot}images/background/$p.png); }").getOrElse(""),
     s".theme { background-color: $lastColor; }",
-    s".theme-text { color: $lastColor; }"
-  ).mkString("\n")
+    s".theme-text { color: $lastColor; }").mkString("\n")
 
   private[this] def isBright = lastColor.stripPrefix("#") match {
     case x if x.length == 6 =>

@@ -1,15 +1,15 @@
-import com.sksamuel.scapegoat.sbt.ScapegoatSbtPlugin.autoImport._
+// import com.sksamuel.scapegoat.sbt.ScapegoatSbtPlugin.autoImport._
 import sbt._
 import sbt.Keys._
 
 import webscalajs.ScalaJSWeb
 
-import net.virtualvoid.sbt.graph.DependencyGraphSettings.graphSettings
 import com.typesafe.sbt.SbtScalariform.{ScalariformKeys, scalariformSettings}
 
 import sbtcrossproject.CrossPlugin.autoImport._
-import scalajscrossproject.ScalaJSCrossPlugin.autoImport.{toScalaJSGroupID => _, _}
+import scalajscrossproject.ScalaJSCrossPlugin.autoImport._
 import sbtcrossproject.{crossProject, CrossType}
+import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 object Shared {
   val projectId = "solitaire-gg"
@@ -23,7 +23,7 @@ object Shared {
 
   object Versions {
     val app = "0.1-SNAPSHOT"
-    val scala = "2.12.3"
+    val scala = "2.12.17"
   }
 
   val commonSettings = Seq(
@@ -43,27 +43,26 @@ object Shared {
     sources in (Compile,doc) := Seq.empty,
 
     // Resolvers
-    resolvers += Resolver.jcenterRepo,
     resolvers += "Akka Snapshot Repository" at "https://repo.akka.io/snapshots/",
 
     // Code Quality
-    scapegoatVersion := Dependencies.Utils.scapegoatVersion,
+    // scapegoatVersion := Dependencies.Utils.scapegoatVersion,
     ScalariformKeys.preferences := ScalariformKeys.preferences.value,
 
     testFrameworks += new TestFramework("utest.runner.Framework")
-  ) ++ graphSettings ++ scalariformSettings
+  ) ++ scalariformSettings
 
   lazy val shared = (crossProject(JSPlatform, JVMPlatform).crossType(CrossType.Pure) in file("shared")).settings(commonSettings: _*).settings(Seq(
     libraryDependencies ++= Seq(
       "io.circe" %%% "circe-core" % Dependencies.Serialization.circeVersion,
       "io.circe" %%% "circe-generic" % Dependencies.Serialization.circeVersion,
-      "io.circe" %%% "circe-generic-extras" % Dependencies.Serialization.circeVersion,
+      "io.circe" %%% "circe-generic-extras" % Dependencies.Serialization.circeExtrasVersion,
       "io.circe" %%% "circe-parser" % Dependencies.Serialization.circeVersion,
       "com.beachape" %%% "enumeratum-circe" % Dependencies.Utils.enumeratumVersion
     ),
     // Code Quality
-    scapegoatIgnoredFiles := Seq(".*/JsonSerializers.scala"),
-    scapegoatDisabledInspections := Seq("FinalModifierOnCaseClass")
+    // scapegoatIgnoredFiles := Seq(".*/JsonSerializers.scala"),
+    // scapegoatDisabledInspections := Seq("FinalModifierOnCaseClass")
   ))
 
   lazy val sharedJs = shared.js.enablePlugins(ScalaJSWeb)

@@ -10,8 +10,7 @@ object Corners extends GameRules(
   like = Some("czarina"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/corners.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/corners.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/corners.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(maximumDeals = Some(3))),
@@ -24,7 +23,4 @@ object Corners extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

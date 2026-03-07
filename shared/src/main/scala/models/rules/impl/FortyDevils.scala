@@ -12,31 +12,23 @@ object FortyDevils extends GameRules(
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       name = "Left Foundation",
       numPiles = 4,
-      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)
-    ),
+      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)),
     FoundationRules(
       name = "Right Foundation",
       setNumber = 1,
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

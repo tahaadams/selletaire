@@ -16,8 +16,7 @@ object AlexanderTheGreat extends GameRules(
       numPiles = 2,
       initialCardRestriction = Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(Color.Red)),
       initialCards = 2,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Black Foundation",
       setNumber = 1,
@@ -26,9 +25,7 @@ object AlexanderTheGreat extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(Color.Black)),
       initialCards = 2,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Fan",
@@ -38,7 +35,4 @@ object AlexanderTheGreat extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRankOrLowRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRankOrLowRank)))

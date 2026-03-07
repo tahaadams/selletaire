@@ -9,22 +9,17 @@ object Swiss extends GameRules(
   title = "Swiss",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/swiss_patience.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SwissPatience.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SwissPatience.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(lowRank = Rank.Two),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
@@ -38,10 +33,6 @@ object Swiss extends GameRules(
         "DDDU",
         "DDU",
         "DU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

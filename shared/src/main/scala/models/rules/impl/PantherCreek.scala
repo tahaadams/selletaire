@@ -15,9 +15,7 @@ object PantherCreek extends GameRules(
     StockRules(
       cardsShown = 16,
       dealTo = StockDealTo.Foundation,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       lowRank = FoundationLowRank.AnyCard,
@@ -26,9 +24,7 @@ object PantherCreek extends GameRules(
       rankMatchRule = RankMatchRule.UpOrDown,
       wrap = false,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -37,7 +33,4 @@ object PantherCreek extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

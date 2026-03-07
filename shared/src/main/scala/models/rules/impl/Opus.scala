@@ -19,8 +19,5 @@ object Opus extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
       emptyFilledWith = FillEmptyWith.HighRank,
-      pilesWithLowCardsAtBottom = 1
-    )
-  ),
-  cells = Some(CellRules(numPiles = 5))
-)
+      pilesWithLowCardsAtBottom = 1)),
+  cells = Some(CellRules(numPiles = 5)))

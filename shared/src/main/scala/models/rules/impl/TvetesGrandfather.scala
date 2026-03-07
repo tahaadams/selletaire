@@ -11,9 +11,7 @@ object TvetesGrandfather extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -24,18 +22,12 @@ object TvetesGrandfather extends GameRules(
         "DDDDDDUUUUU",
         "DDDDDUUUUU",
         "DDDUUUUU",
-        "DUUUUU"
-      ),
+        "DUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.HighRank)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

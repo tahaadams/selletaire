@@ -20,14 +20,10 @@ object RussianCell extends GameRules(
         "DDDUUUUU",
         "DDDDUUUUU",
         "DDDDDUUUUU",
-        "DDDDDDUUUUU"
-      ),
+        "DDDDDDUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(numPiles = 2)))

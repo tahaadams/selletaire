@@ -10,8 +10,7 @@ object Beetle extends GameRules(
   links = Seq(
     Link("Wikipedia", "en.wikipedia.org/wiki/Beetle_(solitaire)"),
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/beetle.htm"),
-    Link("Chet Carrie on eHow", "www.ehow.com/how_7215429_play-beetle-solitaire.html")
-  ),
+    Link("Chet Carrie on eHow", "www.ehow.com/how_7215429_play-beetle-solitaire.html")),
   layout = "sf|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   deckOptions = DeckOptions(numDecks = 2),
@@ -31,11 +30,7 @@ object Beetle extends GameRules(
         "UUUUU",
         "UUUUU",
         "UUUUU",
-        "UUUUU"
-      ),
+        "UUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

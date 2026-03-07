@@ -12,22 +12,15 @@ object Kiev extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       moveCompleteSequencesOnly = true,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Count(4),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-      rankMatchRuleForMovingStacks = RankMatchRule.Any
-    )
-  )
-)
+      rankMatchRuleForMovingStacks = RankMatchRule.Any)))

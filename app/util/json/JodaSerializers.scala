@@ -1,7 +1,7 @@
 package util.json
 
 import io.circe.Decoder.Result
-import io.circe.{Decoder, Encoder, HCursor, Json}
+import io.circe.{ Decoder, Encoder, HCursor, Json }
 import io.circe.generic.extras.Configuration
 import java.time.LocalDateTime
 import util.DateUtils

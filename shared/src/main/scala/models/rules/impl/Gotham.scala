@@ -16,20 +16,14 @@ object Gotham extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Manually,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(
     WasteRules(
-      numPiles = 3
-    )
-  ),
+      numPiles = 3)),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -37,7 +31,4 @@ object Gotham extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock, PileSet.Behavior.Waste)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock, PileSet.Behavior.Waste))))

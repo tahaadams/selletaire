@@ -2,10 +2,10 @@ package models.queries.history
 
 import java.util.UUID
 
-import models.database.{Query, Row, Statement}
-import models.history.{GameHistory, GameSeed}
+import models.database.{ Query, Row, Statement }
+import models.history.{ GameHistory, GameSeed }
 import models.queries.BaseQueries
-import models.rules.{GameRules, GameRulesSet}
+import models.rules.{ GameRules, GameRulesSet }
 
 import models.database.DatabaseFieldType.TimestampType
 import services.test.GameSolver
@@ -16,8 +16,7 @@ object GameSeedQueries extends BaseQueries[GameSeed] {
   override protected val columns = Seq(
     "rules", "seed", "games", "wins", "moves",
     "first_player", "first_moves", "first_elapsed_ms", "first_occurred",
-    "fastest_player", "fastest_moves", "fastest_elapsed_ms", "fastest_occurred"
-  )
+    "fastest_player", "fastest_moves", "fastest_elapsed_ms", "fastest_occurred")
   override protected def idColumns = Seq("rules", "seed")
   override protected val searchColumns = Seq("rules", "seed::text", "first_player::text", "fastest_player::text")
 
@@ -72,8 +71,7 @@ object GameSeedQueries extends BaseQueries[GameSeed] {
       if (gh.isWon) { 1 } else { 0 }, gh.moves,
       player, gh.moves, gh.duration, gh.completed,
       player, gh.moves, gh.duration, gh.completed,
-      gh.rules, gh.seed
-    )
+      gh.rules, gh.seed)
   }
 
   override protected def fromRow(row: Row) = {
@@ -87,8 +85,7 @@ object GameSeedQueries extends BaseQueries[GameSeed] {
         player = p,
         moves = row.as[Int](prefix + "moves"),
         elapsed = row.as[Int](prefix + "elapsed_ms"),
-        occurred = TimestampType.opt(row, prefix + "occurred").getOrElse(DateUtils.now)
-      )
+        occurred = TimestampType.opt(row, prefix + "occurred").getOrElse(DateUtils.now))
     }
     GameSeed(rules, seed, games, wins, moves, recordForRow("first_"), recordForRow("fastest_"))
   }
@@ -96,6 +93,5 @@ object GameSeedQueries extends BaseQueries[GameSeed] {
   override protected def toDataSeq(gs: GameSeed) = Seq[Any](
     gs.rules, gs.seed, gs.games, gs.wins, gs.moves,
     gs.first.map(_.player), gs.first.map(_.moves), gs.first.map(_.elapsed), gs.first.map(_.occurred),
-    gs.fastest.map(_.player), gs.fastest.map(_.moves), gs.fastest.map(_.elapsed), gs.fastest.map(_.occurred)
-  )
+    gs.fastest.map(_.player), gs.fastest.map(_.moves), gs.fastest.map(_.elapsed), gs.fastest.map(_.occurred))
 }

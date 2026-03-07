@@ -31,6 +31,5 @@ object InstallHistoryQueries extends BaseQueries[InstallHistory] {
   }
 
   override protected def toDataSeq(ih: InstallHistory) = Seq[Any](
-    ih.id, ih.userId, ih.deviceId, ih.deviceInfo.toArray, ih.client, ih.occurred
-  )
+    ih.id, ih.userId, ih.deviceId, ih.deviceInfo.toArray, ih.client, ih.occurred)
 }

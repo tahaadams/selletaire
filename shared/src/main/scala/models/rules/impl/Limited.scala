@@ -17,29 +17,21 @@ object Limited extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/limited.html"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/limited.htm"),
     Link("Battleline Games", "www.limitedsolitaire.com/LimitedSolitaireInstructions.html"),
-    Link("Solitaire Central", "www.solitairecentral.com/rules/Limited.html")
-  ),
+    Link("Solitaire Central", "www.solitairecentral.com/rules/Limited.html")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
       initialCards = InitialCards.Count(3),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

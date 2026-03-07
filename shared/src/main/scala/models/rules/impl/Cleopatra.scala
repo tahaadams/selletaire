@@ -29,11 +29,7 @@ object Cleopatra extends GameRules(
         "DUDU",
         "UDU",
         "DU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

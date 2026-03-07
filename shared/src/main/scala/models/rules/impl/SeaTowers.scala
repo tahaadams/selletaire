@@ -15,8 +15,7 @@ object SeaTowers extends GameRules(
     Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/sea_towers.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/sea_towers.htm"),
     Link("Super Solitaire", "supersolitaire.weisswo.com/Games+Rules/Entries/2010/11/12_Seahaven_Towers.html"),
-    Link("Bicycle", "www.bicyclecards.com/card-games/rule/seahaven-towers")
-  ),
+    Link("Bicycle", "www.bicyclecards.com/card-games/rule/seahaven-towers")),
   layout = "f::c|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -26,8 +25,5 @@ object SeaTowers extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(initialCards = 2))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(initialCards = 2)))

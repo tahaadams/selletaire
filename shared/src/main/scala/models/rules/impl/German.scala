@@ -14,16 +14,13 @@ object German extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/german-patience.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/GermanPatience.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/german_patience.php"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/german_patience.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/german_patience.html")),
   layout = "sw|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   tableaus = IndexedSeq(
     TableauRules(
@@ -33,7 +30,4 @@ object German extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.Up,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

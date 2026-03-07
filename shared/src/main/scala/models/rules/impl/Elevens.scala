@@ -14,8 +14,7 @@ object Elevens extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/elevens.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Elevens.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/elevens.htm"),
-    Link("Jan Wolter's Experiments", "/article/simplepairs.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/simplepairs.html")),
   layout = "sf|t",
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToElevenOrJQK,
   stock = Some(StockRules(dealTo = StockDealTo.Never, maximumDeals = Some(1))),
@@ -28,7 +27,4 @@ object Elevens extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

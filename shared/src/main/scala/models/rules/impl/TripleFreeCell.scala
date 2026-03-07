@@ -16,8 +16,5 @@ object TripleFreeCell extends GameRules(
       numPiles = 13,
       initialCards = InitialCards.Count(12),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules(numPiles = 10))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(numPiles = 10)))

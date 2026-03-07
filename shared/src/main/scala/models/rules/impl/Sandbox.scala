@@ -14,9 +14,6 @@ object Sandbox extends GameRules(
 
   foundations = IndexedSeq(FoundationRules(
     suitMatchRule = SuitMatchRule.Any,
-    rankMatchRule = RankMatchRule.Any
-  )),
+    rankMatchRule = RankMatchRule.Any)),
   stock = Some(StockRules(
-    dealTo = StockDealTo.Foundation
-  ))
-)
+    dealTo = StockDealTo.Foundation)))

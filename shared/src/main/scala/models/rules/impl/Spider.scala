@@ -8,8 +8,7 @@ object Spider extends GameRules(
   title = "Spider",
   related = Seq(
     "fredsspider", "chinesespider", "astrocyte", "mondospider", "tarantula", "trillium", "spideronesuit", "spidertwosuits",
-    "spiderette", "blackwidow", "hugespider", "beetle", "bigspider"
-  ),
+    "spiderette", "blackwidow", "hugespider", "beetle", "bigspider"),
   links = Seq(
     Link("Wikipedia", "en.wikipedia.org/wiki/Spider_(solitaire)"),
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/spider.htm"),
@@ -23,23 +22,18 @@ object Spider extends GameRules(
     Link("Dan Fletcher's Strategy Guide", "www.solitairecentral.com/articles/SpiderSolitaireAStrategyGuideForBeginners.html"),
     Link("Boris Sandberg's Strategy Guide", "www.solitairecentral.com/articles/SpiderSolitaireAWinningStrategy.html"),
     Link("Steve Weiss", "home.comcast.net/~srweiss/spider/"),
-    Link("Alex Robinson's Spider Solver", "www.tranzoa.net/~alex/plspider.htm")
-  ),
+    Link("Alex Robinson's Spider Solver", "www.tranzoa.net/~alex/plspider.htm")),
   layout = "s:f|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.TableauIfNoneEmpty,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -54,11 +48,7 @@ object Spider extends GameRules(
         "DDDDU",
         "DDDDU",
         "DDDDU",
-        "DDDDU"
-      ),
+        "DDDDU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

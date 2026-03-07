@@ -16,22 +16,16 @@ object LadyCadogan extends GameRules(
     FoundationRules(
       name = "Left Foundation",
       numPiles = 4,
-      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)
-    ),
+      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)),
     FoundationRules(
       name = "Right Foundation",
       setNumber = 1,
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

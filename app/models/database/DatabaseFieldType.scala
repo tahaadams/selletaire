@@ -1,6 +1,6 @@
 package models.database
 
-import java.time.{LocalDate, LocalDateTime, LocalTime}
+import java.time.{ LocalDate, LocalDateTime, LocalTime }
 import java.util.UUID
 
 import enumeratum._

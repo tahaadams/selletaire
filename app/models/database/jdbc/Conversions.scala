@@ -1,6 +1,6 @@
 package models.database.jdbc
 
-import java.time.{LocalDate, LocalDateTime}
+import java.time.{ LocalDate, LocalDateTime }
 import util.DateUtils
 
 object Conversions {

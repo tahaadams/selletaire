@@ -12,8 +12,7 @@ object Corona extends GameRules(
     Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/corona.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/corona.html"),
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/corona.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/corona.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/corona.php")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -26,7 +25,4 @@ object Corona extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock)))

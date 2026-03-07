@@ -8,24 +8,16 @@ object NorthwestTerritory extends GameRules(
   title = "Northwest Territory",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/northwest_territory.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/northwest_territory.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/northwest_territory.html")),
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

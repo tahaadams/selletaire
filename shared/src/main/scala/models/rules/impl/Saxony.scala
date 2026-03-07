@@ -18,9 +18,6 @@ object Saxony extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
   cells = Some(CellRules(initialCards = 4)),
-  reserves = Some(ReserveRules(name = "Tableau", numPiles = 8, cardsFaceDown = -1))
-)
+  reserves = Some(ReserveRules(name = "Tableau", numPiles = 8, cardsFaceDown = -1)))

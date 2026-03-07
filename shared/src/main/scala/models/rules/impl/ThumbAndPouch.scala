@@ -17,25 +17,17 @@ object ThumbAndPouch extends GameRules(
     Link("dogMelon", "www.dogmelon.com.au/solhelp/Klondike%20Solitaire.shtml"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/thumb_and_pouch.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Thumb_And_Pouch.html.en"),
-    Link("Elton Gahr on HobbyHub", "www.hobbyhub360.com/index.php/solitaire-how-to-play-thumb-and-pouch-13658/")
-  ),
+    Link("Elton Gahr on HobbyHub", "www.hobbyhub360.com/index.php/solitaire-how-to-play-thumb-and-pouch-13658/")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
-      suitMatchRuleForMovingStacks = SuitMatchRule.DifferentSuits
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.DifferentSuits)))

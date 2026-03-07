@@ -12,16 +12,13 @@ object Indefatigable extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/indefatigable.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Indefatigable.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/the_indefatigable.php"),
-    Link("Jan Wolter's Experiments", "/article/indefatigable.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/indefatigable.html")),
   layout = "::::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -29,12 +26,7 @@ object Indefatigable extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

@@ -10,14 +10,11 @@ object Shamrocks extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/shamrocks.htm"),
     Link("Wikipedia", "en.wikipedia.org/wiki/Shamrocks"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/shamrocks.htm"),
-    Link("Shamrocks Solitaire.com", "www.shamrockssolitaire.com/ShamrocksSolitaireInstructions.html")
-  ),
+    Link("Shamrocks Solitaire.com", "www.shamrockssolitaire.com/ShamrocksSolitaireInstructions.html")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
-      numPiles = 4
-    )
-  ),
+      numPiles = 4)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Fan",
@@ -41,15 +38,11 @@ object Shamrocks extends GameRules(
         "UUU",
         "UUU",
         "UUU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
       maxCards = 3,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveKingsToBottom)))

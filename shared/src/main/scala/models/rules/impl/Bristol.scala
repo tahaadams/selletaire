@@ -15,8 +15,7 @@ object Bristol extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/bristol.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Bristol.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/bristol.php"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Bristol.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Bristol.html.en")),
   layout = "sw::f|.t",
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules(numPiles = 3)),
@@ -28,7 +27,4 @@ object Bristol extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

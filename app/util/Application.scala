@@ -2,12 +2,12 @@ package util
 
 import java.util.TimeZone
 
-import akka.actor.{ActorSystem, Props}
+import akka.actor.{ ActorSystem, Props }
 import play.api.i18n.MessagesApi
 import play.api.inject.ApplicationLifecycle
 import play.api.libs.ws.WSClient
 import services.audit.NotificationService
-import services.database.{Database, Schema}
+import services.database.{ Database, Schema }
 import services.file.FileService
 import services.scheduled.ScheduledTask
 import services.supervisor.ActorSupervisor
@@ -21,14 +21,13 @@ object Application {
 
 @javax.inject.Singleton
 class Application @javax.inject.Inject() (
-    val config: util.Config,
-    val messagesApi: MessagesApi,
-    val lifecycle: ApplicationLifecycle,
-    val notificationService: NotificationService,
-    val system: ActorSystem,
-    val task: ScheduledTask,
-    val ws: WSClient
-) extends Logging {
+  val config: util.Config,
+  val messagesApi: MessagesApi,
+  val lifecycle: ApplicationLifecycle,
+  val notificationService: NotificationService,
+  val system: ActorSystem,
+  val task: ScheduledTask,
+  val ws: WSClient) extends Logging {
   if (Application.initialized) {
     log.info("Skipping initialization after failure.")
   } else {
@@ -76,6 +75,6 @@ class Application @javax.inject.Inject() (
     import util.FutureUtils.defaultContext
     import scala.concurrent.duration._
     log.info("Scheduling task to run every hour, after five minutes.")
-    system.scheduler.schedule(5.minutes, 1.hour, task)
+    system.scheduler.scheduleAtFixedRate(5.minutes, 1.hour)(() => task.run())
   }
 }

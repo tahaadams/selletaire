@@ -13,8 +13,7 @@ object GayGordons extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/exit.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/exit.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Exit.htm"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Gay_Gordons.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Gay_Gordons.html.en")),
   layout = "f|r|t",
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToElevenOrJPairOrQK,
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
@@ -26,8 +25,5 @@ object GayGordons extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      actionAfterDeal = PileAction.LimitToTwoJacks
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 2))
-)
+      actionAfterDeal = PileAction.LimitToTwoJacks)),
+  reserves = Some(ReserveRules(initialCards = 2)))

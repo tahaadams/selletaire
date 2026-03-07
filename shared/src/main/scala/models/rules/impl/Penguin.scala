@@ -14,8 +14,7 @@ object Penguin extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/penguin.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/penguin.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/penguin.htm"),
-    Link("Solitaire Central", "www.solitairecentral.com/articles/HowToPlayPenguinSolitaire.html")
-  ),
+    Link("Solitaire Central", "www.solitairecentral.com/articles/HowToPlayPenguinSolitaire.html")),
   layout = ":.f|c|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, initialCards = 3, autoMoveCards = true)),
@@ -26,8 +25,5 @@ object Penguin extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
       emptyFilledWith = FillEmptyWith.HighRank,
-      pilesWithLowCardsAtBottom = 1
-    )
-  ),
-  cells = Some(CellRules(numPiles = 7))
-)
+      pilesWithLowCardsAtBottom = 1)),
+  cells = Some(CellRules(numPiles = 7)))

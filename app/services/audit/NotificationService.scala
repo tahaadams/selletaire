@@ -2,7 +2,7 @@ package services.audit
 
 import util.FutureUtils.defaultContext
 import play.api.libs.ws.WSClient
-import util.{Config, Logging}
+import util.{ Config, Logging }
 
 import io.circe._
 
@@ -17,8 +17,7 @@ class NotificationService @javax.inject.Inject() (ws: WSClient, config: Config) 
       "channel" -> Json.fromString(channel),
       "username" -> Json.fromString(username),
       "icon_url" -> Json.fromString(iconUrl),
-      "text" -> Json.fromString(msg)
-    ))
+      "text" -> Json.fromString(msg)))
 
     val call = ws.url(config.slackUrl).withHttpHeaders("Accept" -> "application/json")
     val f = call.post(body.spaces2)

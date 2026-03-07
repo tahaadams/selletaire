@@ -14,21 +14,16 @@ object LadyBetty extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/lady_betty.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/lady_betty.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/lady-betty.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/LadyBetty.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/LadyBetty.htm")),
   layout = "sf|t",
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Manually,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Reserve",
@@ -39,7 +34,4 @@ object LadyBetty extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Stock),
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Stock))))

@@ -16,8 +16,5 @@ object SimonSays extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)),
+  cells = Some(CellRules(numPiles = 2)))

@@ -21,7 +21,4 @@ object Bavarian extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.Up,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

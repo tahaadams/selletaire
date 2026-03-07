@@ -20,8 +20,5 @@ object ThreeDemons extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 48, cardsFaceDown = -1))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  reserves = Some(ReserveRules(initialCards = 48, cardsFaceDown = -1)))

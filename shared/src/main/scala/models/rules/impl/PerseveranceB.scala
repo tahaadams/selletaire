@@ -9,16 +9,13 @@ object PerseveranceB extends GameRules(
   like = Some("perseverancea"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/perseverance.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/perseverance.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/perseverance.htm")),
   layout = "::::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -27,12 +24,7 @@ object PerseveranceB extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    )
-  ),
+      actionDuringDeal = PileAction.MoveKingsToBottom)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

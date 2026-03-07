@@ -11,26 +11,18 @@ object Gilbert extends GameRules(
   layout = "swff|t",
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.DeckHighRank,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      emptyFilledWith = FillEmptyWith.Sevens
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.Sevens)))

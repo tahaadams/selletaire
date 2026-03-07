@@ -3,7 +3,7 @@ package services.test
 import models.GameMessage
 import models.history.GameHistory
 import models.rules.GameRulesSet
-import models.test.{Test, Tree}
+import models.test.{ Test, Tree }
 import services.history.GameSeedService
 import util.Logging
 

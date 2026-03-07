@@ -12,16 +12,13 @@ object GoodMeasure extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/good_measure.htm"),
     Link("About.com (Erik Arneson)", "boardgames.about.com/od/solitaire/a/good_measure.htm"),
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/GoodMeasure.html"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/good_measure.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/good_measure.html")),
   layout = ".f|2t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 2,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -30,7 +27,4 @@ object GoodMeasure extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveKingsToBottom)))

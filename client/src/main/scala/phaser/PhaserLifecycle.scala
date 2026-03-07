@@ -1,9 +1,9 @@
 package phaser
 
-import msg.req.{MoveHistory, OnGameComplete}
+import msg.req.{ MoveHistory, OnGameComplete }
 import org.scalajs.dom
 import phaser.card.CardAnimation
-import phaser.state.{InitialState, LoadingState}
+import phaser.state.{ InitialState, LoadingState }
 
 object PhaserLifecycle {
   def start(g: PhaserGame) = {
@@ -40,7 +40,6 @@ object PhaserLifecycle {
       score = g.gameplay.services.state.calculateScore(moves, undos, redos),
       firstMove = g.gameplay.services.moves.getFirstMove,
       history = g.gameplay.services.moves.history.map(m => MoveHistory(m._1, m._2)),
-      occurred = System.currentTimeMillis
-    )
+      occurred = System.currentTimeMillis)
   }
 }

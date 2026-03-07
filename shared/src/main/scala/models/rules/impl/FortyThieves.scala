@@ -9,8 +9,7 @@ object FortyThieves extends GameRules(
   related = Seq(
     "robie", "napoleonsquadrilateral", "famousfifty", "fortybandits", "limited", "elba", "threepirates", "squadron",
     "fortythieves3", "sixtythieves", "littlenapoleon", "eightythieves", "mamysusan", "sanjuanhill", "fortythieves4", "thievesrush",
-    "josephine"
-  ),
+    "josephine"),
   links = Seq(
     Link("Wikipedia", "en.wikipedia.org/wiki/Forty_Thieves_(card_game)"),
     Link("Solitaire Central", "www.solitairecentral.com/rules/FortyThieves.html"),
@@ -25,29 +24,21 @@ object FortyThieves extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/forty-thieves.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/FortyThieves.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/forty_thieves.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/forty_thieves.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/forty_thieves.php")),
   layout = "swf|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

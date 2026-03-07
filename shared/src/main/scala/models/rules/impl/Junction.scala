@@ -9,27 +9,19 @@ object Junction extends GameRules(
   title = "Junction",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/junction.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/junction.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/junction.htm")),
   layout = ":::::::sw|f|.::::t",
   deckOptions = DeckOptions(numDecks = 4, ranks = Seq(Rank.Seven, Rank.Eight, Rank.Nine, Rank.Ten, Rank.Jack, Rank.Queen, Rank.King, Rank.Ace)),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 16,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

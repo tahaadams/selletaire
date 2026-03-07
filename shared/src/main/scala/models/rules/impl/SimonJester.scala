@@ -14,9 +14,7 @@ object SimonJester extends GameRules(
       numPiles = 8,
       moveCompleteSequencesOnly = true,
       canMoveFrom = FoundationCanMoveFrom.Never,
-      visible = false
-    )
-  ),
+      visible = false)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 14,
@@ -35,11 +33,7 @@ object SimonJester extends GameRules(
         "UUUU",
         "UUU",
         "UU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

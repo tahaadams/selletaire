@@ -18,5 +18,4 @@ case class Settings(
   tilt: Boolean = true,
   autoFlip: Boolean = true,
   audio: Boolean = false,
-  language: Language = Language.English
-)
+  language: Language = Language.English)

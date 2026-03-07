@@ -18,8 +18,5 @@ object DoubleMinerva extends GameRules(
       numPiles = 9,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.OddNumbered,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  reserves = Some(ReserveRules(initialCards = 13)))

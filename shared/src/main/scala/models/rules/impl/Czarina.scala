@@ -13,8 +13,7 @@ object Czarina extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/czarina.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/czarina.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/czarina.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Czarina.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Czarina.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -27,7 +26,4 @@ object Czarina extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

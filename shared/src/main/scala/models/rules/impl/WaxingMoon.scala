@@ -18,6 +18,4 @@ object WaxingMoon extends GameRules(
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

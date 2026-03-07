@@ -12,15 +12,12 @@ object LaBelleLucie extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/la_belle_lucie.html"),
     Link("Wikipedia", "en.wikipedia.org/wiki/La_Belle_Lucie"),
     Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/la_belle_lucie.htm"),
-    Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#belle")
-  ),
+    Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#belle")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 18,
@@ -43,17 +40,11 @@ object LaBelleLucie extends GameRules(
         "UUU",
         "UUU",
         "UUU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

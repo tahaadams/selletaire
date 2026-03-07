@@ -19,12 +19,9 @@ object YukonicPlague extends GameRules(
       "DDUUUU",
       "DDUUUUU",
       "DDUUUUUU",
-      "DDUUUUUU"
-    ),
+      "DDUUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  )),
-  reserves = Some(ReserveRules(initialCards = 13))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)),
+  reserves = Some(ReserveRules(initialCards = 13)))

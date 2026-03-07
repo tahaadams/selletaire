@@ -4,7 +4,7 @@ import java.sql.Connection
 import java.util.UUID
 
 import models.history.GameHistory
-import models.queries.user.{UserQueries, UserStatisticsQueries}
+import models.queries.user.{ UserQueries, UserStatisticsQueries }
 import models.user.UserStatistics
 import util.FutureUtils.defaultContext
 import services.database.Database

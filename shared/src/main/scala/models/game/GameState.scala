@@ -3,20 +3,19 @@ package models.game
 import java.util.UUID
 
 import models.ResponseMessage
-import models.card.{Card, Deck, Rank, Suit}
+import models.card.{ Card, Deck, Rank, Suit }
 import models.pile.set.PileSet
 
 case class GameState(
-    gameId: UUID,
-    rules: String,
-    rulesTitle: String,
-    maxPlayers: Int,
-    seed: Int,
-    deck: Deck,
-    pileSets: IndexedSeq[PileSet],
-    layout: String,
-    var stockCounter: Int = 0
-) extends GameStateHelper {
+  gameId: UUID,
+  rules: String,
+  rulesTitle: String,
+  maxPlayers: Int,
+  seed: Int,
+  deck: Deck,
+  pileSets: IndexedSeq[PileSet],
+  layout: String,
+  var stockCounter: Int = 0) extends GameStateHelper {
   var players = IndexedSeq.empty[GamePlayer]
 
   protected[this] val playerKnownIds = collection.mutable.HashMap.empty[UUID, collection.mutable.HashSet[Int]]
@@ -29,7 +28,7 @@ case class GameState(
 
   def addPlayer(userId: UUID, name: String, autoFlipOption: Boolean) = players.find(_.userId == userId) match {
     case Some(_) =>
-      // TODO Reconnect
+    // TODO Reconnect
     case None =>
       val playerIndex = playerKnownIds.size
       if (playerIndex == maxPlayers) {
@@ -56,8 +55,7 @@ case class GameState(
         PileSet(ps.behavior, ps.piles.map(p => p.copy(cards = p.cards.map { c =>
           if (knownCards.contains(c.id)) { c.copy() } else { c.copy(r = Rank.Unknown, s = Suit.Unknown) }
         })), visible = ps.visible)
-      }
-    )
+      })
     ret.refreshCaches()
     ret
   }
@@ -76,6 +74,5 @@ case class GameState(
   def toStrings = Seq(
     s"Game ID: $gameId", s"Rules: $rules", s"Seed: $seed",
     s"Players: ${players.map(x => s"${x.userId} (${x.name})").mkString(", ")}",
-    s"Deck: ${deck.cards}", s"${piles.size} Piles: "
-  ) ++ piles.map(p => p.toString)
+    s"Deck: ${deck.cards}", s"${piles.size} Piles: ") ++ piles.map(p => p.toString)
 }

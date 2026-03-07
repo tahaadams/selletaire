@@ -10,28 +10,20 @@ object ImperialGuards extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/imperial_guards.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/imperial-guards.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ImperialGuards.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ImperialGuards.htm")),
   layout = "sf|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
       maximumDeals = Some(1),
-      createPocketWhenEmpty = true
-    )
-  ),
+      createPocketWhenEmpty = true)),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.Count(1),
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

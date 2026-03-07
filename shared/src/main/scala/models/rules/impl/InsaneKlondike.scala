@@ -10,20 +10,13 @@ object InsaneKlondike extends GameRules(
   deckOptions = DeckOptions(numDecks = 32),
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 32 * 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 52,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

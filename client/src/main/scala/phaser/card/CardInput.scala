@@ -1,6 +1,6 @@
 package phaser.card
 
-import com.definitelyscala.phaser.{Point, Pointer}
+import com.definitelyscala.phaser.{ Point, Pointer }
 import phaser.pile.PileDragHelper
 
 import scala.scalajs.js

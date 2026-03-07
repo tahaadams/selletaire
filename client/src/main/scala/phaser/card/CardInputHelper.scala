@@ -2,7 +2,7 @@ package phaser.card
 
 import com.definitelyscala.phaser.Easing.Easing
 import models.game.PossibleMove
-import models.{MC, SC}
+import models.{ MC, SC }
 
 import scala.scalajs.js
 import scala.scalajs.js.Date

@@ -10,22 +10,16 @@ object Trigon extends GameRules(
   related = Seq("doubletrigon", "quadrupletrigon", "trigonleft"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/trigon.htm"),
-    Link("Jan Wolter's Experiments", "/article/trigon.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/trigon.html")),
   layout = "swf|t",
   stock = Some(StockRules()),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

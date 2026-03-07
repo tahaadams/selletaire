@@ -10,20 +10,13 @@ object OctupleKlondike extends GameRules(
   deckOptions = DeckOptions(numDecks = 8),
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 32,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 26,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

@@ -60,8 +60,7 @@ object TableauHelpService {
         "help.tableau.build.rank.and.suit.match.rules",
         loweredName,
         MatchRuleHelpService.toWords(rules.rankMatchRuleForBuilding),
-        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding)
-      )
+        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding))
     }
 
     if (rules.rankMatchRuleForMovingStacks == RankMatchRule.None || rules.suitMatchRuleForMovingStacks == SuitMatchRule.None) {
@@ -71,8 +70,7 @@ object TableauHelpService {
         "help.tableau.move.stacks.rank.and.suit.match.rules",
         loweredName,
         MatchRuleHelpService.toWords(rules.rankMatchRuleForBuilding),
-        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding)
-      )
+        MatchRuleHelpService.toWords(rules.suitMatchRuleForBuilding))
     }
 
     val name = if (rules.setNumber == 0) {

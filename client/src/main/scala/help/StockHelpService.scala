@@ -1,6 +1,6 @@
 package help
 
-import models.rules.{StockCardsDealt, StockDealTo, StockRules}
+import models.rules.{ StockCardsDealt, StockDealTo, StockRules }
 import util.Messages
 
 object StockHelpService {

@@ -14,26 +14,18 @@ object Spiderette extends GameRules(
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/Spiderette.html"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/spiderette.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Spiderette.html.en"),
-    Link("Solitaire City", "www.solitairecity.com/iPhone/Spiderette.shtml")
-  ),
+    Link("Solitaire City", "www.solitairecity.com/iPhone/Spiderette.shtml")),
   layout = "sf|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   stock = Some(
     StockRules(
       dealTo = StockDealTo.TableauIfNoneEmpty,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

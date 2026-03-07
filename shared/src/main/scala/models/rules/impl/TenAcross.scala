@@ -24,14 +24,10 @@ object TenAcross extends GameRules(
         "DDDUU",
         "DDUUU",
         "DUUUU",
-        "UUUUU"
-      ),
+        "UUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2, initialCards = 2))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(numPiles = 2, initialCards = 2)))

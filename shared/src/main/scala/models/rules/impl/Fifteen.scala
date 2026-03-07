@@ -8,23 +8,19 @@ object Fifteen extends GameRules(
   title = "Fifteen",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/fifteen.htm"),
-    Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#fifteen")
-  ),
+    Link("Lady Cadogan's Illustrated Games of Solitaire or Patience", "www.gutenberg.org/files/21642/21642-h/21642-h.htm#fifteen")),
   layout = ":::f:f|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)
-    ),
+      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)),
     FoundationRules(
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.DeckHighRank,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      rankMatchRule = RankMatchRule.Down
-    )
-  ),
+      rankMatchRule = RankMatchRule.Down)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 15,
@@ -32,7 +28,4 @@ object Fifteen extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

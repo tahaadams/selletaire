@@ -8,24 +8,22 @@ object UserStatistics {
   }
 
   case class Games(
-      played: Int,
-      wins: Int,
-      losses: Int,
-      totalDurationMs: Long,
-      totalMoves: Int,
-      totalUndos: Int,
-      totalRedos: Int,
-      lastWin: Option[Long],
-      lastLoss: Option[Long],
-      currentWinStreak: Int,
-      maxWinStreak: Int,
-      currentLossStreak: Int,
-      maxLossStreak: Int
-  )
+    played: Int,
+    wins: Int,
+    losses: Int,
+    totalDurationMs: Long,
+    totalMoves: Int,
+    totalUndos: Int,
+    totalRedos: Int,
+    lastWin: Option[Long],
+    lastLoss: Option[Long],
+    currentWinStreak: Int,
+    maxWinStreak: Int,
+    currentLossStreak: Int,
+    maxLossStreak: Int)
 }
 
 case class UserStatistics(
   userId: UUID,
   joined: Long,
-  games: UserStatistics.Games
-)
+  games: UserStatistics.Games)

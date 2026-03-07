@@ -1,3 +1,6 @@
+ThisBuild / libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % VersionScheme.Always
+ThisBuild / libraryDependencySchemes += "io.circe" %% "circe-core" % VersionScheme.Always
+
 lazy val sharedJvm = Shared.sharedJvm
 
 lazy val sharedJs = Shared.sharedJs

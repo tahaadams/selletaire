@@ -10,20 +10,15 @@ object ThreeBlindMice extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/three_blind_mice.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/three_blind_mice.html"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/three-blind-mice.htm"),
-    Link("Wikipedia", "en.wikipedia.org/wiki/Scorpion_(solitaire)")
-  ),
+    Link("Wikipedia", "en.wikipedia.org/wiki/Scorpion_(solitaire)")),
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -38,13 +33,9 @@ object ThreeBlindMice extends GameRules(
         "UUUUU",
         "UUUUU",
         "UUUUU",
-        "UUUUU"
-      ),
+        "UUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

@@ -11,8 +11,7 @@ object AcesAndKings extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/aces_and_kings.htm"),
     Link("Wikipedia", "en.wikipedia.org/wiki/Aces_and_Kings_(solitaire)"),
     Link("MyPatience", "mypatience.net/Rules.aspx?gameId=33"),
-    Link("eHow", "www.ehow.com/how_2106994_play-aces-kings-solitaire.html")
-  ),
+    Link("eHow", "www.ehow.com/how_2106994_play-aces-kings-solitaire.html")),
   layout = "swff|::r:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -21,17 +20,14 @@ object AcesAndKings extends GameRules(
     FoundationRules(
       name = "Ace Foundation",
       numPiles = 4,
-      suitMatchRule = SuitMatchRule.Any
-    ),
+      suitMatchRule = SuitMatchRule.Any),
     FoundationRules(
       name = "King Foundation",
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.DeckHighRank,
       suitMatchRule = SuitMatchRule.Any,
-      rankMatchRule = RankMatchRule.Down
-    )
-  ),
+      rankMatchRule = RankMatchRule.Down)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
@@ -39,8 +35,5 @@ object AcesAndKings extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 2, initialCards = 13))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)),
+  reserves = Some(ReserveRules(numPiles = 2, initialCards = 13)))

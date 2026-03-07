@@ -13,29 +13,21 @@ object Josephine extends GameRules(
     Link("dogMelon", "www.dogmelon.com.au/solhelp/Josephine.shtml"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/josephine.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/josephine.php"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/josephine.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/josephine.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

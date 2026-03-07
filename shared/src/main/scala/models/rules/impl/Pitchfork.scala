@@ -24,11 +24,7 @@ object Pitchfork extends GameRules(
         "UU",
         "UUUU",
         "UUUUUUUU",
-        "UUUUUUUU"
-      ),
+        "UUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 7))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  reserves = Some(ReserveRules(initialCards = 7)))

@@ -18,6 +18,4 @@ object DoubleFourteens extends GameRules(
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.None,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
-    emptyFilledWith = FillEmptyWith.None
-  ))
-)
+    emptyFilledWith = FillEmptyWith.None)))

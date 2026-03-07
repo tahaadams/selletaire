@@ -9,8 +9,7 @@ object MamySusan extends GameRules(
   like = Some("fortythieves"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/mamy_susan.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/MamySusan.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/MamySusan.htm")),
   layout = "swf|r:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -21,8 +20,5 @@ object MamySusan extends GameRules(
       numPiles = 10,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 5, cardsFaceDown = -1))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  reserves = Some(ReserveRules(initialCards = 5, cardsFaceDown = -1)))

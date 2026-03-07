@@ -17,8 +17,7 @@ object Diplomat extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Diplomat.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/diplomat.php"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/diplomat.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/diplomat.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/diplomat.html")),
   layout = "swf|.:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -31,7 +30,4 @@ object Diplomat extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)))

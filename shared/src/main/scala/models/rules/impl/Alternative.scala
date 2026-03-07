@@ -16,8 +16,7 @@ object Alternative extends GameRules(
       numPiles = 2,
       initialCardRestriction = Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(Color.Red)),
       initialCards = 2,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Black Foundation",
       setNumber = 1,
@@ -26,9 +25,7 @@ object Alternative extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(Color.Black)),
       initialCards = 2,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -37,12 +34,7 @@ object Alternative extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 1
-    )
-  )
-)
+      redealsAllowed = 1)))

@@ -9,17 +9,14 @@ object GolfRush extends GameRules(
   like = Some("golf"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/golf_rush.htm"),
-    Link("Jan Wolter's Experiments", "/article/golf.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/golf.html")),
   layout = "sf|t",
   victoryCondition = VictoryCondition.AllOnFoundationOrStock,
   stock = Some(
     StockRules(
       cardsShown = 16,
       dealTo = StockDealTo.Foundation,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       lowRank = FoundationLowRank.AnyCard,
@@ -28,16 +25,11 @@ object GolfRush extends GameRules(
       rankMatchRule = RankMatchRule.UpOrDown,
       wrap = false,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

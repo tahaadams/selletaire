@@ -13,8 +13,7 @@ object Deuces extends GameRules(
     Link("Wikipedia", "en.wikipedia.org/wiki/Deuces_(solitaire)"),
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/deuces.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/deuces.html"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/deuces.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/deuces.htm")),
   layout = "swf|.t",
   deckOptions = DeckOptions(numDecks = 2, lowRank = Rank.Two),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -26,7 +25,4 @@ object Deuces extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

@@ -46,8 +46,7 @@ object ExportService {
   private[this] val staticReplacements = Seq(
     "/assets/" -> "[]assets/",
     "/strings.js" -> "[]strings.js",
-    "&#x27;" -> "'"
-  )
+    "&#x27;" -> "'")
 
   private[this] def replaceStaticLinks(s: String, prefix: Option[String]) = staticReplacements.foldLeft(s) { (s, r) =>
     val swap = prefix match {

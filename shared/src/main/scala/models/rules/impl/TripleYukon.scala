@@ -12,9 +12,7 @@ object TripleYukon extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 12,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
@@ -32,12 +30,8 @@ object TripleYukon extends GameRules(
         "DDDDDDDDDUUUUUU",
         "DDDDDDDDDDUUUUUU",
         "DDDDDDDDDDDUUUUUU",
-        "DDDDDDDDDDDDUUUUUU"
-      ),
+        "DDDDDDDDDDDDUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

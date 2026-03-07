@@ -13,16 +13,14 @@ object CastlesInSpain extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/castles-in-spain.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/castles_in_spain.php"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/CastlesinSpain.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/castles_in_spain.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/castles_in_spain.htm")),
   layout = "f|tt",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None),
     TableauRules(
       setNumber = 1,
       numPiles = 6,
@@ -31,7 +29,4 @@ object CastlesInSpain extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveKingsToBottom)))

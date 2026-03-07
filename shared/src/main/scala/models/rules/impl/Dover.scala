@@ -20,6 +20,4 @@ object Dover extends GameRules(
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.Any,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
-    mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-  ))
-)
+    mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)))

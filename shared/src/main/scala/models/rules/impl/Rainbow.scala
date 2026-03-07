@@ -16,8 +16,7 @@ object Rainbow extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Rainbow.htm"),
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/Rainbow.html"),
     Link("PySol", "pysolfc.sourceforge.net/doc/rules/rainbow.html"),
-    Link("Swoop Solitaire", "www.swoopsoftware.com/solitaire_rules/rainbow.html")
-  ),
+    Link("Swoop Solitaire", "www.swoopsoftware.com/solitaire_rules/rainbow.html")),
   layout = "swf|r::t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -30,8 +29,5 @@ object Rainbow extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1)))

@@ -18,8 +18,7 @@ object Chessboard extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Chessboard.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/chessboard.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Chessboard.html.en"),
-    Link("L. Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-chessboard-solitaire-14077/")
-  ),
+    Link("L. Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-chessboard-solitaire-14077/")),
   layout = ":::f|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
@@ -30,6 +29,4 @@ object Chessboard extends GameRules(
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
     wrap = true,
-    suitMatchRuleForMovingStacks = SuitMatchRule.None
-  ))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.None)))

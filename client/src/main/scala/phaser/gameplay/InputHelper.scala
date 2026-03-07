@@ -1,7 +1,7 @@
 package phaser.gameplay
 
 import client.SolitaireGG
-import input.{GamepadHandler, InputMessage, KeyboardHandler}
+import input.{ GamepadHandler, InputMessage, KeyboardHandler }
 
 class InputHelper(gg: SolitaireGG) {
   new KeyboardHandler(gg.phaser, onInput)
@@ -17,7 +17,7 @@ class InputHelper(gg: SolitaireGG) {
   }
 
   private[this] def toggleDebug() = {
-    import org.scalajs.jquery.{jQuery => $}
+    import org.scalajs.jquery.{ jQuery => $ }
     val jq = $(".pdebug")
     if (jq.length == 1) {
       jq.fadeToggle()

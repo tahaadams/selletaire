@@ -22,8 +22,7 @@ class ExportCrawler(ws: WSClient, baseUrl: String, outPath: File, debug: Boolean
     "assets/lib/materializecss/fonts/roboto/Roboto-Light.woff2",
     "assets/lib/materializecss/fonts/roboto/Roboto-Thin.woff",
     "assets/lib/materializecss/fonts/roboto/Roboto-Thin.woff2",
-    "assets/client-opt.js"
-  )
+    "assets/client-opt.js")
 
   private[this] val debugAssets = Seq(
     "strings.js",
@@ -37,13 +36,11 @@ class ExportCrawler(ws: WSClient, baseUrl: String, outPath: File, debug: Boolean
     "assets/lib/materializecss/fonts/roboto/Roboto-Light.woff2",
     "assets/lib/materializecss/fonts/roboto/Roboto-Thin.woff",
     "assets/lib/materializecss/fonts/roboto/Roboto-Thin.woff2",
-    "assets/client-fastopt.js"
-  )
+    "assets/client-fastopt.js")
 
   private[this] val folders = Seq(
     "public/audio" -> "assets/audio",
-    "public/images" -> "assets/images"
-  )
+    "public/images" -> "assets/images")
 
   def get(path: String, output: Option[String] = None) = ws.url(baseUrl + path).get().map {
     case x if x.status != 200 => throw new IllegalStateException(s"Status [${x.status}:${x.statusText}] from [$path].")

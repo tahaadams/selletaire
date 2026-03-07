@@ -1,14 +1,13 @@
 package audio
 
-import models.{MC, RequestMessage, SC, SP}
+import models.{ MC, RequestMessage, SC, SP }
 import phaser.PhaserGame
 
 object AudioService {
   val keys = Seq(
     "draw" -> (0.0 -> 0.19),
     "shuffle" -> (0.19 -> 0.75),
-    "playcard" -> (0.75 -> 0.94)
-  )
+    "playcard" -> (0.75 -> 0.94))
 }
 
 class AudioService(p: PhaserGame) {

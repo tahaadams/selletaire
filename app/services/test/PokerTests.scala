@@ -1,8 +1,8 @@
 package services.test
 
-import models.card.{Card, Rank, Suit}
+import models.card.{ Card, Rank, Suit }
 import models.rules.PokerRules
-import models.test.{Test, Tree}
+import models.test.{ Test, Tree }
 
 object PokerTests {
   private[this] def cardFrom(s: String) = Card(id = 0, r = Rank.withValue(s.toCharArray()(0)), s = Suit.withValue(s.toCharArray()(1)))
@@ -21,6 +21,5 @@ object PokerTests {
     testHand("three-of-a-kind", "AH,AS,AD,JC,XH"),
     testHand("two-pair", "AH,AS,3D,3C,XH"),
     testHand("pair", "AH,AS,2D,8C,XH"),
-    testHand("high-card", "AH,JH,9S,7D,5C")
-  ))
+    testHand("high-card", "AH,JH,9S,7D,5C")))
 }

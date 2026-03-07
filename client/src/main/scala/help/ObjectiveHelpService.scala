@@ -1,6 +1,6 @@
 package help
 
-import models.rules.{CardRemovalMethod, GameRules, VictoryCondition}
+import models.rules.{ CardRemovalMethod, GameRules, VictoryCondition }
 import util.Messages
 
 object ObjectiveHelpService {
@@ -38,8 +38,7 @@ object ObjectiveHelpService {
       val (rmr, smr) = rules.tableaus.toList match {
         case h :: _ => (
           MatchRuleHelpService.toWords(h.rankMatchRuleForBuilding),
-          MatchRuleHelpService.toWords(h.suitMatchRuleForBuilding)
-        )
+          MatchRuleHelpService.toWords(h.suitMatchRuleForBuilding))
         case _ => throw new IllegalStateException("Invalid number of tableau sets.")
       }
       Messages("help.victory.condition.all.on.tableau.sorted", rmr, smr)

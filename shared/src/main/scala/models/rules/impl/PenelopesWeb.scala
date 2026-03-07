@@ -9,15 +9,12 @@ object PenelopesWeb extends GameRules(
   like = Some("streetsandalleys"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/penelopes_web.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/penelope-web.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/penelope-web.htm")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -25,7 +22,4 @@ object PenelopesWeb extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

@@ -1,7 +1,7 @@
 package models.game
 
 import enumeratum.values._
-import models.{MC, SC, SP, UN}
+import models.{ MC, SC, SP, UN }
 
 object PossibleMove {
   sealed abstract class Type(val value: Char) extends CharEnumEntry

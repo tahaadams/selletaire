@@ -14,17 +14,14 @@ object RainbowFan extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       name = "Aces Foundation",
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       name = "Kings Foundation",
       setNumber = 1,
@@ -33,9 +30,7 @@ object RainbowFan extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.Down,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 20,
@@ -46,12 +41,7 @@ object RainbowFan extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
       emptyFilledWith = FillEmptyWith.None,
-      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Tableau)
-    )
-  ),
+      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Tableau))),
   special = Some(
     SpecialRules(
-      rotationsAllowed = 3
-    )
-  )
-)
+      rotationsAllowed = 3)))

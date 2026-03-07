@@ -21,8 +21,5 @@ object Wood extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve,
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Waste)
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 10))
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Waste))),
+  reserves = Some(ReserveRules(initialCards = 10)))

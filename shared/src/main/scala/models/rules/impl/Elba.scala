@@ -12,5 +12,4 @@ object Elba extends GameRules(
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 10, initialCards = InitialCards.Count(5), emptyFilledWith = FillEmptyWith.HighRank))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 10, initialCards = InitialCards.Count(5), emptyFilledWith = FillEmptyWith.HighRank)))

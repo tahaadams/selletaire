@@ -1,7 +1,7 @@
 package models.rules.moves
 
 import models.game.GameState
-import models.rules.{GameRules, StockDealTo}
+import models.rules.{ GameRules, StockDealTo }
 
 object InitialMoves {
   def performInitialMoves(rules: GameRules, state: GameState) = performDefault(rules, state)
@@ -57,7 +57,7 @@ object InitialMoves {
       gameState.addCards(gameState.deck.getCards(numCards = cardCount, turnFaceUp = true), "waste-1", reveal = true)
     }
 
-    if(gameState.deck.cards.nonEmpty) {
+    if (gameState.deck.cards.nonEmpty) {
       throw new IllegalStateException(s"[${gameState.deck.cards.size}] remaining in deck after initial moves.")
     }
   }

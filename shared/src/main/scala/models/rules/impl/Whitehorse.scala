@@ -15,6 +15,4 @@ object Whitehorse extends GameRules(
   tableaus = IndexedSeq(TableauRules(
     initialCards = InitialCards.Count(1),
     autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

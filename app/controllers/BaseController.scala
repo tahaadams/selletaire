@@ -8,7 +8,7 @@ import util.FutureUtils.defaultContext
 import play.api.mvc._
 import services.user.UserService
 import util.metrics.Instrumented
-import util.{Application, Logging}
+import util.{ Application, Logging }
 
 import scala.concurrent.Future
 
@@ -20,8 +20,7 @@ abstract class BaseController() extends InjectedController with I18nSupport with
   protected[this] lazy val metricsName = util.Config.projectId + "_" + cn(this)
   protected[this] lazy val requestHistogram = Histogram.build(
     metricsName + "_request",
-    s"Controller request metrics for [$metricsName]"
-  ).labelNames("method").register()
+    s"Controller request metrics for [$metricsName]").labelNames("method").register()
 
   override implicit val messagesApi = app.messagesApi
 

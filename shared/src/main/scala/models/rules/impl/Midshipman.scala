@@ -13,29 +13,21 @@ object Midshipman extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/midshipman.htm"),
     Link("PySol", "pysolfc.sourceforge.net/doc/rules/midshipman.html"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/midshipman.php"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Midshipman.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Midshipman.htm")),
   layout = "swf|:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(2),
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

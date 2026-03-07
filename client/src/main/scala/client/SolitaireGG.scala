@@ -7,9 +7,9 @@ import navigation.NavigationService
 import network.NetworkService
 import phaser.PhaserGame
 import phaser.gameplay.InputHelper
-import settings.{ProfileService, SettingsService}
+import settings.{ ProfileService, SettingsService }
 
-import scala.scalajs.js.annotation.{JSExport, JSExportTopLevel}
+import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 import scala.util.Random
 
 @JSExportTopLevel("SolitaireGG")

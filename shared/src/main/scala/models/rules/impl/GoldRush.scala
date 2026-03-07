@@ -12,19 +12,12 @@ object GoldRush extends GameRules(
   stock = Some(
     StockRules(
       maximumDeals = Some(3),
-      cardsDealt = StockCardsDealt.FewerEachTime
-    )
-  ),
+      cardsDealt = StockCardsDealt.FewerEachTime)),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

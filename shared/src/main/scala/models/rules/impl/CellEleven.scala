@@ -27,11 +27,7 @@ object CellEleven extends GameRules(
         "UUUUUUUUUUUUU",
         "UUUUUUUUUUUUU",
         "UUUUUUUUUUUUU",
-        "UUUUUUUUUUUUU"
-      ),
+        "UUUUUUUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules(numPiles = 11, initialCards = 2))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(numPiles = 11, initialCards = 2)))

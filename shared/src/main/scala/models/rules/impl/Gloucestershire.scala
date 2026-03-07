@@ -9,8 +9,7 @@ object Gloucestershire extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/gloucestershire.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/gloucestershire.html"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Gloucestershire.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Gloucestershire.htm")),
   layout = "wf|t",
   deckOptions = DeckOptions(numDecks = 2),
   waste = Some(WasteRules()),
@@ -19,9 +18,7 @@ object Gloucestershire extends GameRules(
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       maxCards = 26,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -34,11 +31,7 @@ object Gloucestershire extends GameRules(
         "UUUUUUU",
         "UUUUUUUU",
         "UUUUUUUUU",
-        "UUUUUUUUUU"
-      ),
+        "UUUUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

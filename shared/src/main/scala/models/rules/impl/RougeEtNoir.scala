@@ -13,35 +13,28 @@ object RougeEtNoir extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/rouge_et_noir.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/rouge_et_noir.htm"),
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/RougeEtNoir.html"),
-    Link("An 1898 description", "howtoplaysolitaire.blogspot.com/2010/06/rouge-et-noir-double-deck-solitaire.html")
-  ),
+    Link("An 1898 description", "howtoplaysolitaire.blogspot.com/2010/06/rouge-et-noir-double-deck-solitaire.html")),
   layout = "sfff|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 2,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueColors),
-      suitMatchRule = SuitMatchRule.SameColor
-    ),
+      suitMatchRule = SuitMatchRule.SameColor),
     FoundationRules(
       setNumber = 1,
       numPiles = 2,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueColors),
-      suitMatchRule = SuitMatchRule.SameColor
-    ),
+      suitMatchRule = SuitMatchRule.SameColor),
     FoundationRules(
       setNumber = 2,
       numPiles = 4,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -55,9 +48,5 @@ object RougeEtNoir extends GameRules(
         "DDU",
         "DU",
         "U",
-        "U"
-      ),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+        "U"),
+      emptyFilledWith = FillEmptyWith.HighRank)))

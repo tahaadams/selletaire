@@ -1,6 +1,6 @@
 package models.pile.options
 
-import models.pile.actions.{DragToAction, SelectCardAction, SelectPileAction}
+import models.pile.actions.{ DragToAction, SelectCardAction, SelectPileAction }
 import models.pile.constraints.Constraint
 
 object ClientPileOptions {
@@ -8,29 +8,26 @@ object ClientPileOptions {
     po.cardsShown,
     po.direction,
     po.dragFromConstraint.fold("never")(_.id),
-    po.dragFromConstraint.flatMap(_.clientOptions)
-  )
+    po.dragFromConstraint.flatMap(_.clientOptions))
 }
 case class ClientPileOptions(
   cardsShown: Option[Int] = None,
   direction: Option[String] = None,
   dragFromConstraint: String = "never",
-  dragFromOptions: Option[Map[String, String]] = None
-)
+  dragFromOptions: Option[Map[String, String]] = None)
 
 case class PileOptions(
-    cardsShown: Option[Int] = None,
-    direction: Option[String] = None,
+  cardsShown: Option[Int] = None,
+  direction: Option[String] = None,
 
-    selectCardConstraint: Option[Constraint] = None,
-    selectPileConstraint: Option[Constraint] = None,
-    dragFromConstraint: Option[Constraint] = None,
-    dragToConstraint: Option[Constraint] = None,
+  selectCardConstraint: Option[Constraint] = None,
+  selectPileConstraint: Option[Constraint] = None,
+  dragFromConstraint: Option[Constraint] = None,
+  dragToConstraint: Option[Constraint] = None,
 
-    selectCardAction: Option[SelectCardAction] = None,
-    selectPileAction: Option[SelectPileAction] = None,
-    dragToAction: Option[DragToAction] = None
-) {
+  selectCardAction: Option[SelectCardAction] = None,
+  selectPileAction: Option[SelectPileAction] = None,
+  dragToAction: Option[DragToAction] = None) {
   def combine(other: PileOptions) = PileOptions(
     cardsShown = other.cardsShown.orElse(this.cardsShown),
     direction = other.direction.orElse(this.direction),
@@ -42,6 +39,5 @@ case class PileOptions(
 
     selectCardAction = other.selectCardAction.orElse(this.selectCardAction),
     selectPileAction = other.selectPileAction.orElse(this.selectPileAction),
-    dragToAction = other.dragToAction.orElse(this.dragToAction)
-  )
+    dragToAction = other.dragToAction.orElse(this.dragToAction))
 }

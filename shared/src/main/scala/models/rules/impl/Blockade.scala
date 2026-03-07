@@ -13,8 +13,7 @@ object Blockade extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/blockade.php"),
     Link("Wikipedia", "en.wikipedia.org/wiki/Blockade_(solitaire)"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/blockade.html"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/blockade.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/blockade.htm")),
   layout = ":s:f|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
@@ -26,7 +25,4 @@ object Blockade extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

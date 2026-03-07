@@ -15,21 +15,14 @@ object Trillium extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
       initialCards = InitialCards.Count(4),
-      cardsFaceDown = TableauFaceDownCards.OddNumbered
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.OddNumbered)))

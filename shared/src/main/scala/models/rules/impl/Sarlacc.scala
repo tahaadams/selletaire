@@ -19,7 +19,4 @@ object Sarlacc extends GameRules(
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
       mayMoveToEmptyFrom = PileSet.Behavior.wtpf,
-      emptyFilledWith = FillEmptyWith.Any
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.Any)))

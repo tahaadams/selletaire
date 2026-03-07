@@ -13,7 +13,5 @@ object DemonFan extends GameRules(
     numPiles = 18,
     initialCards = InitialCards.RestOfDeck,
     suitMatchRuleForMovingStacks = SuitMatchRule.None,
-    emptyFilledWith = FillEmptyWith.None
-  )),
-  special = Some(SpecialRules(redealsAllowed = 6))
-)
+    emptyFilledWith = FillEmptyWith.None)),
+  special = Some(SpecialRules(redealsAllowed = 6)))

@@ -9,8 +9,7 @@ object Manx extends GameRules(
   related = Seq("tabbycat"),
   links = Seq(
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/Manx.html"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/manx.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/manx.html")),
   layout = "sf|ct",
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, suitMatchRule = SuitMatchRule.Any, moveCompleteSequencesOnly = true, autoMoveCards = true)),
@@ -21,8 +20,5 @@ object Manx extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  ),
-  cells = Some(CellRules(pluralName = "Tail", numPiles = 1))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)),
+  cells = Some(CellRules(pluralName = "Tail", numPiles = 1)))

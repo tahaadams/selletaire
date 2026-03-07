@@ -1,6 +1,6 @@
 package client
 
-import game.{GameListService, GameStartService}
+import game.{ GameListService, GameStartService }
 import help.HelpService
 import navigation.NavigationState
 import settings.SettingsPanel

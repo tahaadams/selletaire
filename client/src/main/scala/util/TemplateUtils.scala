@@ -2,7 +2,7 @@ package util
 
 import org.scalajs.dom
 import org.scalajs.dom._
-import org.scalajs.jquery.{JQuery, JQueryEventObject, jQuery => $}
+import org.scalajs.jquery.{ JQuery, JQueryEventObject, jQuery => $ }
 
 import scalatags.Text.all._
 import scalatags.Text.tags2.time

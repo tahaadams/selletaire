@@ -12,16 +12,12 @@ object ScorpionTail extends GameRules(
     StockRules(
       name = "Reserve",
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      moveCompleteSequencesOnly = true
-    )
-  ),
+      moveCompleteSequencesOnly = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -32,12 +28,8 @@ object ScorpionTail extends GameRules(
         "DDDUUUU",
         "UUUUUUU",
         "UUUUUUU",
-        "UUUUUUU"
-      ),
+        "UUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

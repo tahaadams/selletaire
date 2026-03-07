@@ -13,8 +13,7 @@ object Backbone extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/backbone.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/backbone.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Backbone.html.en"),
-    Link("L. Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-backbone-solitaire-14353/")
-  ),
+    Link("L. Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/how-to-play-backbone-solitaire-14353/")),
   layout = "swf|t|p",
   victoryCondition = VictoryCondition.NoneInPyramid,
   deckOptions = DeckOptions(numDecks = 2),
@@ -27,9 +26,7 @@ object Backbone extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
   pyramids = IndexedSeq(
     PyramidRules(
       name = "Backbone",
@@ -37,7 +34,4 @@ object Backbone extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

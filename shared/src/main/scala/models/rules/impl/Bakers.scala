@@ -13,8 +13,7 @@ object Bakers extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/bakers_game.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/bakers_game.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Bakers_Game.html.en"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/bakers_game.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/bakers_game.htm")),
   layout = "fc|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -23,8 +22,5 @@ object Bakers extends GameRules(
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules())
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules()))

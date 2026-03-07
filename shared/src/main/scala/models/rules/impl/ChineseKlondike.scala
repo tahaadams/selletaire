@@ -18,7 +18,4 @@ object ChineseKlondike extends GameRules(
     TableauRules(
       numPiles = 12,
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

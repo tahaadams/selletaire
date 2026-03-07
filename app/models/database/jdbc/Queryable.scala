@@ -1,11 +1,11 @@
 package models.database.jdbc
 
-import java.sql.{Connection, PreparedStatement, Types}
+import java.sql.{ Connection, PreparedStatement, Types }
 import java.util.UUID
 
 import io.circe.Json
-import models.database.{Query, RawQuery, Statement}
-import util.{Logging, NullUtils}
+import models.database.{ Query, RawQuery, Statement }
+import util.{ Logging, NullUtils }
 
 import scala.annotation.tailrec
 import scala.concurrent.Future

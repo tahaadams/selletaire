@@ -9,8 +9,7 @@ object CrissCross extends GameRules(
   like = Some("simplepairs"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/criss_cross.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/CrissCross.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/CrissCross.htm")),
   layout = "swf|t",
   cardRemovalMethod = CardRemovalMethod.RemovePairsOfSameRank,
   stock = Some(StockRules(dealTo = StockDealTo.WasteOrPairManually, maximumDeals = Some(1))),
@@ -22,9 +21,7 @@ object CrissCross extends GameRules(
       maxCards = 0,
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
@@ -33,7 +30,4 @@ object CrissCross extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

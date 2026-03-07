@@ -11,8 +11,7 @@ object Acme extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/acme.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/acme.htm"),
-    Link("Jan Wolter's Experiments", "/article/acme.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/acme.html")),
   layout = "swf|r::t",
   stock = Some(StockRules(maximumDeals = Some(2))),
   waste = Some(WasteRules()),
@@ -24,8 +23,5 @@ object Acme extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1))
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Reserve)),
+  reserves = Some(ReserveRules(initialCards = 13, cardsFaceDown = -1)))

@@ -1,6 +1,6 @@
 package models.settings
 
-import models.graphql.{CommonSchema, GraphQLContext}
+import models.graphql.{ CommonSchema, GraphQLContext }
 import sangria.macros.derive._
 import sangria.schema._
 
@@ -16,6 +16,5 @@ object SettingsSchema {
   implicit val menuPositionEnum = CommonSchema.deriveStringEnumeratumType(name = "MenuPosition", values = MenuPosition.values)
 
   implicit val settingsType: OutputType[Settings] = deriveObjectType[GraphQLContext, Settings](
-    ObjectTypeDescription("The settings for this user.")
-  )
+    ObjectTypeDescription("The settings for this user."))
 }

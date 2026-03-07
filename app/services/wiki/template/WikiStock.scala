@@ -1,6 +1,6 @@
 package services.wiki.template
 
-import models.rules.{StockCardsDealt, StockDealTo, StockRules}
+import models.rules.{ StockCardsDealt, StockDealTo, StockRules }
 import services.wiki.WikiService
 import services.wiki.WikiService.messages
 

@@ -11,22 +11,17 @@ object Nines extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/nines.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/nines.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Nines.htm"),
-    Link("Jan Wolter's Experiments", "/article/simplepairs.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/simplepairs.html")),
   layout = "s.:f|t",
   cardRemovalMethod = CardRemovalMethod.RemoveNinesOrPairsAddingToNineOr10JQK,
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
@@ -35,7 +30,4 @@ object Nines extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

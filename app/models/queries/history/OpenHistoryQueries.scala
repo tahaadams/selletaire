@@ -31,6 +31,5 @@ object OpenHistoryQueries extends BaseQueries[OpenHistory] {
   }
 
   override protected def toDataSeq(oh: OpenHistory) = Seq[Any](
-    oh.id, oh.userId, oh.deviceId, oh.deviceInfo.toArray, oh.client, oh.occurred
-  )
+    oh.id, oh.userId, oh.deviceId, oh.deviceInfo.toArray, oh.client, oh.occurred)
 }

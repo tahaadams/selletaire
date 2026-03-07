@@ -12,8 +12,7 @@ object EightOff extends GameRules(
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/EightOff.html"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/eight_off.html"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Eight_Off.html.en"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/eight_off.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/freecell/eight_off.htm")),
   layout = "::f|c|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -23,8 +22,5 @@ object EightOff extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules(numPiles = 8, initialCards = 4))
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules(numPiles = 8, initialCards = 4)))

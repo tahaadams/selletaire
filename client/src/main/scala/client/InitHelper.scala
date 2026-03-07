@@ -3,7 +3,7 @@ package client
 import org.scalajs.dom
 import org.scalajs.dom.raw.BeforeUnloadEvent
 import settings.ThemeService
-import util.{Logging, NullUtils}
+import util.{ Logging, NullUtils }
 
 import scala.scalajs.js
 

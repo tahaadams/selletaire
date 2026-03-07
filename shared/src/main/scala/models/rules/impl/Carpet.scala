@@ -14,8 +14,7 @@ object Carpet extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/carpet.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Carpet.htm"),
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/carpet.html"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/carpet.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/carpet.htm")),
   layout = "swf|2t",
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
@@ -29,7 +28,4 @@ object Carpet extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Waste)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Waste))))

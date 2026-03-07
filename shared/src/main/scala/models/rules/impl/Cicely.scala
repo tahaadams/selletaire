@@ -12,8 +12,7 @@ object Cicely extends GameRules(
   links = Seq(
     Link("Solsuite Solitaire", "www.solsuite.com/games/cicely.htm"),
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/cicely.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/cicely.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/cicely.htm")),
   layout = "sff|c|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1), cardsDealt = StockCardsDealt.Count(4))),
@@ -21,17 +20,14 @@ object Cicely extends GameRules(
     FoundationRules(
       name = "Ace Foundation",
       numPiles = 4,
-      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)
-    ),
+      initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits)),
     FoundationRules(
       name = "King Foundation",
       setNumber = 1,
       numPiles = 4,
       lowRank = FoundationLowRank.DeckHighRank,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      rankMatchRule = RankMatchRule.Down
-    )
-  ),
+      rankMatchRule = RankMatchRule.Down)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
@@ -41,8 +37,5 @@ object Cicely extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Cell, PileSet.Behavior.Tableau)
-    )
-  ),
-  cells = Some(CellRules(numPiles = 8, mayMoveToFrom = Seq(PileSet.Behavior.Tableau), initialCards = 8))
-)
+      mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Cell, PileSet.Behavior.Tableau))),
+  cells = Some(CellRules(numPiles = 8, mayMoveToFrom = Seq(PileSet.Behavior.Tableau), initialCards = 8)))

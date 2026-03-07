@@ -9,8 +9,7 @@ object Klondike extends GameRules(
   related = Seq(
     "whitehorse", "kingsley", "trigon", "goldmine", "thoughtful", "klondikegallery", "chineseklondike", "athena",
     "saratoga", "endlessharp", "smokey", "spike", "gilbert", "jumboklondike", "chinaman", "klondike1card",
-    "sevendevils"
-  ),
+    "sevendevils"),
   links = Seq(
     Link("Wikipedia", "en.wikipedia.org/wiki/Klondike_(solitaire)"),
     Link("Solitaire Central", "www.solitairecentral.com/rules/Klondike.html"),
@@ -23,24 +22,16 @@ object Klondike extends GameRules(
     Link("Boris Sandberg's Strategy Tips", "www.solitairecentral.com/articles/KlondikeSolitaireWinningStrategyTips.html"),
     Link("A Strategy for Winning Klondike Solitaire", "www.jupiterscientific.org/sciinfo/AStrategryForWinningKlondikeSolitaire.html"),
     Link("Usman Latif's analysis of the number of Klondike cards in which no cards can be played.", "www.techuser.net/klondikeprob.html"),
-    Link("Bill's Solitaire Tester", "www.roziturnbull.com/bill/Solitaire/solitaire.htm")
-  ),
+    Link("Bill's Solitaire Tester", "www.roziturnbull.com/bill/Solitaire/solitaire.htm")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

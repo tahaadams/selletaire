@@ -9,8 +9,7 @@ object Arizona extends GameRules(
   related = Seq("phoenix"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/arizona.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/arizona.htm")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/arizona.htm")),
   layout = "wf|t",
   waste = Some(WasteRules(name = "Reserve")),
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
@@ -20,7 +19,4 @@ object Arizona extends GameRules(
       initialCards = InitialCards.Count(6),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

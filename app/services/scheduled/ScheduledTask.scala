@@ -5,7 +5,7 @@ import services.email.EmailService
 import util.Logging
 
 import scala.concurrent.Future
-import scala.util.{Failure, Success}
+import scala.util.{ Failure, Success }
 
 object ScheduledTask {
   trait Task {
@@ -21,8 +21,7 @@ class ScheduledTask @javax.inject.Inject() (emailService: EmailService, config: 
     new MetricsUpdate(),
     new EmailReport(emailService),
     new RowCountUpdate(),
-    new TableReaper()
-  )
+    new TableReaper())
 
   override def run() = go(false)
 

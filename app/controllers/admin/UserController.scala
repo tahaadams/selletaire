@@ -9,7 +9,7 @@ import models.queries.user.UserQueries
 import util.FutureUtils.defaultContext
 import services.database.Database
 import services.history.GameHistoryService
-import services.user.{UserService, UserStatisticsService}
+import services.user.{ UserService, UserStatisticsService }
 import util.Application
 
 import scala.concurrent.Future

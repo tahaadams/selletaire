@@ -10,15 +10,12 @@ object ThreeShufflesAndADraw extends GameRules(
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/three_shuffles_and_a_draw.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ThreeShufflesandaDraw.htm"),
-    Link("Wikipedia", "en.wikipedia.org/wiki/Three_Shuffles_and_a_Draw_(solitaire)")
-  ),
+    Link("Wikipedia", "en.wikipedia.org/wiki/Three_Shuffles_and_a_Draw_(solitaire)")),
   layout = "::.f|2t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 18,
@@ -41,19 +38,13 @@ object ThreeShufflesAndADraw extends GameRules(
         "UUU",
         "UUU",
         "UUU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   special = Some(
     SpecialRules(
       redealsAllowed = 2,
       drawsAllowed = 1,
-      drawsAfterRedeals = true
-    )
-  )
-)
+      drawsAfterRedeals = true)))

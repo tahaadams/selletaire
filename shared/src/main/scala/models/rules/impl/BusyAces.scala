@@ -15,8 +15,7 @@ object BusyAces extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/BusyAces.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/busy-aces.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/busy_aces.htm"),
-    Link("Amelia Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/view-article/1866274/")
-  ),
+    Link("Amelia Schaffer on HobbyHub", "www.hobbyhub360.com/index.php/view-article/1866274/")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -28,7 +27,4 @@ object BusyAces extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

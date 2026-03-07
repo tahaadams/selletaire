@@ -21,8 +21,7 @@ object Zerline extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    ),
+      emptyFilledWith = FillEmptyWith.HighRank),
     TableauRules(
       name = "Reserve",
       setNumber = 1,
@@ -33,7 +32,4 @@ object Zerline extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       mayMoveToNonEmptyFrom = Seq(PileSet.Behavior.Tableau),
-      maxCards = 4
-    )
-  )
-)
+      maxCards = 4)))

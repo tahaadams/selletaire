@@ -18,5 +18,4 @@ case class GameStatistics(
   totalUndos: Int,
   totalRedos: Int,
   lastWin: Option[Long],
-  lastLoss: Option[Long]
-)
+  lastLoss: Option[Long])

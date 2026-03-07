@@ -9,8 +9,7 @@ object DoubleDot extends GameRules(
   title = "Double Dot",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/double_dot.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/double_dot.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/double_dot.htm")),
   layout = "s:ff|t",
   deckOptions = DeckOptions(lowRank = Rank.Unknown),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
@@ -22,8 +21,7 @@ object DoubleDot extends GameRules(
       initialCards = 2,
       rankMatchRule = RankMatchRule.UpBy2,
       maxCards = 13,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       setNumber = 1,
       numPiles = 2,
@@ -32,9 +30,7 @@ object DoubleDot extends GameRules(
       initialCards = 2,
       rankMatchRule = RankMatchRule.UpBy2,
       maxCards = 13,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(TableauRules(
     numPiles = 8,
     initialCards = InitialCards.Count(1),
@@ -42,6 +38,4 @@ object DoubleDot extends GameRules(
     suitMatchRuleForBuilding = SuitMatchRule.Any,
     rankMatchRuleForBuilding = RankMatchRule.DownBy2,
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-    rankMatchRuleForMovingStacks = RankMatchRule.DownBy2
-  ))
-)
+    rankMatchRuleForMovingStacks = RankMatchRule.DownBy2)))

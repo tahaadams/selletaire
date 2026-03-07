@@ -14,9 +14,7 @@ object TripleScorpion extends GameRules(
       numPiles = 12,
       moveCompleteSequencesOnly = true,
       canMoveFrom = FoundationCanMoveFrom.Never,
-      visible = false
-    )
-  ),
+      visible = false)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 13,
@@ -34,13 +32,9 @@ object TripleScorpion extends GameRules(
         "UUUUUUUUUUUU",
         "UUUUUUUUUUUU",
         "UUUUUUUUUUUU",
-        "UUUUUUUUUUUU"
-      ),
+        "UUUUUUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

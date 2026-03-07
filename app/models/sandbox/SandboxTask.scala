@@ -5,7 +5,7 @@ import services.database.BackupRestore
 import services.export.ExportService
 import services.sandbox._
 import services.wiki.WikiService
-import util.{Application, EnumWithDescription, Logging}
+import util.{ Application, EnumWithDescription, Logging }
 import util.FutureUtils.defaultContext
 
 import scala.concurrent.Future

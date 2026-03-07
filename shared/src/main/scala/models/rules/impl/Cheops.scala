@@ -10,8 +10,7 @@ object Cheops extends GameRules(
   like = Some("pyramid"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/cheops.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/cheops.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/cheops.htm")),
   layout = "swf|p",
   victoryCondition = VictoryCondition.NoneInPyramid,
   cardRemovalMethod = CardRemovalMethod.RemoveConsecutiveOrEqualRankPairs,
@@ -23,7 +22,4 @@ object Cheops extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Down,
       rankMatchRuleForMovingStacks = RankMatchRule.Down,
       mayMoveToNonEmptyFrom = PileSet.Behavior.wtpf,
-      mayMoveToEmptyFrom = PileSet.Behavior.wtpf
-    )
-  )
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.wtpf)))

@@ -12,16 +12,13 @@ object Scotch extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/scotch_patience.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/scotch.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ScotchPatience.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/scotch_patience.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/scotch_patience.html")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       suitMatchRule = SuitMatchRule.AlternatingColors,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 18,
@@ -29,7 +26,4 @@ object Scotch extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

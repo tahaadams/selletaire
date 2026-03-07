@@ -13,15 +13,12 @@ object Russian extends GameRules(
     Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/russian_solitaire.htm"),
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/RussianSolitaire.html"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/russian-solitaire.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/russian_solitaire.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/russian_solitaire.htm")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       initialCards = InitialCards.Custom,
@@ -32,13 +29,9 @@ object Russian extends GameRules(
         "DDDUUUUU",
         "DDDDUUUUU",
         "DDDDDUUUUU",
-        "DDDDDDUUUUU"
-      ),
+        "DDDDDDUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

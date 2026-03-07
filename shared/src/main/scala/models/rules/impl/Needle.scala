@@ -12,9 +12,7 @@ object Needle extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Reserve",
@@ -24,8 +22,7 @@ object Needle extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      maxCards = 18
-    ),
+      maxCards = 18),
     TableauRules(
       setNumber = 1,
       numPiles = 9,
@@ -39,10 +36,6 @@ object Needle extends GameRules(
         "UU",
         "UUUU",
         "UUUUUUUU",
-        "UUUUUUUU"
-      ),
+        "UUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

@@ -12,16 +12,13 @@ object PerseveranceA extends GameRules(
     Link("Wikipedia", "en.wikipedia.org/wiki/Perseverance_(solitaire)"),
     Link("An 1898 Description", "howtoplaysolitaire.blogspot.com/2010/06/perseverance-single-deck-solitaire-game.html"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/perseverance.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Perseverance.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Perseverance.htm")),
   layout = "::::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -29,7 +26,4 @@ object PerseveranceA extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

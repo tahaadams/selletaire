@@ -17,8 +17,7 @@ object BlackHole extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/black_hole.html"),
     Link("Wikipedia", "en.wikipedia.org/wiki/Black_Hole_(solitaire)"),
     Link("Computer Solvability of BlackHole", "ipg.host.cs.st-andrews.ac.uk/papers/AICommsBlackhole-revised.pdf"),
-    Link("Jan Wolter's Experiments", "/article/blackhole.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/blackhole.html")),
   layout = "f|t",
   victoryCondition = VictoryCondition.AllOnFoundationOrStock,
   foundations = IndexedSeq(
@@ -28,9 +27,7 @@ object BlackHole extends GameRules(
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpOrDown,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 17,
@@ -39,7 +36,4 @@ object BlackHole extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

@@ -13,15 +13,12 @@ object Somerset extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/somerset.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/somerset.php"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Somerset.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/somerset.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/somerset.htm")),
   layout = ":::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
@@ -36,10 +33,6 @@ object Somerset extends GameRules(
         "UUUUUUU",
         "UUUUUUUU",
         "UUUUUUUU",
-        "UUUUUUUU"
-      ),
+        "UUUUUUUU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

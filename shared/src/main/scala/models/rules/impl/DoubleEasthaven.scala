@@ -11,11 +11,9 @@ object DoubleEasthaven extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/double_easthaven.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/double_easthaven.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/double_easthaven.htm"),
-    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/double-easthaven.asp")
-  ),
+    Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/double-easthaven.asp")),
   layout = "sf|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 8, initialCards = InitialCards.Count(3)))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 8, initialCards = InitialCards.Count(3))))

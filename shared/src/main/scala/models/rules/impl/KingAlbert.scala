@@ -13,25 +13,17 @@ object KingAlbert extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/king_albert.html"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/king_albert.htm"),
     Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/king_albert.htm"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/King_Albert.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/King_Albert.html.en")),
   layout = "w:f|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

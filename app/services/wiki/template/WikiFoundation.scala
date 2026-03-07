@@ -38,8 +38,7 @@ object WikiFoundation {
 
       rules.initialCardRestriction match {
         case Some(FoundationInitialCardRestriction.SpecificColorUniqueSuits(c)) => ret += messages(
-          "help.foundation.initial.restriction.specific.color.unique.suits", c.toString.toLowerCase
-        )
+          "help.foundation.initial.restriction.specific.color.unique.suits", c.toString.toLowerCase)
         case Some(FoundationInitialCardRestriction.SpecificSuit(s)) => ret += messages("help.foundation.initial.restriction.specific.suit", s.title)
         case Some(FoundationInitialCardRestriction.UniqueColors) => ret += messages("help.foundation.initial.restriction.unique.colors")
         case Some(FoundationInitialCardRestriction.UniqueSuits) => ret += messages("help.foundation.initial.restriction.unique.suits")
@@ -53,8 +52,7 @@ object WikiFoundation {
           "help.foundation.build.rank.and.suit.match.rules",
           loweredName,
           WikiMatchRule.toWords(rules.rankMatchRule),
-          WikiMatchRule.toWords(rules.suitMatchRule)
-        )
+          WikiMatchRule.toWords(rules.suitMatchRule))
       }
 
       if (rules.wrap) {

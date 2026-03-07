@@ -14,8 +14,7 @@ object BakersDozen extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/bakers_dozen.html"),
     Link("About.com", "boardgames.about.com/od/solitaire/a/bakers_dozen.htm"),
     Link("Solitaire Central", "www.solitairecentral.com/rules/BakersDozen.html"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Bakers_Dozen.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Bakers_Dozen.html.en")),
   layout = ":.f|t|.t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -25,8 +24,7 @@ object BakersDozen extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    ),
+      actionDuringDeal = PileAction.MoveKingsToBottom),
     TableauRules(
       setNumber = 1,
       numPiles = 6,
@@ -35,7 +33,4 @@ object BakersDozen extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.None,
-      actionDuringDeal = PileAction.MoveKingsToBottom
-    )
-  )
-)
+      actionDuringDeal = PileAction.MoveKingsToBottom)))

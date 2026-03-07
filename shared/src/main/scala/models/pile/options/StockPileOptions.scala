@@ -1,9 +1,9 @@
 package models.pile.options
 
-import models.pile.actions.{SelectCardActions, SelectPileActions}
+import models.pile.actions.{ SelectCardActions, SelectPileActions }
 import models.pile.constraints.Constraint
 import models.pile.set.PileSet
-import models.rules.{StockCardsDealt, StockDealTo, StockRules}
+import models.rules.{ StockCardsDealt, StockDealTo, StockRules }
 
 object StockPileOptions {
   def apply(rules: StockRules, pileIdsByType: Map[String, Seq[String]]) = {
@@ -82,7 +82,6 @@ object StockPileOptions {
       selectCardConstraint = selectCardConstraint,
       selectPileConstraint = Some(Constraint.allOf("stock-select-pile", Constraint.empty, selectPileConstraint)),
       selectCardAction = selectCardAction,
-      selectPileAction = selectPileAction
-    )
+      selectPileAction = selectPileAction)
   }
 }

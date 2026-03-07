@@ -1,7 +1,7 @@
 package controllers.admin
 
 import controllers.BaseController
-import models.rules.{GameRules, GameRulesSet}
+import models.rules.{ GameRules, GameRulesSet }
 import play.api.http.FileMimeTypes
 import services.history.GameStatisticsService
 import util.Application

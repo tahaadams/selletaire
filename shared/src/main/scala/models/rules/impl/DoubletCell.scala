@@ -18,8 +18,5 @@ object DoubletCell extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
-  cells = Some(CellRules())
-)
+      emptyFilledWith = FillEmptyWith.None)),
+  cells = Some(CellRules()))

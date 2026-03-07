@@ -14,11 +14,9 @@ object Carlton extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/carlton.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/carlton.php"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Carlton.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/carlton.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/carlton.htm")),
   layout = "sf|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(dealTo = StockDealTo.Tableau, maximumDeals = Some(1))),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 8))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 8)))

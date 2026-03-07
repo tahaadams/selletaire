@@ -13,5 +13,4 @@ object DoubleGoldRush extends GameRules(
   stock = Some(StockRules(maximumDeals = Some(3), cardsDealt = StockCardsDealt.FewerEachTime)),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, autoMoveCards = true)),
-  tableaus = IndexedSeq(TableauRules(numPiles = 10, emptyFilledWith = FillEmptyWith.HighRank))
-)
+  tableaus = IndexedSeq(TableauRules(numPiles = 10, emptyFilledWith = FillEmptyWith.HighRank)))

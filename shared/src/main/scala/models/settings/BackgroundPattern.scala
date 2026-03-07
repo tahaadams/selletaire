@@ -33,6 +33,5 @@ object BackgroundPattern {
     "use-your-illusion",
     "vaio", "vichy",
     "washi", "weave", "white-diamond-dark", "white-diamond", "white-tiles", "wild-flowers", "worn-dots", "woven-light", "woven",
-    "xv"
-  )
+    "xv")
 }

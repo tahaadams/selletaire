@@ -1,7 +1,7 @@
 package help
 
 import models.card.Rank
-import models.rules.{FillEmptyWith, RankMatchRule, SuitMatchRule}
+import models.rules.{ FillEmptyWith, RankMatchRule, SuitMatchRule }
 import util.Messages
 
 object MatchRuleHelpService {

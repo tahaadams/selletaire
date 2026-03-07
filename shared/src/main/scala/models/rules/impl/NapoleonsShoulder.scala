@@ -13,16 +13,12 @@ object NapoleonsShoulder extends GameRules(
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -30,7 +26,4 @@ object NapoleonsShoulder extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Waste)
-    )
-  )
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Waste))))

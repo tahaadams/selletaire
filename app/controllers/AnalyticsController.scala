@@ -14,8 +14,7 @@ class AnalyticsController @javax.inject.Inject() (override val app: Application)
       "Access-Control-Allow-Origin" -> origin,
       "Access-Control-Allow-Credentials" -> "true",
       "Access-Control-Allow-Methods" -> "POST",
-      "Access-Control-Allow-Headers" -> "Origin, X-Requested-With, Content-Type, Accept"
-    ))
+      "Access-Control-Allow-Headers" -> "Origin, X-Requested-With, Content-Type, Accept"))
   }
 
   def error(device: UUID) = analyticsAction("Error")

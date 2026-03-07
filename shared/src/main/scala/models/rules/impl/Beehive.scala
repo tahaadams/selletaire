@@ -19,9 +19,7 @@ object Beehive extends GameRules(
       rankMatchRule = RankMatchRule.Equal,
       moveCompleteSequencesOnly = true,
       maxCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 6,
@@ -30,8 +28,5 @@ object Beehive extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       rankMatchRuleForBuilding = RankMatchRule.Equal,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
-      rankMatchRuleForMovingStacks = RankMatchRule.Equal
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 10, cardsFaceDown = -1))
-)
+      rankMatchRuleForMovingStacks = RankMatchRule.Equal)),
+  reserves = Some(ReserveRules(initialCards = 10, cardsFaceDown = -1)))

@@ -13,16 +13,12 @@ object Quadrennial extends GameRules(
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 16,
       initialCards = 16,
-      suitMatchRule = SuitMatchRule.Any
-    )
-  ),
+      suitMatchRule = SuitMatchRule.Any)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Reserve",
@@ -31,12 +27,7 @@ object Quadrennial extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

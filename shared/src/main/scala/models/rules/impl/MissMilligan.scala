@@ -16,29 +16,21 @@ object MissMilligan extends GameRules(
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/MissMilligan.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/miss_milligan.html"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/miss-milligan.htm"),
-    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/miss_milligan.htm")
-  ),
+    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/miss_milligan.htm")),
   layout = "sf|:t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Tableau,
       maximumDeals = Some(1),
-      createPocketWhenEmpty = true
-    )
-  ),
+      createPocketWhenEmpty = true)),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

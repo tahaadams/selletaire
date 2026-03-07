@@ -12,8 +12,7 @@ object Canister extends GameRules(
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/canister.html"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/canister.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Canister.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/canister.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/canister.htm")),
   layout = "::f|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -22,7 +21,4 @@ object Canister extends GameRules(
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

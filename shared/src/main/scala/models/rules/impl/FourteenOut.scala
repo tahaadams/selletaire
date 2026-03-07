@@ -12,17 +12,14 @@ object FourteenOut extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/fourteen_out.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/block_fourteen.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/take_fourteen.html"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Fourteen.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Fourteen.html.en")),
   layout = "2tf",
   cardRemovalMethod = CardRemovalMethod.RemovePairsAddingToFourteen,
   foundations = IndexedSeq(
     FoundationRules(
       canMoveFrom = FoundationCanMoveFrom.Never,
       visible = false,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -30,7 +27,4 @@ object FourteenOut extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

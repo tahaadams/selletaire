@@ -16,29 +16,21 @@ object Indian extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/indian.php"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/indian.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/indian.html"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/indian.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/indian.htm")),
   layout = "swf|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 8,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
       initialCards = InitialCards.Count(3),
       cardsFaceDown = TableauFaceDownCards.Count(1),
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

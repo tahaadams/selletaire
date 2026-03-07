@@ -14,22 +14,16 @@ object Martha extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/martha.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/martha.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Martha.htm"),
-    Link("dogMelon", "www.dogmelon.com.au/solhelp/Martha%20Solitaire.shtml")
-  ),
+    Link("dogMelon", "www.dogmelon.com.au/solhelp/Martha%20Solitaire.shtml")),
   layout = "::::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.OddNumbered,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

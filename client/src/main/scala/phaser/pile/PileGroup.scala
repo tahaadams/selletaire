@@ -1,6 +1,6 @@
 package phaser.pile
 
-import com.definitelyscala.phaser.{Group, Pointer, Sprite}
+import com.definitelyscala.phaser.{ Group, Pointer, Sprite }
 import models.SP
 import models.game.PossibleMove
 import models.pile.Pile

@@ -21,7 +21,7 @@ class MoveHelper(gs: GameState, postMove: () => Unit) {
       firstMoveMade = Some(System.currentTimeMillis)
     }
     lastMoveMade = Some(System.currentTimeMillis)
-    if(trackHistory) {
+    if (trackHistory) {
       history += (msg -> System.currentTimeMillis)
     }
     postMove()

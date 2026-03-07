@@ -20,6 +20,4 @@ object EightsDown extends GameRules(
     suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
     rankMatchRuleForBuilding = RankMatchRule.Up,
     suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit,
-    rankMatchRuleForMovingStacks = RankMatchRule.Up
-  ))
-)
+    rankMatchRuleForMovingStacks = RankMatchRule.Up)))

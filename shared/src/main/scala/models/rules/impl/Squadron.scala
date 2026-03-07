@@ -12,8 +12,7 @@ object Squadron extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/squadron.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/squadron.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Squadron.htm"),
-    Link("Solavant Solitaire", "www.solavant.com/solitaire/squadron.php")
-  ),
+    Link("Solavant Solitaire", "www.solavant.com/solitaire/squadron.php")),
   layout = "swf|::::c|.t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -25,8 +24,5 @@ object Squadron extends GameRules(
       initialCards = InitialCards.Count(4),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  cells = Some(CellRules(numPiles = 3, initialCards = 3))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(numPiles = 3, initialCards = 3)))

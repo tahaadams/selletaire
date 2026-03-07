@@ -1,6 +1,6 @@
 package models.rules.impl
 
-import models.card.{Rank, Suit}
+import models.card.{ Rank, Suit }
 import models.pile.set.PileSet
 import models.rules._
 
@@ -16,8 +16,7 @@ object FallingStar extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/falling-star.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/FallingStar.htm"),
     Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/falling_star.html"),
-    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/falling_star.htm")
-  ),
+    Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/falling_star.htm")),
   layout = "swf|r|t",
   deckOptions = DeckOptions(numDecks = 2, suits = Seq(Suit.Horseshoes, Suit.Stars), lowRank = Rank.Unknown),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -31,8 +30,5 @@ object FallingStar extends GameRules(
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock,
       mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve,
-      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 11))
-)
+      mayMoveToEmptyFrom = PileSet.Behavior.allButReserve)),
+  reserves = Some(ReserveRules(initialCards = 11)))

@@ -2,7 +2,7 @@ package services.test
 
 import java.util.UUID
 
-import models.test.{Test, TestResult, Tree}
+import models.test.{ Test, TestResult, Tree }
 import util.Logging
 
 import scala.util.control.NonFatal

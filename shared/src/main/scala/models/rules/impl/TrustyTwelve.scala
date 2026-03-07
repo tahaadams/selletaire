@@ -11,17 +11,14 @@ object TrustyTwelve extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/trusty_twelve.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/trusty_twelve.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/trusty-twelve.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/TrustyTwelve.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/TrustyTwelve.htm")),
   layout = "s|2t",
   victoryCondition = VictoryCondition.NoneInStock,
   stock = Some(
     StockRules(
       cardsShown = 19,
       dealTo = StockDealTo.TableauEmpty,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 12,
@@ -30,7 +27,4 @@ object TrustyTwelve extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock)))

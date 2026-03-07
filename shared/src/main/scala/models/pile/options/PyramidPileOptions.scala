@@ -1,9 +1,9 @@
 package models.pile.options
 
-import models.pile.actions.{DragToActions, SelectCardActions}
+import models.pile.actions.{ DragToActions, SelectCardActions }
 import models.pile.constraints.Constraint
 import models.pile.set.PileSet
-import models.rules.{CardRemovalMethod, PyramidRules}
+import models.rules.{ CardRemovalMethod, PyramidRules }
 
 object PyramidPileOptions {
   def apply(rules: PyramidRules, crm: CardRemovalMethod) = {
@@ -14,8 +14,7 @@ object PyramidPileOptions {
       dragToConstraint = Some(dragToConstraint(crm, rules.mayMoveToEmptyFrom, rules.mayMoveToNonEmptyFrom)),
       selectCardConstraint = Some(Constraint.allOf("top-card-select", Constraint.topCardOnly, Constraint.forCardRemovalMethod(crm))),
       selectCardAction = Some(SelectCardActions.drawToPiles(() => 1, Seq("foundation-1"))),
-      dragToAction = Some(DragToActions.remove())
-    )
+      dragToAction = Some(DragToActions.remove()))
 
     val ret = (1 to rules.height).flatMap { i =>
       (1 to i).map { j =>
@@ -57,11 +56,8 @@ object PyramidPileOptions {
       direction = None,
       dragFromConstraint = Some(c),
       dragToConstraint = Some(Constraint.allOf("pyramid-total", c, baseOptions.dragToConstraint.getOrElse(
-        throw new IllegalStateException()
-      ))),
+        throw new IllegalStateException()))),
       selectCardConstraint = Some(Constraint.allOf("pyramid-select", c, Constraint.topCardOnly, baseOptions.selectCardConstraint.getOrElse(
-        throw new IllegalStateException()
-      )))
-    )
+        throw new IllegalStateException()))))
   }
 }

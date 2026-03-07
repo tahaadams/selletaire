@@ -13,21 +13,16 @@ object Raglan extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/raglan.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Raglan.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/raglan.php"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/raglan.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/klondike/raglan.htm")),
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
@@ -41,10 +36,6 @@ object Raglan extends GameRules(
         "UUUU",
         "UUU",
         "UU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)))

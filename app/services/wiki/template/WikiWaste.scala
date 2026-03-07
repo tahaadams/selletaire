@@ -1,6 +1,6 @@
 package services.wiki.template
 
-import models.rules.{WastePlayableCards, WasteRules}
+import models.rules.{ WastePlayableCards, WasteRules }
 import services.wiki.WikiService
 import services.wiki.WikiService.messages
 

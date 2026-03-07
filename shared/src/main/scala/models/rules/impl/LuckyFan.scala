@@ -19,8 +19,5 @@ object LuckyFan extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.HighRank,
-      maxCards = 3
-    )
-  ),
-  cells = Some(CellRules(numPiles = 2))
-)
+      maxCards = 3)),
+  cells = Some(CellRules(numPiles = 2)))

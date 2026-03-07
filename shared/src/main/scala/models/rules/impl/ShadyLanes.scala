@@ -11,8 +11,7 @@ object ShadyLanes extends GameRules(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/shady_lanes.htm"),
     Link("Solsuite Solitaire", "www.solsuite.com/games/shady_lanes.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/shady-lanes.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ShadyLanes.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/ShadyLanes.htm")),
   layout = "swf|r|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -24,8 +23,5 @@ object ShadyLanes extends GameRules(
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Reserve)
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 4, cardsFaceDown = -1))
-)
+      mayMoveToEmptyFrom = Seq(PileSet.Behavior.Reserve))),
+  reserves = Some(ReserveRules(numPiles = 4, cardsFaceDown = -1)))

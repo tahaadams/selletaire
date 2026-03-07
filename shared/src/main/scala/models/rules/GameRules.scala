@@ -21,5 +21,4 @@ case class GameRules(
   foundations: IndexedSeq[FoundationRules] = IndexedSeq.empty,
   tableaus: IndexedSeq[TableauRules] = IndexedSeq.empty,
   pyramids: IndexedSeq[PyramidRules] = IndexedSeq.empty,
-  special: Option[SpecialRules] = None
-) extends GameRulesHelper
+  special: Option[SpecialRules] = None) extends GameRulesHelper

@@ -1,16 +1,15 @@
 package phaser.card
 
-import com.definitelyscala.phaser.{Point, Pointer, Sprite}
-import models.card.{Rank, Suit}
+import com.definitelyscala.phaser.{ Point, Pointer, Sprite }
+import models.card.{ Rank, Suit }
 import phaser.PhaserGame
-import phaser.pile.{PileDragHelper, PileGroup}
+import phaser.pile.{ PileDragHelper, PileGroup }
 import util.Logging
 
 import scala.scalajs.js
 
 class CardSprite(
-    val phaser: PhaserGame, val id: Int, initialRank: Rank, initialSuit: Suit, initialFaceUp: Boolean = false, initialX: Int, initialY: Int
-) extends Sprite(phaser, initialX.toDouble, initialY.toDouble) {
+  val phaser: PhaserGame, val id: Int, initialRank: Rank, initialSuit: Suit, initialFaceUp: Boolean = false, initialX: Int, initialY: Int) extends Sprite(phaser, initialX.toDouble, initialY.toDouble) {
   private[this] var rank = initialRank
   def getRank = rank
   private[this] var suit = initialSuit

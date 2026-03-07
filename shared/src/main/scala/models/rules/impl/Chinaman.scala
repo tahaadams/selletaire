@@ -16,7 +16,4 @@ object Chinaman extends GameRules(
     TableauRules(
       suitMatchRuleForBuilding = SuitMatchRule.DifferentSuits,
       suitMatchRuleForMovingStacks = SuitMatchRule.DifferentSuits,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

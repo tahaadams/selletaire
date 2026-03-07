@@ -10,8 +10,7 @@ object ChallengeFreeCell extends GameRules(
   related = Seq("superchallengefreecell"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/challenge_freecell.htm"),
-    Link("Michael Keller's amazing FreeCell FAQ", "solitairelaboratory.com/fcfaq.html#AceDepth")
-  ),
+    Link("Michael Keller's amazing FreeCell FAQ", "solitairelaboratory.com/fcfaq.html#AceDepth")),
   layout = "f|c|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(
@@ -20,8 +19,5 @@ object ChallengeFreeCell extends GameRules(
       initialCards = InitialCards.RestOfDeck,
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      pilesWithLowCardsAtBottom = 8
-    )
-  ),
-  cells = Some(CellRules())
-)
+      pilesWithLowCardsAtBottom = 8)),
+  cells = Some(CellRules()))

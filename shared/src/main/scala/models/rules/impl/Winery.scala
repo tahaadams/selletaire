@@ -14,7 +14,5 @@ object Winery extends GameRules(
     numPiles = 10,
     initialCards = InitialCards.RestOfDeck,
     cardsFaceDown = TableauFaceDownCards.Count(0),
-    suitMatchRuleForMovingStacks = SuitMatchRule.None
-  )),
-  cells = Some(CellRules(numPiles = 2, initialCards = 2))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  cells = Some(CellRules(numPiles = 2, initialCards = 2)))

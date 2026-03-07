@@ -9,28 +9,18 @@ object KlondikeGalleryMode extends GameRules(
   like = Some("klondike"),
   links = Seq(
     Link("Wikipedia", "en.wikipedia.org/wiki/Klondike_(solitaire)"),
-    Link("Robert Abbott's Strategy Guide", "www.logicmazes.com/sol/")
-  ),
+    Link("Robert Abbott's Strategy Guide", "www.logicmazes.com/sol/")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      cardsDealt = StockCardsDealt.Count(3)
-    )
-  ),
+      cardsDealt = StockCardsDealt.Count(3))),
   waste = Some(
     WasteRules(
-      name = "Gallery"
-    )
-  ),
+      name = "Gallery")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

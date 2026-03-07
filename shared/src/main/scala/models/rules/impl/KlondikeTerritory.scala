@@ -8,23 +8,15 @@ object KlondikeTerritory extends GameRules(
   title = "Klondike Territory",
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/klondike_territory.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/klondike_territory.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/klondike_territory.html")),
   layout = "wf|t",
   waste = Some(
     WasteRules(
-      name = "Reserve"
-    )
-  ),
+      name = "Reserve")),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

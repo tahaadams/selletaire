@@ -14,8 +14,7 @@ object Yukon extends GameRules(
     Link("Solitaire Game Rules.com", "solitaire-game-rules.com/games/yukon.htm"),
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Yukon.html.en"),
     Link("About Dot Com", "boardgames.about.com/od/solitaire/a/yukon.htm"),
-    Link("Dan Fletcher's Strategy Guide", "www.solitairecentral.com/articles/YukonSolitaireStrategyGuide.html")
-  ),
+    Link("Dan Fletcher's Strategy Guide", "www.solitairecentral.com/articles/YukonSolitaireStrategyGuide.html")),
   layout = ":::f|t",
   foundations = IndexedSeq(FoundationRules(numPiles = 4, autoMoveCards = true)),
   tableaus = IndexedSeq(TableauRules(
@@ -27,11 +26,8 @@ object Yukon extends GameRules(
       "DDDUUUUU",
       "DDDDUUUUU",
       "DDDDDUUUUU",
-      "DDDDDDUUUUU"
-    ),
+      "DDDDDDUUUUU"),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForMovingStacks = SuitMatchRule.Any,
     rankMatchRuleForMovingStacks = RankMatchRule.Any,
-    emptyFilledWith = FillEmptyWith.HighRank
-  ))
-)
+    emptyFilledWith = FillEmptyWith.HighRank)))

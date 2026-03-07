@@ -29,10 +29,6 @@ object Alexandria extends GameRules(
         "UUUU",
         "UUU",
         "UU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.HighRank)))

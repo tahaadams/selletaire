@@ -28,8 +28,7 @@ object WikiCell {
               "help.piles.multiple.cards.multiple.each",
               WikiService.numberAsString(x, properCase = true),
               loweredName,
-              WikiService.numberAsString(rules.initialCards)
-            )
+              WikiService.numberAsString(rules.initialCards))
           }
         }
     }

@@ -12,17 +12,14 @@ object Antares extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Left Tableau",
       numPiles = 4,
       initialCards = InitialCards.Count(7),
       cardsFaceDown = TableauFaceDownCards.Count(0),
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    ),
+      suitMatchRuleForMovingStacks = SuitMatchRule.None),
     TableauRules(
       name = "Right Tableau",
       setNumber = 1,
@@ -32,8 +29,5 @@ object Antares extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.Any,
       rankMatchRuleForMovingStacks = RankMatchRule.Any,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
-  cells = Some(CellRules())
-)
+      emptyFilledWith = FillEmptyWith.HighRank)),
+  cells = Some(CellRules()))

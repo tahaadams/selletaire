@@ -14,23 +14,19 @@ object RoyalRendezvous extends GameRules(
     Link("Solitaire Till Dawn", "www.semicolon.com/Solitaire/Rules/RoyalRendezvous.html"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/royal_rendezvous.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/royal-rendezvous.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/RoyalRendezvous.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/RoyalRendezvous.htm")),
   layout = "sw:ff|::::ff|t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       name = "Straight Foundation",
       numPiles = 4,
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      initialCards = 4
-    ),
+      initialCards = 4),
     FoundationRules(
       name = "Odd Foundation",
       setNumber = 1,
@@ -38,8 +34,7 @@ object RoyalRendezvous extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.UpBy2,
-      maxCards = 6
-    ),
+      maxCards = 6),
     FoundationRules(
       name = "Even Foundation",
       setNumber = 2,
@@ -48,17 +43,14 @@ object RoyalRendezvous extends GameRules(
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
       initialCards = 4,
       rankMatchRule = RankMatchRule.UpBy2,
-      maxCards = 6
-    ),
+      maxCards = 6),
     FoundationRules(
       name = "King Foundation",
       setNumber = 3,
       numPiles = 4,
       lowRank = FoundationLowRank.SpecificRank(Rank.King),
       initialCardRestriction = Some(FoundationInitialCardRestriction.UniqueSuits),
-      maxCards = 1
-    )
-  ),
+      maxCards = 1)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -66,7 +58,4 @@ object RoyalRendezvous extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock
-    )
-  )
-)
+      autoFillEmptyFrom = TableauAutoFillEmptyFrom.WasteThenStock)))

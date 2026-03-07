@@ -15,16 +15,11 @@ object QuadrupleInterchange extends GameRules(
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 16,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 11,
       initialCards = InitialCards.Count(11),
       cardsFaceDown = TableauFaceDownCards.EvenNumbered,
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
-      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

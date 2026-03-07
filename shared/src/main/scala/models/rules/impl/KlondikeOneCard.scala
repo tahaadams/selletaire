@@ -11,5 +11,4 @@ object KlondikeOneCard extends GameRules(
   stock = Some(StockRules()),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(FoundationRules(numPiles = 4)),
-  tableaus = IndexedSeq(TableauRules(emptyFilledWith = FillEmptyWith.HighRank))
-)
+  tableaus = IndexedSeq(TableauRules(emptyFilledWith = FillEmptyWith.HighRank)))

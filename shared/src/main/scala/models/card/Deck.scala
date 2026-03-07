@@ -19,8 +19,7 @@ case class Deck(var cards: Seq[Card], lowRank: Rank, highRank: Rank, originalOrd
     suit: Option[Suit] = None,
     forbiddenSuits: Set[Suit] = Set.empty,
     color: Option[Color] = None,
-    forbiddenColors: Set[Color] = Set.empty
-  ) = {
+    forbiddenColors: Set[Color] = Set.empty) = {
     val ret = if (rank.isEmpty && forbiddenRanks.isEmpty && suit.isEmpty && forbiddenSuits.isEmpty && color.isEmpty && forbiddenColors.isEmpty) {
       this.cards.take(numCards)
     } else {

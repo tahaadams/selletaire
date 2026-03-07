@@ -14,16 +14,13 @@ object Trefoil extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/trefoil.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/trefoil.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Trefoil.htm"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/trefoil.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/trefoil.html")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 16,
@@ -31,12 +28,7 @@ object Trefoil extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

@@ -9,20 +9,14 @@ object AmericanCanister extends GameRules(
   like = Some("canister"),
   links = Seq(
     Link("Zonora", "www.zonora.com/games/a/american-canister.htm"),
-    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/american_canister.htm")
-  ),
+    Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/american_canister.htm")),
   layout = "::f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 8,
       initialCards = InitialCards.RestOfDeck,
-      cardsFaceDown = TableauFaceDownCards.Count(0)
-    )
-  )
-)
+      cardsFaceDown = TableauFaceDownCards.Count(0))))

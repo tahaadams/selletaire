@@ -2,7 +2,7 @@ package services.history
 
 import java.util.UUID
 
-import models.history.{GameHistory, GameSeed}
+import models.history.{ GameHistory, GameSeed }
 import models.queries.BaseQueries
 import models.queries.history.GameSeedQueries
 import util.FutureUtils.defaultContext

@@ -16,8 +16,7 @@ object Whitehead extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/whitehead.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/whitehead.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Whitehead.htm"),
-    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Whitehead.html.en")
-  ),
+    Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Whitehead.html.en")),
   layout = "swf|t",
   stock = Some(StockRules(maximumDeals = Some(1))),
   waste = Some(WasteRules()),
@@ -25,6 +24,4 @@ object Whitehead extends GameRules(
   tableaus = IndexedSeq(TableauRules(
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.SameColor,
-    suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit
-  ))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.SameSuit)))

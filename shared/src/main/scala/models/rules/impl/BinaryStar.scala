@@ -10,8 +10,7 @@ object BinaryStar extends GameRules(
   like = Some("blackhole"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/binary_star.htm"),
-    Link("Jan Wolter's Experiments", "/article/blackhole.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/blackhole.html")),
   layout = "ff|t",
   victoryCondition = VictoryCondition.AllOnFoundationOrStock,
   deckOptions = DeckOptions(numDecks = 2),
@@ -22,8 +21,7 @@ object BinaryStar extends GameRules(
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpOrDown,
       maxCards = 0,
-      autoMoveCards = true
-    ),
+      autoMoveCards = true),
     FoundationRules(
       setNumber = 1,
       lowRank = FoundationLowRank.DeckHighRank,
@@ -32,9 +30,7 @@ object BinaryStar extends GameRules(
       suitMatchRule = SuitMatchRule.Any,
       rankMatchRule = RankMatchRule.UpOrDown,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 17,
@@ -43,7 +39,4 @@ object BinaryStar extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       rankMatchRuleForBuilding = RankMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

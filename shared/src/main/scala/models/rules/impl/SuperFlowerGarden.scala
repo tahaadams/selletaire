@@ -12,15 +12,12 @@ object SuperFlowerGarden extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/super_flower_garden.htm"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/super-flower-garden.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/super_flower_garden.php"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SuperFlowerGarden.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SuperFlowerGarden.htm")),
   layout = "f|t",
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 18,
@@ -43,17 +40,11 @@ object SuperFlowerGarden extends GameRules(
         "UUU",
         "UUU",
         "UUU",
-        "U"
-      ),
+        "U"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.None)),
   special = Some(
     SpecialRules(
-      redealsAllowed = 2
-    )
-  )
-)
+      redealsAllowed = 2)))

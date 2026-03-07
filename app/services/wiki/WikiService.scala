@@ -1,7 +1,7 @@
 package services.wiki
 
-import models.rules.{GameRules, GameRulesSet}
-import util.{Application, Logging}
+import models.rules.{ GameRules, GameRulesSet }
+import util.{ Application, Logging }
 import better.files._
 import play.api.i18n.Messages
 import play.api.i18n.Messages.UrlMessageSource

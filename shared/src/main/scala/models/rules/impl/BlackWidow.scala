@@ -12,8 +12,7 @@ object BlackWidow extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/black-widow.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/BlackWidow.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/black_widow.php"),
-    Link("Bryan Cohen on eHow", "www.ehow.com/list_6702718_black-widow-card-game-rules.html")
-  ),
+    Link("Bryan Cohen on eHow", "www.ehow.com/list_6702718_black-widow-card-game-rules.html")),
   layout = "s.f|t",
   victoryCondition = VictoryCondition.AllOnTableauSorted,
   deckOptions = DeckOptions(numDecks = 2),
@@ -33,11 +32,7 @@ object BlackWidow extends GameRules(
         "DDDDU",
         "DDDDU",
         "DDDDU",
-        "DDDDU"
-      ),
+        "DDDDU"),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

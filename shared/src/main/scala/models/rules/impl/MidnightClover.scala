@@ -13,9 +13,7 @@ object MidnightClover extends GameRules(
     FoundationRules(
       numPiles = 4,
       initialCards = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       name = "Fan",
@@ -24,12 +22,7 @@ object MidnightClover extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
-      emptyFilledWith = FillEmptyWith.HighRank
-    )
-  ),
+      emptyFilledWith = FillEmptyWith.HighRank)),
   special = Some(
     SpecialRules(
-      drawsAllowed = 1
-    )
-  )
-)
+      drawsAllowed = 1)))

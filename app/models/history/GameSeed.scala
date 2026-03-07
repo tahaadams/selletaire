@@ -15,5 +15,4 @@ case class GameSeed(
   wins: Int = 0,
   moves: Int = 0,
   first: Option[GameSeed.Record] = None,
-  fastest: Option[GameSeed.Record] = None
-)
+  fastest: Option[GameSeed.Record] = None)

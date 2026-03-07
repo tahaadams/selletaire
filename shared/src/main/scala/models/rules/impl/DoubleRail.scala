@@ -13,8 +13,7 @@ object DoubleRail extends GameRules(
     Link("Solavant Solitaire", "www.solavant.com/solitaire/double_rail.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/double-rail.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/DoubleRail.htm"),
-    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/double_rail.htm")
-  ),
+    Link("Zonora", "www.zonora.com/mysolitaire/rules/forty_thieves/double_rail.htm")),
   layout = "swf|:::t",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -25,6 +24,4 @@ object DoubleRail extends GameRules(
     initialCards = InitialCards.Count(1),
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.Any,
-    suitMatchRuleForMovingStacks = SuitMatchRule.Any
-  ))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

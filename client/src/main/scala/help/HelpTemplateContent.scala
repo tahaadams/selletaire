@@ -9,13 +9,11 @@ import scalatags.Text.all._
 object HelpTemplateContent {
   def rulesLink(rulesId: String, rulesTitle: String) = div(
     a(cls := "help-link", href := NavigationUrls.rules(rulesId))(rulesTitle),
-    a(cls := "play-link", href := NavigationUrls.play(rulesId), data("rules") := rulesId, title := s"Play $rulesTitle Now")(raw("&#9654;"))
-  )
+    a(cls := "play-link", href := NavigationUrls.play(rulesId), data("rules") := rulesId, title := s"Play $rulesTitle Now")(raw("&#9654;")))
 
   def getTitleDiv(rules: GameRules) = div(cls := "rules-help")(h2(
     rules.title,
-    a(cls := "play-link", href := NavigationUrls.play(rules.id), title := Messages("help.play.now"))(raw("&#9654;"))
-  ))
+    a(cls := "play-link", href := NavigationUrls.play(rules.id), title := Messages("help.play.now"))(raw("&#9654;"))))
 
   def getLayoutDiv(rules: GameRules) = div(
     h3(Messages("help.layout")),
@@ -29,11 +27,8 @@ object HelpTemplateContent {
             })
           } else {
             div()
-          }
-        )
-      }
-    )
-  )
+          })
+      }))
 
   def getSimilarDiv(rules: GameRules) = rules.like match {
     case Some(likeId) =>
@@ -44,11 +39,7 @@ object HelpTemplateContent {
           li(
             rulesLink(like.id, like.title),
             div(
-              em(GameRulesHelpService.description(like.id, link = false))
-            )
-          )
-        )
-      )
+              em(GameRulesHelpService.description(like.id, link = false))))))
     case None => div()
   }
 
@@ -57,8 +48,7 @@ object HelpTemplateContent {
       h3(Messages("help.web.resources")),
       ul(rules.links.map { l =>
         li(a(target := "_blank", href := l.url)(l.title))
-      })
-    )
+      }))
   } else {
     div()
   }
@@ -71,10 +61,8 @@ object HelpTemplateContent {
         ul(rels.map { rel =>
           li(
             rulesLink(rel._1, rel._2.title),
-            div(em(GameRulesHelpService.description(rel._2.id, link = false)))
-          )
-        })
-      )
+            div(em(GameRulesHelpService.description(rel._2.id, link = false))))
+        }))
     } else {
       div()
     }
@@ -85,8 +73,7 @@ object HelpTemplateContent {
       h3(Messages("help.also.known.as")),
       div(cls := "objective")(rules.aka.toSeq.map { aka =>
         rulesLink(aka._1, aka._2)
-      })
-    )
+      }))
   } else {
     div()
   }

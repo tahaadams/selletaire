@@ -12,24 +12,19 @@ object SimplePairs extends GameRules(
     Link("AisleRiot", "help.gnome.org/users/aisleriot/stable/Jamestown.html.en"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/simple-pairs.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SimplePairs.htm"),
-    Link("Jan Wolter's Experiments", "/article/simplepairs.html")
-  ),
+    Link("Jan Wolter's Experiments", "/article/simplepairs.html")),
   layout = "sf|t",
   cardRemovalMethod = CardRemovalMethod.RemovePairsOfSameRank,
   stock = Some(
     StockRules(
       dealTo = StockDealTo.Never,
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
       lowRank = FoundationLowRank.AnyCard,
       maxCards = 0,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 9,
@@ -38,7 +33,4 @@ object SimplePairs extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.None,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.Stock,
-      emptyFilledWith = FillEmptyWith.None
-    )
-  )
-)
+      emptyFilledWith = FillEmptyWith.None)))

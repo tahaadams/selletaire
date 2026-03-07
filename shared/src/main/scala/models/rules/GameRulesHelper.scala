@@ -2,7 +2,7 @@ package models.rules
 
 import java.util.UUID
 
-import models.card.{Deck, Rank, Suit}
+import models.card.{ Deck, Rank, Suit }
 import models.game.GameState
 import models.pile.set._
 
@@ -55,8 +55,7 @@ trait GameRulesHelper { this: GameRules =>
       }
     },
     "reserves" -> reserves.map(r => (1 to r.numPiles).map(i => s"reserve-$i")).getOrElse(Nil),
-    "cells" -> cells.map(c => (1 to c.numPiles).map(i => s"cells-$i")).getOrElse(Nil)
-  )
+    "cells" -> cells.map(c => (1 to c.numPiles).map(i => s"cells-$i")).getOrElse(Nil))
 
   protected[this] lazy val prototypePileSets = {
     tableaus.map(t => TableauSet(t, deckOptions, cardRemovalMethod)) ++

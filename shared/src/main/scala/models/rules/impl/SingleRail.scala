@@ -12,28 +12,20 @@ object SingleRail extends GameRules(
     Link("Solsuite Solitaire", "www.solsuite.com/games/single_rail.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/single_rail.php"),
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/single-rail.htm"),
-    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SingleRail.htm")
-  ),
+    Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/SingleRail.htm")),
   layout = "swf|t",
   stock = Some(
     StockRules(
-      maximumDeals = Some(1)
-    )
-  ),
+      maximumDeals = Some(1))),
   waste = Some(WasteRules()),
   foundations = IndexedSeq(
     FoundationRules(
       numPiles = 4,
-      autoMoveCards = true
-    )
-  ),
+      autoMoveCards = true)),
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 4,
       initialCards = InitialCards.Count(1),
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForBuilding = SuitMatchRule.Any,
-      suitMatchRuleForMovingStacks = SuitMatchRule.Any
-    )
-  )
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.Any)))

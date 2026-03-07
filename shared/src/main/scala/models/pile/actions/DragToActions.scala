@@ -4,7 +4,7 @@ import models.card.Card
 import models.game.GameState
 import models.pile.Pile
 import models.pile.set.PileSet
-import models.{CardsMoved, ResponseMessage}
+import models.{ CardsMoved, ResponseMessage }
 
 case class DragToAction(id: String, f: (Pile, Seq[Card], Pile, GameState) => Seq[ResponseMessage])
 

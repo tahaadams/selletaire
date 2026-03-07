@@ -9,8 +9,7 @@ object CastleOfIndolence extends GameRules(
   like = Some("beleagueredcastle"),
   links = Seq(
     Link("Pretty Good Solitaire", "www.goodsol.com/pgshelp/castle_of_indolence.htm"),
-    Link("Solsuite Solitaire", "www.solsuite.com/games/castle_of_indolence.htm")
-  ),
+    Link("Solsuite Solitaire", "www.solsuite.com/games/castle_of_indolence.htm")),
   layout = "f|::r|t",
   deckOptions = DeckOptions(numDecks = 2),
   foundations = IndexedSeq(FoundationRules(numPiles = 8, suitMatchRule = SuitMatchRule.Any, autoMoveCards = true)),
@@ -19,7 +18,5 @@ object CastleOfIndolence extends GameRules(
     initialCards = InitialCards.RestOfDeck,
     cardsFaceDown = TableauFaceDownCards.Count(0),
     suitMatchRuleForBuilding = SuitMatchRule.Any,
-    suitMatchRuleForMovingStacks = SuitMatchRule.None
-  )),
-  reserves = Some(ReserveRules(numPiles = 4, initialCards = 13, cardsFaceDown = -1))
-)
+    suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  reserves = Some(ReserveRules(numPiles = 4, initialCards = 13, cardsFaceDown = -1)))

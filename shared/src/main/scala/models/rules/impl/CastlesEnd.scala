@@ -20,8 +20,5 @@ object CastlesEnd extends GameRules(
       suitMatchRuleForBuilding = SuitMatchRule.SameSuit,
       rankMatchRuleForBuilding = RankMatchRule.UpOrDown,
       wrap = true,
-      suitMatchRuleForMovingStacks = SuitMatchRule.None
-    )
-  ),
-  reserves = Some(ReserveRules(numPiles = 2, cardsFaceDown = -1))
-)
+      suitMatchRuleForMovingStacks = SuitMatchRule.None)),
+  reserves = Some(ReserveRules(numPiles = 2, cardsFaceDown = -1)))

@@ -4,12 +4,12 @@ import controllers.BaseController
 import io.circe.Json
 import models.user.User
 import play.api.libs.json.JsObject
-import sangria.execution.{ErrorWithResolver, QueryAnalysisError}
+import sangria.execution.{ ErrorWithResolver, QueryAnalysisError }
 import sangria.marshalling.circe._
 import sangria.marshalling.MarshallingUtil._
 import sangria.parser.SyntaxError
 import services.graphql.GraphQLService
-import util.{Application, FutureUtils}
+import util.{ Application, FutureUtils }
 import util.FutureUtils.defaultContext
 
 import scala.concurrent.Future
@@ -52,9 +52,7 @@ class GraphQLController @javax.inject.Inject() (override val app: Application) e
           "syntaxError" -> Json.fromString(error.getMessage),
           "locations" -> Json.arr(Json.obj(
             "line" -> Json.fromInt(error.originalError.position.line),
-            "column" -> Json.fromInt(error.originalError.position.column)
-          ))
-        )
+            "column" -> Json.fromInt(error.originalError.position.column))))
         Future.successful(BadRequest(json.spaces2).as("application/json"))
     }
   }

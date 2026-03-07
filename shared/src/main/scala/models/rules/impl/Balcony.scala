@@ -20,8 +20,5 @@ object Balcony extends GameRules(
       cardsFaceDown = TableauFaceDownCards.Count(0),
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       autoFillEmptyFrom = TableauAutoFillEmptyFrom.StockThenWaste,
-      mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve
-    )
-  ),
-  reserves = Some(ReserveRules(initialCards = 7))
-)
+      mayMoveToNonEmptyFrom = PileSet.Behavior.allButReserve)),
+  reserves = Some(ReserveRules(initialCards = 7)))

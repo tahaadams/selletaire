@@ -14,8 +14,7 @@ object Batsford extends GameRules(
     Link("BVS Solitaire Collection", "www.bvssolitaire.com/rules/batsford.htm"),
     Link("Rapture Technologies KingSol", "www.rapturetech.com/KingSol/Rules/Batsford.htm"),
     Link("Solavant Solitaire", "www.solavant.com/solitaire/batsford.php"),
-    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/batsford.html")
-  ),
+    Link("Xolitaire", "www.escapedivision.com/xolitaire/en/games/batsford.html")),
   layout = "swf|tt",
   deckOptions = DeckOptions(numDecks = 2),
   stock = Some(StockRules(maximumDeals = Some(1))),
@@ -24,8 +23,7 @@ object Batsford extends GameRules(
   tableaus = IndexedSeq(
     TableauRules(
       numPiles = 10,
-      emptyFilledWith = FillEmptyWith.HighRank
-    ),
+      emptyFilledWith = FillEmptyWith.HighRank),
     TableauRules(
       name = "Reserve",
       setNumber = 1,
@@ -36,7 +34,4 @@ object Batsford extends GameRules(
       rankMatchRuleForBuilding = RankMatchRule.Equal,
       suitMatchRuleForMovingStacks = SuitMatchRule.None,
       emptyFilledWith = FillEmptyWith.HighRank,
-      maxCards = 3
-    )
-  )
-)
+      maxCards = 3)))
