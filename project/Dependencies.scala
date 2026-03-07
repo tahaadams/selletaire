@@ -64,9 +64,9 @@ object Dependencies {
   }
 
   object ScalaJS {
-    val jQueryVersion = "2.2.0"
+    val jQueryVersion = "1.0.0"
     val scalaTagsVersion = "0.12.0"
-    val domVersion = "2.2.0"
+    val domVersion = "2.1.0"
     val definitelyScalaVersion = "1.0.2"
   }
 
