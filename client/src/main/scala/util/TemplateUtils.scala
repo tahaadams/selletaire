@@ -2,14 +2,15 @@ package util
 
 import org.scalajs.dom
 import org.scalajs.dom._
-import org.scalajs.jquery.{ JQuery, JQueryEventObject, jQuery => $ }
+import scala.scalajs.js
+import util.JQueryCompat.{ JQuery, JQueryEventObject, jQuery => $ }
 
 import scalatags.Text.all._
 import scalatags.Text.tags2.time
 
 object TemplateUtils {
   def map(jq: JQuery, f: (JQuery) => (String, String)) = jq.map { e: Element =>
-    f($(e))
+    f($(e)).asInstanceOf[js.Any]
   }
 
   def clickHandler(jq: JQuery, f: JQuery => Unit) = jq.click { e: JQueryEventObject =>

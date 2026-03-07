@@ -8,12 +8,12 @@ import models.{ PossibleMoves, RE, UN }
 import models.game._
 import models.rules.{ GameRules, GameRulesSet }
 import models.settings.Settings
-import org.scalajs.jquery.JQuery
+import util.JQueryCompat.JQuery
 import phaser.PhaserGame
 import phaser.card.CardImages
 import phaser.playmat.Playmat
 import util.Logging
-import org.scalajs.jquery.{ jQuery => $ }
+import util.JQueryCompat.{ jQuery => $ }
 
 object Gameplay {
   case class GameServices(

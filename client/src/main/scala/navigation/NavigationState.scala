@@ -1,6 +1,6 @@
 package navigation
 
-import org.scalajs.jquery.{ jQuery => $ }
+import util.JQueryCompat.{ jQuery => $ }
 
 import enumeratum.values._
 

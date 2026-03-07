@@ -8,7 +8,7 @@ import models.pile.set.PileSet
 import phaser.PhaserGame
 import phaser.card.CardSprite
 
-class PileGroup(val phaser: PhaserGame, p: Pile) extends Group(game = phaser, parent = phaser.getPlaymat) {
+class PileGroup(val phaser: PhaserGame, p: Pile) extends Group(phaser, phaser.getPlaymat) {
   val id = p.id
   val behavior = p.pileSet.map(_.behavior).getOrElse(throw new IllegalStateException(s"Missing pileset for pile [$id]."))
   val options = p.options

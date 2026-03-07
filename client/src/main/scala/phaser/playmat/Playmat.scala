@@ -10,7 +10,7 @@ import phaser.pile.PileGroup
 import util.{ Logging, NullUtils }
 
 class Playmat(val phaser: PhaserGame, val pileSets: IndexedSeq[PileSet], val layoutString: String) extends Group(
-  game = phaser, parent = NullUtils.inst, name = "playmat") {
+  phaser, NullUtils.inst, "playmat") {
   var w: Double = 0.0
   var h: Double = 0.0
 

@@ -22,7 +22,7 @@ class PlaymatEmitter(playmat: Playmat) {
     val e = this.suitEmitter(card.getSuit.index)
     e.emitX = card.x
     e.emitY = card.y
-    e.start(explode = true, 1000, 0, 40)
+    e.start(true, 1000, 0, 40)
   }
 
   def bringToTop() = suitEmitter.foreach(playmat.bringToTop)

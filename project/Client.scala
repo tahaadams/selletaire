@@ -11,7 +11,7 @@ object Client {
     unmanagedSourceDirectories in Compile := Seq((scalaSource in Compile).value),
     libraryDependencies ++= Seq(
       // "com.definitelyscala" %% "scala-js-phaser" % Dependencies.ScalaJS.definitelyScalaVersion,
-      "be.doeraene"  % "scalajs-jquery_sjs1_2.12" % "1.0.0",
+      // "be.doeraene" % "scalajs-jquery_sjs1_2.12" % "1.0.0" — removed: incompatible with scalajs-dom 2.x; replaced by util.JQueryCompat
       "com.lihaoyi"  % "scalatags_sjs1_2.12"      % "0.12.0",
       "org.scala-js" % "scalajs-dom_sjs1_2.12"    % "2.3.0"
 ),

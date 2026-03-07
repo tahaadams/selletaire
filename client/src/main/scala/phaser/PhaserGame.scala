@@ -6,7 +6,7 @@ import com.definitelyscala.phaser._
 import models.RequestMessage
 import models.game.PossibleMove
 import org.scalajs.dom
-import org.scalajs.dom.raw.UIEvent
+import org.scalajs.dom.UIEvent
 import phaser.card.CardImages
 import phaser.gameplay.Gameplay
 import phaser.playmat.Playmat

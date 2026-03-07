@@ -17,7 +17,7 @@ class InputHelper(gg: SolitaireGG) {
   }
 
   private[this] def toggleDebug() = {
-    import org.scalajs.jquery.{ jQuery => $ }
+    import util.JQueryCompat.{ jQuery => $ }
     val jq = $(".pdebug")
     if (jq.length == 1) {
       jq.fadeToggle()

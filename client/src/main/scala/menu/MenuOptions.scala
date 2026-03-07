@@ -4,7 +4,7 @@ import client.SolitaireGG
 import game.ActiveGame
 import models.rules.GameRulesSet
 import navigation.NavigationService
-import org.scalajs.jquery.{ jQuery => $ }
+import util.JQueryCompat.{ jQuery => $ }
 import util.TemplateUtils
 
 object MenuOptions {

@@ -1,7 +1,7 @@
 package util
 
 import org.scalajs.dom
-import org.scalajs.dom.raw.Event
+import org.scalajs.dom.Event
 
 import scala.scalajs.js.Dynamic.global
 
@@ -38,7 +38,7 @@ object Logging {
 
   private[this] def installErrorHandler() = {
     if (showDebug) {
-      dom.window.onerror = (e: Event, source: String, lineno: Int, colno: Int) => {
+      dom.window.onerror = (e: Event, source: String, lineno: Int, colno: Int, _: js.Any) => {
         info(s"Script error [$e] encountered in [$source:$lineno:$colno]")
         error(e.toString)
       }

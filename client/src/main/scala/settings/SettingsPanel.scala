@@ -2,7 +2,7 @@ package settings
 
 import menu.MenuService
 import models.settings._
-import org.scalajs.jquery.{ jQuery => $ }
+import util.JQueryCompat.{ jQuery => $ }
 
 object SettingsPanel {
   private[this] var initialized = false

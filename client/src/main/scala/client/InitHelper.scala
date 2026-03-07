@@ -1,7 +1,7 @@
 package client
 
 import org.scalajs.dom
-import org.scalajs.dom.raw.BeforeUnloadEvent
+import org.scalajs.dom.BeforeUnloadEvent
 import settings.ThemeService
 import util.{ Logging, NullUtils }
 
