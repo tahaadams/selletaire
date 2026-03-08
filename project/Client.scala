@@ -11,10 +11,10 @@ object Client {
     unmanagedSourceDirectories in Compile := Seq((scalaSource in Compile).value),
     libraryDependencies ++= Seq(
       // "com.definitelyscala" %% "scala-js-phaser" % Dependencies.ScalaJS.definitelyScalaVersion,
-      "be.doeraene"  % "scalajs-jquery_sjs1_2.12" % "1.0.0",
       "com.lihaoyi"  % "scalatags_sjs1_2.12"      % "0.12.0",
       "org.scala-js" % "scalajs-dom_sjs1_2.12"    % "2.3.0"
 ),
+    libraryDependencySchemes += "org.scala-js" %% "scalajs-dom_sjs1" % VersionScheme.Always,
     scalaJSStage in Global := FastOptStage,
     // scapegoatIgnoredFiles := Seq(".*/JsUtils.scala", ".*/JsonSerializers.scala", ".*/Messages.scala"),
     // scapegoatVersion := Dependencies.Utils.scapegoatVersion,
