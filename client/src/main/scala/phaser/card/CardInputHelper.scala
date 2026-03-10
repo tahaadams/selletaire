@@ -1,6 +1,5 @@
 package phaser.card
 
-import com.definitelyscala.phaser.Easing.Easing
 import models.game.PossibleMove
 import models.{ MC, SC }
 
@@ -43,7 +42,8 @@ trait CardInputHelper {
       }
       val scaleTween = card.game.add.tween(card.scale)
       val props = js.Dynamic.literal("x" -> 1.0, "y" -> 1.0)
-      scaleTween.to(props, 200, Easing.Default, autoStart = true, delay = 0.0, repeat = 0.0, yoyo = false)
+      val easing = js.Dynamic.global.Phaser.Easing.Default
+      scaleTween.asInstanceOf[js.Dynamic].to(props, 200, easing, true, 0.0, 0.0, false)
       scaleTween.start()
     }
   }

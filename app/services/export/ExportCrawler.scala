@@ -36,7 +36,7 @@ class ExportCrawler(ws: WSClient, baseUrl: String, outPath: File, debug: Boolean
     "assets/lib/materializecss/fonts/roboto/Roboto-Light.woff2",
     "assets/lib/materializecss/fonts/roboto/Roboto-Thin.woff",
     "assets/lib/materializecss/fonts/roboto/Roboto-Thin.woff2",
-    "assets/client-fastopt.js")
+    "assets/client-fastopt/main.js")
 
   private[this] val folders = Seq(
     "public/audio" -> "assets/audio",

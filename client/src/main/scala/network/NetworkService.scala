@@ -9,8 +9,8 @@ import scala.scalajs.js.timers.setTimeout
 class NetworkService(debug: Boolean, handleMessage: (SocketResponseMessage) => Unit) {
   private[this] val loc = org.scalajs.dom.document.location
 
-  private[this] val socketUrl = if (loc.host == "localhost:5000") {
-    "ws://localhost:5000/socket"
+  private[this] val socketUrl = if (loc.host == "localhost:9000") {
+    "ws://localhost:9000/socket"
   } else {
     "wss://solitaire.gg/socket"
   }

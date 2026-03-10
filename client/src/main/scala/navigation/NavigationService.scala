@@ -2,7 +2,7 @@ package navigation
 
 import game.ActiveGame
 import org.scalajs.dom
-import org.scalajs.dom.raw.PopStateEvent
+import org.scalajs.dom.PopStateEvent
 import util.Logging
 
 object NavigationService {

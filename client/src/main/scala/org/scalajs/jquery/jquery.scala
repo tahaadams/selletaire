@@ -32,13 +32,18 @@ trait JQuery extends js.Object {
   def removeClass(className: String): JQuery = js.native
   def fadeIn(duration: js.Any = js.native): JQuery = js.native
   def fadeOut(duration: js.Any = js.native): JQuery = js.native
-}
 
-object jQuery {
-  @js.native
-  @JSGlobal("jQuery")
-  private object jq extends js.Object {
-    def apply(selector: js.Any): JQuery = js.native
-  }
-  def apply(selector: js.Any): JQuery = jq(selector)
+  def find(selector: js.Any): JQuery = js.native
+  def data(name: String): js.Any = js.native
+  def data(name: String, value: js.Any): JQuery = js.native
+  def prop(name: String): js.Any = js.native
+  def prop(name: String, value: js.Any): JQuery = js.native
+  @JSName("val")
+  def value(): String = js.native
+  @JSName("val")
+  def value(v: js.Any): JQuery = js.native
+  def remove(): JQuery = js.native
+  def appendTo(target: js.Any): JQuery = js.native
+  def hasClass(className: String): Boolean = js.native
+  def fadeToggle(duration: js.Any = js.native): JQuery = js.native
 }

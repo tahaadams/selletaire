@@ -7,4 +7,5 @@ import scala.scalajs.js.annotation._
 @JSGlobal("Phaser.Time")
 class Time extends js.Object {
   var advancedTiming: Boolean = js.native
+  val now: Double = js.native
 }

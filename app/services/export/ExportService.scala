@@ -8,7 +8,7 @@ import play.api.test.FakeRequest
 import util.Application
 
 object ExportService {
-  private[this] val baseUrl = "http://localhost:5000/"
+  private[this] val baseUrl = "http://localhost:9000/"
   val rootPath = "/Users/kyle/Projects/Personal/solitaire.gg".toFile
   private[this] val outPath = rootPath / "build/web"
   private[this] val offlineUser = User(User.defaultId)
