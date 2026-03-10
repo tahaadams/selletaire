@@ -1,7 +1,7 @@
 package settings
 
 import org.scalajs.dom
-import org.scalajs.jquery.{ jQuery => $ }
+import util.JQueryCompat.{ jQuery => $ }
 import util.Logging
 
 object ThemeService {

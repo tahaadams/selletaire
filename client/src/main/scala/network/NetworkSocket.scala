@@ -1,6 +1,6 @@
 package network
 
-import org.scalajs.dom.raw._
+import org.scalajs.dom._
 
 import scala.scalajs.js
 import scala.scalajs.js.JSON
