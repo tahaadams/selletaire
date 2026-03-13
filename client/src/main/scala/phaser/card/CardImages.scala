@@ -16,30 +16,40 @@ class CardImages(game: PhaserGame, settings: Settings) {
     ret
   }
 
-  private[this] val redRankImages = Rank.all.map { r =>
-    val ret = new Image(game, 0, 0, "card-ranks", r.index - 2)
+  // 4 rows of rank images (one per suit: Hearts=0, Spades=1, Diamonds=2, Clubs=3)
+  // Each row has 13 ranks. Frame index = (suitIndex * 13) + (rank.index - 2)
+  private[this] val suitRankImages: Map[(Int, Int), Image] = (for {
+    s <- Suit.standard
+    r <- Rank.all
+  } yield {
+    val frameIndex = (s.index * 13) + (r.index - 2)
+    val ret = new Image(game, 0, 0, "card-ranks", frameIndex)
     ret.anchor.x = 0.5
     ret.anchor.y = 0.5
-    ret
-  }
+    (s.index, r.index) -> ret
+  }).toMap
 
-  private[this] val blackRankImages = Rank.all.map { r =>
-    val ret = new Image(game, 0, 0, "card-ranks", 13 + r.index - 2)
-    ret.anchor.x = 0.5
-    ret.anchor.y = 0.5
-    ret
-  }
-
-  private[this] val faceCardImages = Suit.standard.flatMap { s =>
-    Seq(0, 1, 2).map { i =>
-      val ret = new Image(game, 0, 0, "card-faces", (s.index * 3) + i)
-      ret.anchor.x = 0.5
-      ret.anchor.y = 0.5
-      ret
+  // Loads all 52 card face images (13 ranks x 4 suits)
+  // Sprite sheet layout: 13 columns (A,2,3,4,5,6,7,8,9,10,J,Q,K) x 4 rows (H,S,D,C)
+  // Frame index = (suit.index * 13) + columnIndex
+  private[this] val faceCardImages: Map[(Int, Int), Image] = (for {
+    s <- Suit.standard
+    r <- Rank.all
+  } yield {
+    val colIndex = r match {
+      case Rank.Ace => 0
+      case _ => r.index - 1 // Two(2)->1, Three(3)->2, ..., King(13)->12
     }
-  }.toIndexedSeq
+    val frameIndex = (s.index * 13) + colIndex
+    val ret = new Image(game, 0, 0, "card-faces", frameIndex)
+    ret.anchor.x = 0.5
+    ret.anchor.y = 0.5
+    (s.index, r.index) -> ret
+  }).toMap
 
-  private[this] val renderer = new CardRender(settings.cardLayout, blank, suitImages, redRankImages, blackRankImages, faceCardImages)
+  private[this] val renderer = new CardRender(
+    settings.cardLayout, blank, suitImages, suitRankImages, faceCardImages,
+    settings.cardSet.w.toDouble, settings.cardSet.h.toDouble)
 
   val textures = Suit.standard.flatMap { s =>
     Rank.all.map { r =>
@@ -61,5 +71,4 @@ class CardImages(game: PhaserGame, settings: Settings) {
     renderer.renderEmptyPile(tex, opaque)
     tex
   }
-
 }

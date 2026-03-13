@@ -7,7 +7,6 @@ import sangria.schema._
 object SettingsSchema {
   implicit val cardBackEnum = CommonSchema.deriveStringEnumeratumType(name = "CardBack", values = CardBack.values)
   implicit val cardBlankEnum = CommonSchema.deriveStringEnumeratumType(name = "CardBlank", values = CardBlank.values)
-  implicit val cardFacesEnum = CommonSchema.deriveStringEnumeratumType(name = "CardFaces", values = CardFaces.values)
   implicit val cardLayoutEnum = CommonSchema.deriveStringEnumeratumType(name = "CardLayout", values = CardLayout.values)
   implicit val cardRanksEnum = CommonSchema.deriveStringEnumeratumType(name = "CardRanks", values = CardRanks.values)
   implicit val cardSetEnum = CommonSchema.deriveStringEnumeratumType(name = "CardSet", values = CardSet.values)

@@ -37,9 +37,6 @@ object SettingsPanelInit {
     CardBlank.values.foreach(cb => radioChange("card-blank", cb.value, () => {
       SettingsPanel.setCurrentSettings(SettingsPanel.getCurrentSettings.copy(cardBlank = cb))
     }))
-    CardFaces.values.foreach(cf => radioChange("card-faces", cf.value, () => {
-      SettingsPanel.setCurrentSettings(SettingsPanel.getCurrentSettings.copy(cardFaces = cf))
-    }))
     CardLayout.values.foreach(cl => radioChange("card-layout", cl.value, () => {
       SettingsPanel.setCurrentSettings(SettingsPanel.getCurrentSettings.copy(cardLayout = cl))
     }))

@@ -17,7 +17,6 @@ object SettingsTemplate {
     val menuPosition = radiosFor("menu-position", Seq(MenuPosition.Top, MenuPosition.Bottom))
     val cardBack = radiosFor("card-back", CardBack.values)
     val cardBlank = radiosFor("card-blank", CardBlank.values)
-    val cardFaces = radiosFor("card-faces", CardFaces.values)
     val cardLayout = radiosFor("card-layout", CardLayout.values)
     val cardRanks = radiosFor("card-ranks", CardRanks.values)
     val cardSuits = radiosFor("card-suits", CardSuits.values)
@@ -34,7 +33,7 @@ object SettingsTemplate {
 
     div(
       title, language, tilt, autoFlip, audio, menuPosition,
-      cardBack, cardBlank, cardFaces, cardLayout, cardRanks, cardSuits,
+      cardBack, cardBlank, cardLayout, cardRanks, cardSuits,
       backgroundColor, backgroundPattern)
   }
 

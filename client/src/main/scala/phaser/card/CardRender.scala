@@ -1,16 +1,17 @@
 package phaser.card
 
 import com.definitelyscala.phaser.{ BitmapData, Image }
-import models.card.{ Color, Rank, Suit }
+import models.card.{ Rank, Suit }
 import models.settings.CardLayout
 
 class CardRender(
   layout: CardLayout,
   blank: Image,
   suitImages: IndexedSeq[Image] = IndexedSeq.empty,
-  redRankImages: IndexedSeq[Image] = IndexedSeq.empty,
-  blackRankImages: IndexedSeq[Image] = IndexedSeq.empty,
-  faceCardImages: IndexedSeq[Image] = IndexedSeq.empty) {
+  suitRankImages: Map[(Int, Int), Image] = Map.empty,
+  faceCardImages: Map[(Int, Int), Image] = Map.empty,
+  cardWidth: Double = 400,
+  cardHeight: Double = 600) {
   private[this] val rankWidths = IndexedSeq(0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 0.8, 1.0, 0.9, 0.9, 0.9, 0.9)
 
   def renderEmptyPile(tex: BitmapData, opaque: BitmapData) = {
@@ -30,50 +31,24 @@ class CardRender(
     val suitImage = suitImages(s.index)
     val rankImage = if (r == Rank.Unknown) {
       throw new IllegalStateException(s"Attempt to render unknown rank for card [$r$s].")
-    } else if (s.color == Color.Red) {
-      redRankImages(r.index - 2)
     } else {
-      blackRankImages(r.index - 2)
+      suitRankImages((s.index, r.index))
     }
+
+    // Look up the PNG face image for this specific suit + rank
+    val faceImage = faceCardImages((s.index, r.index))
+
+    // Draw the face image filling the entire card
+    tex.draw(faceImage, cardWidth / 2, cardHeight / 2, cardWidth, cardHeight)
 
     layout match {
       case CardLayout.A =>
-        if (r.locs.isEmpty) {
-          if (r == Rank.Ace) {
-            tex.draw(suitImage, 200, 300, 200, 200)
-          } else {
-            tex.draw(faceCardImages((s.index * 3) + r.index - 11), 200, 325, 350, 525)
-          }
-        } else {
-          r.locs.foreach { loc =>
-            tex.draw(suitImage, (loc._1 * 300) + 50, (loc._2 * 500) + 50, 100, 100);
-          }
-        }
-
         val rIdx = r.index - 2
         val rankWidth = rankWidths(rIdx)
         tex.draw(rankImage, 60 * rankWidth, 60, 80, 80)
         tex.draw(suitImage, (60 * rankWidth) + 60, 60, 50, 50)
         tex.draw(suitImage, 60 * rankWidth, 130, 50, 50)
       case CardLayout.B =>
-        if (r.locs.isEmpty) {
-          if (r == Rank.Ace) {
-            tex.draw(suitImage, 200, 300, 200, 200)
-          } else {
-            tex.draw(faceCardImages((s.index * 3) + r.index - 11), 200, 300, 400, 600)
-          }
-        } else {
-          r.locs.foreach { loc =>
-            if (loc._2 > 0.5) {
-              suitImage.angle = 180
-            }
-            tex.draw(suitImage, (loc._1 * 300) + 50, loc._2 * 600, 100, 100)
-            if (loc._2 > 0.5) {
-              suitImage.angle = 0
-            }
-          }
-        }
-
         tex.draw(rankImage, 35, 45, 50, 50)
         tex.draw(suitImage, 35, 95, 50, 50)
         rankImage.angle = 180

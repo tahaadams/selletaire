@@ -27,7 +27,7 @@ class LoadingState(settings: Settings) extends State {
       case _ => throw new IllegalStateException(s"Unhandled size [$size].")
     }
 
-    game.load.spritesheet("card-faces", assetRoot + s"images/cards/$size/faces/${settings.cardFaces.value}.png", faceSize._1, faceSize._2)
+    game.load.spritesheet("card-faces", assetRoot + s"images/cards/$size/faces/faces.png", faceSize._1, faceSize._2)
   }
 
   override def create() = {

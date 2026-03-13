@@ -5,12 +5,11 @@ object Settings {
 }
 
 case class Settings(
-  backgroundColor: String = "#356d88",
+  backgroundColor: String = "#926f9c",
   backgroundPattern: Option[String] = Some("black-felt"),
   cardSet: CardSet = CardSet.Default,
   cardBack: CardBack = CardBack.A,
   cardBlank: CardBlank = CardBlank.A,
-  cardFaces: CardFaces = CardFaces.A,
   cardLayout: CardLayout = CardLayout.A,
   cardRanks: CardRanks = CardRanks.A,
   cardSuits: CardSuits = CardSuits.A,
