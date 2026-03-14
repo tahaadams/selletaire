@@ -12,8 +12,8 @@ import sbtcrossproject.{crossProject, CrossType}
 import org.portablescala.sbtplatformdeps.PlatformDepsPlugin.autoImport._
 
 object Shared {
-  val projectId = "solitaire-gg"
-  val projectName = "Solitaire.gg"
+  val projectId = "selletaire"
+  val projectName = "Selletaire"
 
   val compileOptions = Seq(
     "target:jvm-1.8", "-encoding", "UTF-8", "-feature", "-deprecation", "-explaintypes", "-feature", "-unchecked",

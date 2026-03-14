@@ -1,6 +1,6 @@
-# Solitaire.gg
+# Selletaire
 
-https://solitaire.gg
+https://selletaire.com
 
 ## Running the app
 
@@ -12,7 +12,7 @@ $ open http://localhost:9000
 
 ## Projects
 
-* `solitaire-gg` Main web application. Handles online games.
+* `selletaire` Main web application. Handles online games.
 * `sharedJvm` Core game logic and rules definitions, for JVM projects.
 * `sharedJs` Shared classes, compiled to Scala.js JavaScript.
 * `sharedNative` Shared classes, compiled to native code.
@@ -22,7 +22,7 @@ $ open http://localhost:9000
 
 ## Technology
 
-Solitaire.gg is a WebGL client-server solitaire implementation with offline support. Using 4K-ready retina-quality HD graphics, Solitaire.gg aims to be the best card game available.
+Selletaire is a WebGL client-server solitaire implementation with offline support. Using 4K-ready retina-quality HD graphics, Selletaire is based on the Solitaire.gg repository which aims to be the best card game available.
 
 In online mode, a Play application communicates over a WebSocket to a pool of Akka actors managing games and connections. 
 Serialization is handled by Play Json, and all database communication runs via postgres-async. In offline mode, Scala.js compiles the
@@ -52,7 +52,7 @@ Inline styles and scripts are prohibited.
 
 ## License
 
-Solitaire.gg is free, open-source software under the [MIT license](LICENSE.md).
+Selletaire is free, open-source software under the [MIT license](LICENSE.md).
 
 Copyright (c) 2017 Kyle Unverferth
 

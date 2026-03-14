@@ -10,7 +10,6 @@ object SettingsTemplate {
     val title = div(id := "settings-disclaimer", cls := "settings-section theme")(
       div(Messages("settings.disclaimer")))
 
-    val language = radiosFor("language", Language.values)
     val tilt = boolRadioFor("tilt", "Card Tilt", "No Card Tilt")
     val autoFlip = boolRadioFor("auto-flip", "Auto Flip", "No Auto Flip")
     val audio = boolRadioFor("audio", "Sound", "No Sound")
@@ -32,7 +31,7 @@ object SettingsTemplate {
     })
 
     div(
-      title, language, tilt, autoFlip, audio, menuPosition,
+      title, tilt, autoFlip, audio, menuPosition,
       cardBack, cardBlank, cardLayout, cardRanks, cardSuits,
       backgroundColor, backgroundPattern)
   }

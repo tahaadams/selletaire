@@ -5,7 +5,7 @@ import help.HelpService
 import navigation.NavigationState
 import settings.SettingsPanel
 
-trait NavigationHelper { this: SolitaireGG =>
+trait NavigationHelper { this: Selletaire =>
   private[this] def onNewGame(rules: Seq[String]) = {
     phaser.gameplay.activeGame.foreach { gameId =>
       GameStartService.endGame(this, gameId, win = false)

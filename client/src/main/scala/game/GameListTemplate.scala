@@ -8,7 +8,7 @@ import scalatags.Text.all._
 
 object GameListTemplate {
   def panelContent = div(
-    div(cls := "theme striped with-margin options-el")("Solitaire.gg"),
+    div(cls := "theme striped with-margin options-el")("Selletaire"),
     list("Favorite Games", GameRulesSet.favorites.map(x => x.id -> x)),
     list("All Games", GameRulesSet.completed))
 

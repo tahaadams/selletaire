@@ -1,7 +1,7 @@
 {
   "id": 1,
-  "title": "Solitaire.gg",
-  "originalTitle": "Solitaire.gg",
+  "title": "Selletaire",
+  "originalTitle": "Selletaire",
   "tags": [],
   "style": "dark",
   "timezone": "browser",
@@ -57,10 +57,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(solitaire-gg.ActorSupervisor.active-connections.count, 'Active Connections')"
+              "target": "alias(selletaire.ActorSupervisor.active-connections.count, 'Active Connections')"
             },
             {
-              "target": "alias(solitaire-gg.ActorSupervisor.active-games.count, 'Active Games')"
+              "target": "alias(selletaire.ActorSupervisor.active-games.count, 'Active Games')"
             }
           ],
           "timeFrom": null,
@@ -129,10 +129,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(collectd.solitaire_gg.cpu-*.cpu-wait, 3)"
+              "target": "aliasByNode(collectd.selletaire.cpu-*.cpu-wait, 3)"
             },
             {
-              "target": "aliasByNode(collectd.solitaire_gg.cpu-*.cpu-user, 3)"
+              "target": "aliasByNode(collectd.selletaire.cpu-*.cpu-user, 3)"
             }
           ],
           "timeFrom": null,
@@ -193,10 +193,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(collectd.solitaire_gg.memory.memory-free, 3)"
+              "target": "aliasByNode(collectd.selletaire.memory.memory-free, 3)"
             },
             {
-              "target": "aliasByNode(collectd.solitaire_gg.memory.memory-used, 3)"
+              "target": "aliasByNode(collectd.selletaire.memory.memory-used, 3)"
             }
           ],
           "timeFrom": null,
@@ -265,7 +265,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(solitaire-gg.GameService.receive.*.count, 3)"
+              "target": "aliasByNode(selletaire.GameService.receive.*.count, 3)"
             }
           ],
           "timeFrom": null,
@@ -326,7 +326,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(solitaire-gg.*.exceptionMeter.count, 1)"
+              "target": "aliasByNode(selletaire.*.exceptionMeter.count, 1)"
             }
           ],
           "timeFrom": null,
@@ -395,7 +395,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(solitaire-gg.requests.*.count, 2)"
+              "target": "aliasByNode(selletaire.requests.*.count, 2)"
             }
           ],
           "timeFrom": null,
@@ -464,7 +464,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(solitaire-gg.GameController.new.*.count, 3)"
+              "target": "aliasByNode(selletaire.GameController.new.*.count, 3)"
             }
           ],
           "timeFrom": null,
@@ -533,10 +533,10 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(solitaire-gg.Database.query.*.p95, 3)"
+              "target": "aliasByNode(selletaire.Database.query.*.p95, 3)"
             },
             {
-              "target": "aliasByNode(solitaire-gg.Database.execute.*.p95, 3)"
+              "target": "aliasByNode(selletaire.Database.execute.*.p95, 3)"
             }
           ],
           "timeFrom": null,

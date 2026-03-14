@@ -1,7 +1,7 @@
 package phaser
 
 import audio.AudioService
-import client.SolitaireGG
+import client.Selletaire
 import com.definitelyscala.phaser._
 import models.RequestMessage
 import models.game.PossibleMove
@@ -24,7 +24,7 @@ object PhaserGame {
     "resolution" -> dom.window.devicePixelRatio))
 }
 
-class PhaserGame(gg: SolitaireGG) extends Game(PhaserGame.options) {
+class PhaserGame(gg: Selletaire) extends Game(PhaserGame.options) {
   this.antialias = true
 
   val gameplay = new Gameplay(this, gg.settings.getSettings, gg.onPhaserLoadComplete _)

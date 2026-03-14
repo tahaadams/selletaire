@@ -7,10 +7,10 @@ import util.{ Logging, NullUtils }
 
 import scala.scalajs.js
 
-trait InitHelper { this: SolitaireGG =>
+trait InitHelper { this: Selletaire =>
   protected[this] def init() = {
     Logging.init(debug = debug)
-    Logging.info("Solitaire.gg, v2.0.0")
+    Logging.info("Selletaire, v2.0.0")
     org.scalajs.dom.window.asInstanceOf[js.Dynamic].PhaserGlobal = js.Dynamic.literal("hideBanner" -> true)
 
     dom.window.onbeforeunload = (_: BeforeUnloadEvent) => {

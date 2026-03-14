@@ -1,14 +1,14 @@
 package phaser.gameplay
 
-import client.SolitaireGG
+import client.Selletaire
 import input.{ GamepadHandler, InputMessage, KeyboardHandler }
 
-class InputHelper(gg: SolitaireGG) {
+class InputHelper(gg: Selletaire) {
   new KeyboardHandler(gg.phaser, onInput)
   new GamepadHandler(gg.phaser, onInput)
 
   def onInput(i: InputMessage): Unit = i match {
-    case InputMessage.Sandbox => SolitaireGG.getActive.onSandbox()
+    case InputMessage.Sandbox => Selletaire.getActive.onSandbox()
     case InputMessage.ToggleDebug => toggleDebug()
     case InputMessage.ToggleMenu => gg.menu.toggleMenu()
     case InputMessage.Undo => gg.phaser.gameplay.undo()

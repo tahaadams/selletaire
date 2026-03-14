@@ -11,7 +11,6 @@ object SettingsSchema {
   implicit val cardRanksEnum = CommonSchema.deriveStringEnumeratumType(name = "CardRanks", values = CardRanks.values)
   implicit val cardSetEnum = CommonSchema.deriveStringEnumeratumType(name = "CardSet", values = CardSet.values)
   implicit val cardSuitsEnum = CommonSchema.deriveStringEnumeratumType(name = "CardSuits", values = CardSuits.values)
-  implicit val languageEnum = CommonSchema.deriveStringEnumeratumType(name = "Language", values = Language.values)
   implicit val menuPositionEnum = CommonSchema.deriveStringEnumeratumType(name = "MenuPosition", values = MenuPosition.values)
 
   implicit val settingsType: OutputType[Settings] = deriveObjectType[GraphQLContext, Settings](

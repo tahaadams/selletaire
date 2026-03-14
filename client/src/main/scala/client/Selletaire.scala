@@ -12,19 +12,19 @@ import settings.{ ProfileService, SettingsService }
 import scala.scalajs.js.annotation.{ JSExport, JSExportTopLevel }
 import scala.util.Random
 
-@JSExportTopLevel("SolitaireGG")
-object SolitaireGG {
-  private[this] var active: Option[SolitaireGG] = None
+@JSExportTopLevel("Selletaire")
+object Selletaire {
+  private[this] var active: Option[Selletaire] = None
   def getActive = active.getOrElse(throw new IllegalStateException("No active application."))
 
   @JSExport
   def go(debug: Boolean): Unit = active match {
-    case None => active = Some(new SolitaireGG(debug))
+    case None => active = Some(new Selletaire(debug))
     case _ => throw new IllegalStateException("Already initialized.")
   }
 }
 
-class SolitaireGG(val debug: Boolean) extends InitHelper with NavigationHelper with MessageHelper {
+class Selletaire(val debug: Boolean) extends InitHelper with NavigationHelper with MessageHelper {
   protected[this] var game: Option[ActiveGame] = None
   def hasGame = game.isDefined
   def getGame = game.getOrElse(throw new IllegalStateException("No active game."))

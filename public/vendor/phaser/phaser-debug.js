@@ -1297,7 +1297,7 @@ function typeToString () {
     }
     // return a string for the phaser type
     else {
-      /* solitaire.gg modifications */
+      /* selletaire modifications */
       if(node.constructor.name === "Card") {
         return "Card (" + node.toString() + ")";
       } else if(node.constructor.name === "Pile") {
@@ -1371,7 +1371,7 @@ function typeToString () {
             return 'Unknown';
         }
       }
-      /* End solitaire.gg modifications */
+      /* End selletaire modifications */
     }
 }
 

@@ -1,17 +1,12 @@
 package services.export
 
 import better.files._
-import models.settings.Language
 import util.FutureUtils.defaultContext
 import play.api.libs.ws.WSClient
 
 import scala.concurrent.Future
 
 class ExportCrawler(ws: WSClient, baseUrl: String, outPath: File, debug: Boolean) {
-  private[this] val langAssets = Language.values.filterNot(_ == Language.English).map { l =>
-    s"strings.js?l=${l.value}" -> s"lang/strings.${l.value}.js"
-  }
-
   private[this] val prodAssets = Seq(
     "strings.js",
     "assets/stylesheets/gg.min.css",
@@ -53,17 +48,12 @@ class ExportCrawler(ws: WSClient, baseUrl: String, outPath: File, debug: Boolean
   val assets = if (debug) { debugAssets } else { prodAssets }
 
   def crawlLocal() = {
-    val langF = langAssets.foldLeft(Future.successful(Seq.empty[File])) { (x, y) =>
-      x.flatMap { f =>
-        get(y._1, Some(y._2)).map(f ++ _)
-      }
-    }
     val assetsF = assets.foldLeft(Future.successful(Seq.empty[File])) { (x, y) =>
       x.flatMap { f =>
         get(y).map(f ++ _)
       }
     }
-    assetsF.flatMap(x => langF.map(y => x ++ y)).map { ret =>
+    assetsF.map { ret =>
       folders.foreach { folder =>
         val d = ExportService.rootPath / folder._1
         if (!d.isDirectory) {

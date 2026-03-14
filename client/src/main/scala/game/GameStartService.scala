@@ -2,7 +2,7 @@ package game
 
 import java.util.UUID
 
-import client.SolitaireGG
+import client.Selletaire
 import menu.MenuService
 import models.rules.GameRulesSet
 import models.rules.moves.InitialMoves
@@ -11,7 +11,7 @@ import msg.req.OnGameStart
 import scala.util.Random
 
 object GameStartService {
-  def onGameStateChange(gg: SolitaireGG, args: Seq[String], menu: MenuService) = {
+  def onGameStateChange(gg: Selletaire, args: Seq[String], menu: MenuService) = {
     if (gg.hasGame) {
       val g = gg.getGame
       args.toList match {
@@ -33,9 +33,9 @@ object GameStartService {
     menu.options.setOptionsForGame()
   }
 
-  def endGame(gg: SolitaireGG, id: UUID, win: Boolean) = gg.phaser.gameplay.stop(id, win, () => gg.clearGame())
+  def endGame(gg: Selletaire, id: UUID, win: Boolean) = gg.phaser.gameplay.stop(id, win, () => gg.clearGame())
 
-  def startGame(gg: SolitaireGG, id: UUID, rulesId: String, seed: Int) = {
+  def startGame(gg: Selletaire, id: UUID, rulesId: String, seed: Int) = {
     if (gg.hasGame) { throw new IllegalStateException(s"Called [startGame] before destroying active [${gg.getGame.rulesId}] game [${gg.getGame.id}].") }
     val rulesTranslated = GameRulesSet.allByIdWithAliases.get(rulesId).map(_.id).getOrElse("klondike")
     val ag = ActiveGame(id = id, rulesId = rulesTranslated, seed = seed)

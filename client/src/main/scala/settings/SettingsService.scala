@@ -7,7 +7,7 @@ import util.JsonSerializers
 import scala.util.control.NonFatal
 
 object SettingsService {
-  private val settingsKey = "solitaire.gg.settings"
+  private val settingsKey = "selletaire.settings"
 }
 
 class SettingsService(onSave: Settings => Unit) {

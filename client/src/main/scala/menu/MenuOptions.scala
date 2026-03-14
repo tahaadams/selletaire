@@ -1,6 +1,6 @@
 package menu
 
-import client.SolitaireGG
+import client.Selletaire
 import game.ActiveGame
 import models.rules.GameRulesSet
 import navigation.NavigationService
@@ -22,8 +22,8 @@ class MenuOptions(setTitle: String => Unit, val navigation: NavigationService) {
   private[this] val generalHelpEntry = MenuOptions.Entry("help", Seq("help"), "Help", () => navigation.generalHelp())
   private[this] val rulesListEntry = MenuOptions.Entry("new-game", Nil, "New Game", () => navigation.games())
 
-  private[this] val undoEntry = MenuOptions.Entry("undo", Nil, "Undo", () => SolitaireGG.getActive.phaser.gameplay.undo())
-  private[this] val redoEntry = MenuOptions.Entry("redo", Nil, "Redo", () => SolitaireGG.getActive.phaser.gameplay.redo())
+  private[this] val undoEntry = MenuOptions.Entry("undo", Nil, "Undo", () => Selletaire.getActive.phaser.gameplay.undo())
+  private[this] val redoEntry = MenuOptions.Entry("redo", Nil, "Redo", () => Selletaire.getActive.phaser.gameplay.redo())
   private[this] val settingsEntry = MenuOptions.Entry("settings", Seq("settings"), "Settings", () => navigation.settings())
   private[this] def rulesHelpEntry(rules: String) = MenuOptions.Entry("help", Seq("help", rules), "Help", () => navigation.rulesHelp(rules))
 
@@ -38,7 +38,7 @@ class MenuOptions(setTitle: String => Unit, val navigation: NavigationService) {
   }
 
   def setOptionsForGameList() = {
-    setTitle("Solitaire.gg")
+    setTitle("Selletaire")
     activeGame match {
       case Some(ag) =>
         val resume = MenuOptions.Entry("resume", Seq("play", ag.rulesId, ag.seed.toString), "Resume", () => navigation.resume(ag))
@@ -51,7 +51,7 @@ class MenuOptions(setTitle: String => Unit, val navigation: NavigationService) {
     case Some(ag) =>
       setTitle(ag.rules.title)
       setOptions(undoEntry, redoEntry, rulesHelpEntry(ag.rulesId), settingsEntry)
-      SolitaireGG.getActive.phaser.gameplay.wireLinks("#menu-link-undo", "#menu-link-redo")
+      Selletaire.getActive.phaser.gameplay.wireLinks("#menu-link-undo", "#menu-link-redo")
     case None => throw new IllegalStateException("No active game.")
   }
 
@@ -65,7 +65,7 @@ class MenuOptions(setTitle: String => Unit, val navigation: NavigationService) {
       setTitle(GameRulesSet.allByIdWithAliases(r).title + " Help")
       setOptions(agLink, generalHelpEntry, settingsEntry)
     case None =>
-      setTitle("Solitaire.gg Help")
+      setTitle("Selletaire Help")
       setOptions(agLink, settingsEntry)
   }
 

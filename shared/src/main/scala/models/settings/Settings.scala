@@ -6,7 +6,7 @@ object Settings {
 
 case class Settings(
   backgroundColor: String = "#926f9c",
-  backgroundPattern: Option[String] = Some("black-felt"),
+  backgroundPattern: Option[String] = Some("scribble-light"),
   cardSet: CardSet = CardSet.Default,
   cardBack: CardBack = CardBack.A,
   cardBlank: CardBlank = CardBlank.A,
@@ -16,5 +16,4 @@ case class Settings(
   menuPosition: MenuPosition = MenuPosition.Top,
   tilt: Boolean = true,
   autoFlip: Boolean = true,
-  audio: Boolean = false,
-  language: Language = Language.English)
+  audio: Boolean = false)

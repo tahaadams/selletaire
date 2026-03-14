@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="gg.solitaire" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-  <name>Solitaire.gg</name>
-  <description>Solitaire.gg</description>
-  <author email="dev@solitaire.gg" href="https://solitaire.gg">The Solitaire.gg Team</author>
+  <name>Selletaire</name>
+  <description>Selletaire</description>
+  <author email="dev@selletaire.gg" href="https://selletaire.gg">The Selletaire Team</author>
   <content src="index.html"/>
 
   <!-- Display Preferences -->
@@ -15,11 +15,11 @@
   <preference name="StatusBarStyle" value="blackopaque" />
 
   <!-- Whitelist -->
-  <access origin="*://solitaire.gg/*" />
+  <access origin="*://selletaire.gg/*" />
 
   <!-- External URLs -->
-  <allow-intent href="http://solitaire.gg/*"/>
-  <allow-intent href="https://solitaire.gg/*"/>
+  <allow-intent href="http://selletaire.gg/*"/>
+  <allow-intent href="https://selletaire.gg/*"/>
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>
